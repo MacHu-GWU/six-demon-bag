@@ -1,0 +1,5 @@
+<2014-10-23 09:20:53.243000><Failed Extraction><Failed to analysis address = 18727 DUKE LAKE DR, zipcode = 77388>
+<2014-10-23 09:20:54.018000><Failed Extraction><Failed to analysis address = 6026 YARWELL DR, zipcode = 77096>
+<2014-10-23 09:20:55.727000><Failed Extraction><Failed to analysis address = 17811 WESTERN PASS LN, zipcode = 77095>
+<2014-10-23 09:20:59.372000><Failed Extraction><Failed to analysis address = 5606 LYNNGATE DR, zipcode = 77373>
+<2014-10-23 09:21:00.673000><Failed Extraction><Failed to analysis address = 1814 JADE HOLLOW LN, zipcode = 77077>

@@ -1,0 +1,1712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Trulia Real Estate Search - Advanced Search</title>
+    <link rel="stylesheet" type="text/css" href="http://css.trulia-cdn.com/css/GOAT40_20b/css/base,mod-styles.css" />
+
+    <script language="JavaScript" type="text/JavaScript">var site_root = '/';</script>
+<script>
+  var qpn_NAMES = {
+        'site':'Trulia',
+        'site_possessive':'Trulia\'s',
+        'mytrulia':'My Trulia',
+        'email_domain':'trulia.com',
+        'truliamap':'TruliaMap',
+        'voices':'Trulia Voices',
+        'account_source':'trulia'
+      },
+      _trulia_logged_in = +'0',
+      _is_real_estate_pro = +'0',
+      _supports_my_trulia = +'1',
+      _release_version_tab = 'GOAT40_20b',
+      _js_server_root = 'http://static.trulia-cdn.com/javascript/GOAT40_20b/',
+      _fb_app_home_story_id = '{FACEBOOK_APP_HOME_STORY_ID}',
+      _fb_app_id = '183577541666001';
+
+      trulia = (typeof(trulia) !== "undefined") ? trulia : {} ;
+      trulia.is_agent_paid = '';
+      trulia.agent_user_id = '';
+  var _feature_auth_popup_center_text_enabled = false;
+var _feature_auth_popup_form_toggle_buttons_enabled = false;
+var _feature_srp_save_search_ux_v1_enabled = false;
+var _feature_srp_save_search_ux_v2_enabled = false;
+var _feature_hp_search_tsa_enabled = false;
+var _feature_srp_sort_default_newest_enabled = false;
+var _feature_srp_sort_default_newest_repeat_users_enabled = false;
+var _feature_pdp_photo_player_ad_enabled = false;
+var _feature_pdp_for_sale_lead_upsell_v1_enabled = false;
+var _feature_moving_postlead_v1_enabled = false;
+var _feature_moving_postlead_v2_enabled = false;
+var _feature_lead_recommender_bypass_a_enabled = false;
+var _feature_pdp_board_walk_v1_enabled = false;
+var _feature_pdp_board_walk_v2_enabled = true;
+var _feature_pdp_board_walk_v3_enabled = false;
+
+</script>
+
+    <script language="JavaScript" type="text/JavaScript" src="http://yui.yahooapis.com/combo?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&2.9.0/build/connection/connection-min.js&2.9.0/build/selector/selector-min.js"></script>
+    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/first_step.js?v=GOAT40_20b"></script>
+    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/site_js.js?v=GOAT40_20b"></script>
+    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/advanced_search.js?v=GOAT40_20b"></script>
+    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/voices_qa.js?v=GOAT40_20b"></script>
+    <script language="JavaScript" type="text/JavaScript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/account.js?v=GOAT40_20b"></script>
+    <script language="JavaScript" type="text/JavaScript">
+      var _SITE_ROOT = site_root = '/';
+      var SITE_PATH_ROOT = '';
+
+      var ASearch = null;
+
+      trulia.ready(function ()
+      {
+        ASearch = new AdvancedSearch();
+        ASearch.page_load = true;
+        ASearch.old_tab = 'city_tab';
+        ASearch.active_tab_elem.value = 'city_tab';
+        ASearch.switch_form('buy');
+        ASearch.init_autofill('city_tab');
+
+        if (ASearch.active_tab_elem.value == 'sold_tab')
+        {
+          ASearch.sold_only_search(true);
+        }
+
+        ASearch.page_load = false;
+      });
+
+      var ASTips = {
+        'area':['Search within area boundary','Confine search results to the city or neighborhood boundary, which will be displayed on the map as a red outline. This option is useful if you are interested in staying within a particular area, and want to be sure where the precise boundary limits are.'],
+        'area2':['ZIP &amp; Neighborhood search','ZIP and neighborhood boundaries are provided by a third-party who compiles the data from community resources, municipalities, and real estate professionals.'],
+        'area3':['Schools search','Search by school returns homes for sale closest to the school you provided. Proximity does not guarantee enrollment eligibility. Please consult a real estate agent or school district to confirm the schools which are zoned for your specific property or area.'],
+        'area4':['Sold Homes search','Search properties that have been sold and recorded as a public record at the local assessor, tax collector or recorder offices across the US. You can specify the time range on how far back to search. This is helpful is you are interested in seeing homes matching certain criteria that have been sold in the past few months or in the past 5 years.'],
+        'lt1':['For sale listing types','<div class="bold">Resale</div>Resale listings comprise homes that are listed with agents and brokers. ' + qpn_NAMES.site + ' works directly with thousands of U.S. brokers who send us data feeds of their listings, tens of thousands of agents who directly submit their listings to ' + qpn_NAMES.site + ', as well as certain Multiple Listing Services and Web site vendors.<br/><br/><div class="bold">New Construction</div>Listings that are provided by builders and new home listing providers showing current availability in new home communities across the US.'],
+        'lt2':['Foreclosures',
+          '<div class="bold">Foreclosures</div>All foreclosure listings are provided by Realty Trac and display basic foreclosure information. In order to view full foreclosure details, users must register with Realty Trac.<br/><br/><div class="bold">Pre-Foreclosure (Notice of Default or Lis Pendens)</div>The foreclosure process begins when a borrower/owner defaults on loan payments and the lender files a public default notice, called a Notice of Default or Lis Pendens. Buying a property in pre-foreclosure involves approaching the borrower/owner and offering to buy the property outright.<br/><br/><div class="bold">Auction (Notice of Trustee Sale or Notice of Foreclosure Sale)</div>If the loan is not reinstated by the end of the pre-foreclosure period, potential buyers can bid on the property at a public auction. Buyers often are required to pay in cash at the auction and may not have much time to research the title and condition of the property beforehand; however, a public auction often offers some of the best bargains and avoids the unpredictability of dealing directly with the borrower/owner.<br/><br/><div class="bold">Bank-owned (Real Estate Owned)</div>If the lender takes ownership of the property, either through an agreement with the owner during pre-foreclosure or at the public auction, the lender will usually want to re-sell the property to recover the unpaid loan amount. The lender will then typically clear the title and perform needed maintenance and repair; however, the potential bargain for these REO homes is typically less than a pre-foreclosure or auction property.'],
+        'lt3':['Recently Sold Homes','Recently sold homes represent homes that have sold within the last 9 months and have been recorded as a public record at the local assessor, tax collector or recorder offices across the US.'],
+        '':['','']
+      };
+      </script>
+  </head>
+  <body class="home_pez greenpanda">
+    <div id="cobrand_custom_header">
+      
+    </div>
+      <header class="globalNav oocss" id="globalNavNormal" data-role="global_nav">
+
+  <div class="backgroundHighlight txtL">
+    <nav class="container containerResponsive line h6 typeWeightNormal mvn" role="navigation" data-role="global_nav_menu">
+      <div class="col phn">
+        
+        <div class="pbm">
+         <a href="/" class="globalNavLogo reversedLogo" data-role="global_nav_logo" title="Trulia real estate, homes for sale and apartments for rent">Trulia</a>
+        </div>
+      </div>
+
+      
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__buy">
+            <div class="typeReversed">
+                          <a href="/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Buy">Buy</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/veterans/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__veteranhomebuyercentral" data-track="Buy|VeteranHomebuyerCentral">Veteran Homebuyer Central</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/advanced/city/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__advancedsearch" data-track="Buy|AdvancedSearch">More Search Options</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/submit_listings/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__sls" data-track="Buy|SLS">FREE List a property</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__sell">
+            <div class="typeReversed">
+                          <a href="/sell/?ts=trulia&tscamp=global_nav_sell" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Sell">Sell</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/sell/?ts=trulia&tscamp=global_nav_whats_my_home_worth" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__whats my home worth" data-track="Sell|Whats My Home Worth">What's My Home Worth</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__rent">
+            <div class="typeReversed">
+                          <a href="/for_rent/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Rent">Rent</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/advanced/rent/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__advancedsearch" data-track="Rent|AdvancedSearch">More Search Options</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/post-rental/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__sls" data-track="Rent|SLS">FREE List a property</a>
+                                          </li>
+                                                          <li>
+                                              <a href="https://support.trulia.com/hc/en-us/articles/201896207-Rental-Listing-Scams-Read-Before-You-Search" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__fraud faqs" data-track="Rent|Fraud FAQs">Rental Fraud FAQs</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__voices">
+            <div class="typeReversed">
+                          <a href="/voices/qa/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Voices">Advice</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                                                        <li>
+                                              <a href="/voices/qa/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__qa" data-track="Voices|QA">Q&amp;A</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/voices/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__voices" data-track="Voices|Voices">Advice</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/voices/blogs/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__blogs" data-track="Voices|Blogs">Blogs</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/voices/guides/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__guides" data-track="Voices|Guides">Guides</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/guides-afi/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__amfamguides" data-track="Voices|AmFamGuides">Insurance Guide</a>
+                                          </li>
+                                                          <li>
+                                              <a href="http://activerain.com" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__activerainblogs" data-track="Voices|activeRainBlogs">ActiveRain Blogs</a>
+                                          </li>
+                                          <li class="dropdownDivider"></li>
+                                                                                            <li>
+                                              <a href="/ask/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__ask" data-track="Voices|Ask">Ask a Question</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/blog/post/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__writeblog" data-track="Voices|WriteBlog">Write a Blog Post</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__mortgage">
+            <div class="typeReversed">
+                          <a href="/loan/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Mortgage">Mortgage</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/loan/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__homeloan" data-track="Mortgage|HomeLoan">Home Loans</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/mortgages/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__mortgage" data-track="Mortgage|Mortgage">Mortgage</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/refinance/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__refinance" data-track="Mortgage|Refinance">Refinance</a>
+                                          </li>
+                                          <li class="dropdownDivider"></li>
+                                                                                            <li>
+                                              <a href="/mortgage-calculators/06/rent-or-buy/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__calculators" data-track="Mortgage|Calculators">Rent vs Buy Calculator</a>
+                                          </li>
+                                                          <li>
+                                              <a href="/mortgage-calculators/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__calculators" data-track="Mortgage|Calculators">Mortgage Calculators</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__local|home">
+            <div class="typeReversed">
+                          <a href="/local/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Local|Home">Local Info</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/local/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__local|home" data-track="Local|Home|Local|Home">Local Home</a>
+                                          </li>
+                                          <li class="dropdownDivider"></li>
+                                                                                            <li>
+                                              <a href="/city/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__local" data-track="Local|Home|Local">Directory</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+              <div class="col phn">
+          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__findpro">
+            <div class="typeReversed">
+                          <a href="/directory/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="FindPro">Find an Agent</a>
+                        </div>
+            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
+              <ul class="dropdownList" data-role="global_nav_menu_submenu">
+                                                      <li>
+                                              <a href="/directory/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__findpro" data-track="FindPro|FindPro">Agent Directory</a>
+                                          </li>
+                                                                    </ul>
+            </div>
+          </div>
+        </div>
+      
+      
+            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
+                <a href="/mobile/" class="globalNavMenuItemLink linkTypeReversed pam clickable iconMobile" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__mobile" data-track="Mobile">Mobile</a>
+              </div>
+            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
+                <a href="/truliapro/?src=000022" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__pro" data-track="Pro">For Professionals</a>
+              </div>
+            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
+                <a href="/submit_listings/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__listings" data-track="Listings">Submit Listings</a>
+              </div>
+            
+    </nav>
+  </div>
+
+    <div class="backgroundBasic txtL pvs" id="global-sub-nav">
+  <div class="container containerResponsive" >
+    <div class="line mln">
+      
+      
+      
+    
+    
+        
+    <div class="colExt pln pts userIcons">
+            <div class="col txtC pvn pls" data-role="global_saved_properties">
+        <ul class="listInline listInlineHover h7 pan man">
+  <li id="propertyDropdown" class="dropdownTopContainer mbn mlm" data-role="dropdown_container">
+    <span class="clickable triggerDropdown overlayContainer linkLowlight">
+      <div class="mts txtC">
+        <i class="iconHeart h4 typeDeemphasize"></i>
+        <span class="iconBadge badgePrimary hideFully" data-role="notify_badge">1</span>
+      </div>
+      <span class="dropdownText">My Homes</span>
+    </span>
+    <div class="propertyDropdownContainer dropdownContent zIndexPopup">
+      <div id="propertyDropdownBody"></div>
+    </div>
+  </li>
+  <li id="mySearchesDropdown" class="dropdownTopContainer mhm mbn" data-role="dropdown_container ss_action" data-action="/account/searches/">
+    <span class="clickable triggerDropdown linkLowlight">
+      <div class="mts txtC">
+        <i class="iconSearch h4 typeDeemphasize"></i>
+        <span class="iconBadge badgePrimary hideFully" data-role="notify_badge">1</span>
+      </div>
+      <span class="dropdownText">My Searches</span>
+      </span>
+    <div class="propertyDropdownContainer dropdownContent zIndexPopup">
+      <div id="searchDropdownBody"></div>
+    </div>
+  </li>
+</ul>
+
+<script type="text/template" id="iconWithBadgeTemplate">
+  <i class="<%= iconToggleClass %> overlayContainer"></i>
+</script>
+
+<script type="text/template" id="propertyRowTemplate">
+  <li class="pan">
+    <div class="media mbn pbs clickable" id="<%= propertyId %>">
+      <a href="<%= pdpUrl %>" class="mediaImg pls">
+        <img src="<%= thumbnail %>" width="50" height="50" alt="<%= description %>">
+      </a>
+      <div class="mediaBody prs">
+        <div class="h7 typeEmphasize typeTruncate propertyBoxPropertyTitle mbn"><%= topTitle %></div>
+        <div class="h7 typeLowlight typeTruncate propertyBoxPropertyType mtn"><%= description %></div>
+      </div>
+    </div>
+  </li>
+</script>
+
+<script type="text/template" id="suggestedPropertyRowTemplate">
+  <li class="mhs">
+    <div class="starMenuCarouselImage imageContainer120x80">
+      <a class="overlayContainer" href="<%= pdpUrl %>">
+        <img src="<%= photoUrl %>">
+        <div class="overlayLowlight overlayFull txtC h7 mvn phs pvl hideVisually">
+          <%= formattedBedAndBath.replace(/\//g, '|').replace(/(^|)(\d+)(|$)/g, '$1<b>$2</b>$3') %> <br>
+          <%= formattedSqft.replace(/(^|)(\d+)(|$)/g, '$1<b>$2</b>$3') %>
+        </div>
+      </a>
+    </div>
+    <div class="pbs txtL">
+      <div class="h7 typeEmphasize typeTruncate mbn" style="width: 120px;"><%= addressShort %></div>
+      <div class="h7 typeLowlight typeTruncate mtn" style="width: 120px;"><%= formattedPrice %></div>
+    </div>
+  </li>
+</script>
+
+<script type="text/template" id="suggestedHomesLinkTemplate">
+  <li class="mhs" style="vertical-align: top;">
+   <div class="backgroundLowlight txtC typeEmphasize h7 mvn phm pvl">
+      <a id="viewAllSuggestedHomesSlide" data-tracking-string="ViewAllSuggestedHomesSlide" href="<%= site_root %>account/suggestions/">
+        View All <br>
+        Suggested Homes
+      </a>
+    </div>
+  </li>
+</script>
+
+<script type="text/template" id="suggestedPropertyContainerTemplate">
+
+  <div class="boxHeadBasic boxFootBasic plm pvs mhn typeEmphasize typeLowlight backgroundLowlight">
+    <span>Suggested just for you</span>
+    <a id="viewAllSuggestedHomesLink" data-tracking-string="ViewAllSuggestedHomesLink" class="h8 typeEmphasize typeCaps" href="<%= site_root %>account/suggestions/">View All</a>
+  </div>
+
+  <ul id="suggestedPropertyList" class="carouselContainer plm listInline lhn mbn">
+    <li class="mbl"><div class="btn mbl phn prev btnDisabled"><i class="iconLeftOpen"></i></div></li>
+    <li class="carousel typeTruncate mbn">
+      <ol class="listInline lhn mbn">
+
+      </ol>
+    </li>
+    <li class="mbl"><div class="btn mbl phn next"><i class="iconRightOpen"></i></div></li>
+  </ul>
+
+</script>
+
+<script type="text/template" id="suggestedPropertyEmptyContainerTemplate">
+  <div class="txtC boxFootBasic h7 typeEmphasize typeCaps man pam">
+    <a href="<%= site_root %>account/suggestions/">
+      <i class="iconThumbsUp h5 mvn"></i>Unlock your personalized home suggestions
+    </a>
+  </div>
+</script>
+
+<script type="text/template" id="myHomesContainerTemplate">
+  <div class="savedPropertiesDropdownBox box dropdownArrowRight dropdownBoxHighlight backgroundLowlight txtL">
+    <div class="boxHead boxHeadBasic typeLowlight line man pvm h6">
+      <div class="col cols14 plm">
+        <%= header %>
+        <a id="viewAllFollowedHomesLink" href="<%= site_root %>account/properties/" class="h8 typeEmphasize typeCaps"><%= viewAllLinkText %></a>
+      </div>
+      <div class="colExt txtR">
+        <ul id="globalNavMyHomesTabHeader" class="tabs tabDefault pln man" data-body="#searchHistoryList">
+
+        </ul>
+      </div>
+    </div>
+    <div class="boxBody backgroundBasic pan">
+
+      <div id="starMenuSavedMessage" class="typeHighlight h7 typeEmphasize phs pts mtn hideFully"></div>
+      <div id="savedPropertyList">
+        <ul class="listBorderedHover mvn pan">
+
+        </ul>
+      </div>
+
+      <div id="suggestedPropertyContainer"></div>
+
+    </div>
+
+    <div id="globalNavMyHomesFooter" class="boxFoot boxFootBasic mhn pvs h7 txtC"></div>
+  </div>
+</script>
+
+<script type="text/template" id="myHomesActiveTab">
+  <li class="pvn phm man"><a href="#" data-tab="<%= tabName %>"><%= tabName %></a></li>
+</script>
+<script type="text/template" id="myHomesInactiveTab">
+  <li class="pvn phm man"><span class="typeLowlight"><%= tabName %></span></li>
+</script>
+
+<script type="text/template" id="savedRentalContainerFooterTemplate">
+  <div class="pas mts" style="white-space: normal;line-height: 1.3;">
+    <i class="h6 iconTrophy"></i>Smart renters contact multiple properties <br> and find a place to live sooner.
+  </div>
+  <div class="mts mbl">
+    <a href="<%= viewAllRentalHomesLink %>" class="btn btnPrimary btnSml btn-primary viewSavedProperties">View All Saved Homes</a>
+  </div>
+</script>
+
+<script type="text/template" id="loggedOutOrNoPropertyContainerTemplate">
+  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundBasic txtL ">
+    <div class="boxBody txtC pvm">
+      <p class="h5 typeEmphasize">Saved Homes</p>
+      <p class="h5 typeWeightNormal txtC mvm">Keep track of your favorite homes from one easy location.</p>
+
+      <% if (is_logged_in) { %>
+        <p class="h5 typeWeightNormal txtC">Save a home to get started.</p>
+      <% } else { %>
+        <p class="txtC mvl phl">
+          <button class="signUpButton btn btnPrimary btn-primary"><span class="phl">Sign in</span></button>
+        </p>
+      <% } %>
+
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="loadingSavedPropertiesContainerTemplate">
+  <div class="box boxHighlight backgroundBasic txtL">
+    <p class="txtC typeWeightNormal h6 txtM"><i class="iconSpinner"></i>Loading</p>
+  </div>
+</script>
+
+<script type="text/template" id="firstTimeUserContainerTemplate">
+  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundLowlight txtL">
+    <div class="boxBody backgroundBasic pan">
+      <img src="http://static.trulia-cdn.com/images/global_nav/saved_properties/one_time_howto_20130903.jpg"/>
+      <div class="pal ptm">
+        <p class="h4 txtC">
+          <span class="typeHighlight typeEmphasize">New.</span> Keep track of your favorite homes.
+        </p>
+        <div class="txtC ptm">
+          <a href="#" class="btn btnDefault">Got It</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="loggedOutSearchContainerTemplate">
+  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundBasic txtL ">
+    <div class="boxBody txtC pvm">
+      <p class="h5 typeEmphasize">Saved Searches</p>
+      <p class="h5 typeWeightNormal txtC mvm">Get notified when homes in your search criteria hit the market.</p>
+
+      <p class="txtC mvl phl">
+        <button class="signUpButton btn btnPrimary btn-primary"><span class="phl">Sign in</span></button>
+      </p>
+
+    </div>
+  </div>
+</script>
+
+      </div>
+      
+      
+            <div class="globalUserCard colExt pln" data-role="global_user_card">
+                    <div class="globalUserCardLinks mts" data-role="global_user_card_links">
+    <div class="globalUserCardLink globalUserCardSigninLink txtC mrl typeHighlight" data-action="%2Flogin" data-role="global_user_card_link global_user_card_signin_link" data-track="UpperRightUniversalLinks|LogIn_Link">
+      <i class="iconUser h5 man"></i><br>
+      <span class="h7 man pan">Sign In</span>
+    </div>
+  </div>
+              </div>
+      
+
+    </div>
+
+    <script type="text/template" id="emptyListItemTemplate">
+	<li class="pvn mvn"></li>
+</script>
+
+
+<script type="text/template" id="autoSuggestItemTemplate">
+  <li class="man pvs" data-title="<%= title %>" data-value="<%= value %>" data-location-id="<%= locationId %>" data-pid="<%= pid %>" data-property-Index="<%= propertyIndex %>" data-ac_index="<%= ac_index %>" data-location-type="<%= locationType %>">
+    <div class="line man">
+    		<div class="col cols20 pan typeTruncate">
+    			<%= display %>
+    		</div>
+    	<div class="colExt txtR typeLowlight pan"><%= suffix %></div>
+    </div>
+  </li>
+</script>
+  </div>
+</div>
+
+
+
+</header>
+
+
+
+
+<script>
+  if (typeof trulia == 'undefined')
+  {
+    trulia = {};
+  }
+
+  if (!trulia.page_name)
+  {
+    trulia.page_name = 'advanced_search';
+  }
+
+  var site_root = site_root ? site_root : '';
+  var _SITE_ROOT = _SITE_ROOT ? _SITE_ROOT : '';
+  var _IMAGE_SERVER = _IMAGE_SERVER ? _IMAGE_SERVER : '';
+  var _IMAGE_SERVER_ROOT = _IMAGE_SERVER_ROOT ? _IMAGE_SERVER_ROOT : '';
+  var _qa_remct_tkn = _qa_remct_tkn ? _qa_remct_tkn : '';
+  var _puid = _puid ? _puid : '';0;
+  var _release_version_tab = _release_version_tab ? _release_version_tab : '';
+</script>
+<script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/global_nav.js?v=GOAT40_20b"></script>
+
+    <div class="minwidth mart15">
+    <div id="home_page_error_display" class="mar0 pad0">
+    <div class="qa_error_summary">
+  <h3 class="error_title"><strong>Sorry! Your search for <span style="color:black;">""</span> returned no results.</strong></h3>
+<p class="error_content">Please refine your search in the box below.</p>
+
+</div>
+
+    </div>
+
+    <h1 class="f22">More search options</h1>
+
+<div class="module mar0 marb20 mart20 pad10 f16 bold ">
+  <div class="content">
+  <label class="marr20"><input type="radio" name="search_type" value="buy" class="marb5" onclick="ASearch.switch_form(this.value);"  checked>Buy</input></label>
+  <label class="marl20"><input type="radio" name="search_type" value="rent" class="marb5" onclick="ASearch.switch_form(this.value);" >Rent</input></label>
+  </div>
+</div>
+
+<div id="error_summary" class="as_error_summary gone tcenter">
+  <span class="f16 mar2 pad0 normal">
+    <strong>Sorry!</strong> We found a few errors. Please scroll down for details.
+  </span>
+</div>
+<div id="no_listings_found" class="as_error_summary gone" style="padding: 10px 20px; font-weight: normal;">
+  <div class="f12 bold">0 properties matched your search.</div>   
+  <div class="f15 bold padt10">Try these search tips:</div>   
+  <div class="black">     
+    <ul style="margin: 0px; padding: 0px 0px 0px 20px;">       
+      <li>Broaden your search by expanding your search criteria.</li>       
+      <li>Expand your search area to include more areas.</li>            
+    </ul>  
+  </div>   
+</div>
+<div id="no_listings_mls" class="as_error_summary gone" style="padding: 10px 20px; font-weight: normal;">
+  <div class="f12 bold">Sorry, we did not find MLS ID# <span id="mlsid"></span> in <span id="mlsloc"></span></div>   
+  <div class="f15 bold padt10">Try these search tips:</div>   
+  <div class="black">     
+    <ul style="margin: 0px; padding: 0px 0px 0px 20px;">       
+      <li><a href="" onclick="ASearch.toggle_adv_search_tabs('address_tab');return false;">Search by street address</a>.</li>
+      <li>Search by <a href="" onclick="ASearch.toggle_adv_search_tabs('city_tab');return false;">City</a>, <a href="" onclick="ASearch.toggle_adv_search_tabs('zip_tab');return false;">ZIP or Neighborhood</a> to expand your area.</li>
+      <li class=""><a href="/alerts/search/">Set up an email alert</a> to be notified when the property is listed on Trulia.</li>
+    </ul>  
+  </div>   
+</div>
+
+<input type="hidden" value="" name="as_autocomplete_value" id="as_autocomplete_value" />
+<input type="hidden" value="" name="active_tab" id="active_tab" value="city_tab" />
+
+<form onclick="doNothing(event);" method="get" onsubmit="return ASearch.validate_form('rent');" id="as_content_form_rent" name="as_content_form_rent" 
+action="/search_advanced_search_post.php" class="as_content_form gone">
+  <div class="module">
+    <div class="content as_tab_content">
+      <div id="rent_tab_content" class="clearfix gone">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+          Location
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form('rent');" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section clear" id="location_section_form_rent">
+          <div class="fleft padr20" style="width:300px;">
+            <label class="as_label" id="location_label_rent" for="location_rent">
+              City <span class="normal">OR</span> neighborhood <span class="normal">OR</span> ZIP <span class="normal">OR</span> Street address
+              <span class="as_required f14">*</span>
+            </label>
+            <div style="width:300px;">
+              <input type="text" id="location_rent" autocomplete="off" value="" class="as_input" name="location_rent" style="color: rgb(0, 0, 0);width:300px;" /><br/>
+              <div id="location_rent_form_query"></div>
+            </div>
+            <div class="clear as_required f10">* required</div>
+          </div>
+        </div>
+      </div>
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Property details
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form('rent');" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+        <div class="padt10 as_tab_section_border clearfix">
+          <div class="fleft padr50">
+            <label for="min_price_rent" class="as_label" id="price_label_rent">Monthly rent</label>
+            <span>
+              $ <input type="text" style="width:125px;" value="" class="as_input" size="12" id="min_price_rent" name="min_price" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              $ <input type="text" style="width:125px;" value="" class="as_input" size="12" id="max_price_rent" name="max_price" />  
+            </span>
+          </div>
+          <div class="fleft padr50">
+            <label for="min_beds_rent" class="as_label" id="beds_label_rent">Bedrooms</label>
+            <span>
+              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="min_beds_rent" name="min_beds" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="max_beds_rent" name="max_beds" />  
+            </span>
+          </div>
+          <div class="fleft">
+            <label for="min_baths_rent" class="as_label" id="baths_label_rent">Bathrooms</label>
+            <span>
+              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="min_baths_rent" name="min_baths" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="max_baths_rent" name="max_baths" />  
+            </span>   
+          </div>
+        </div>
+
+        <div class="padt10 as_tab_section_border clearfix" id="sizes_section_rent">
+          <div class="fleft padr50">
+            <label for="min_sqft_rent" class="as_label" id="sqft_label_rent">Square feet</label>
+            <span>
+              <input type="text" style="width:135px;" value="" class="as_input" size="12" id="min_sqft_rent" name="min_sqft" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:135px;" value="" class="as_input" size="12" id="max_sqft_rent" name="max_sqft" />  
+            </span>
+          </div>
+          <div class="fleft padr50">
+            <label for="filter_pets" class="as_label" id="pets_label_rent">Pets allowed</label>
+            <span>
+                <select id="filter_pets" name="filter_pets" onchange="">
+    <option value="">No Preference</option>
+    <option  value="cats">Cats</option>
+    <option  value="sm_dogs">Small Dogs</option>
+    <option  value="lg_dogs">Large Dogs</option>
+    <option  value="other">Other</option>
+  </select>
+
+            </span>
+          </div>
+        </div>
+
+        <div class="as_tab_section_border clearfix">
+          <div class="fleft as_label padr25" style="width:80px;">
+            Property type
+          </div>
+            <div class="fleft">
+        <span class="bold">
+      <input type="checkbox" id="pt_rent_all" name="pt_rent_all" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" checked="checked"/>
+      <label for="pt_rent_all" class="padr15" onclick>All</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_rent_1" name="pt_rent_1" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_1" class="padr15" onclick>Single-Family Home</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_rent_2" name="pt_rent_2" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_2" class="padr15" onclick>Condo</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_rent_10" name="pt_rent_10" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_10" class="padr15" onclick>Townhome</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_rent_12" name="pt_rent_12" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_12" class="padr15" onclick>Apartment</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_rent_13" name="pt_rent_13" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_13" class="padr15" onclick>Loft</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_rent_15" name="pt_rent_15" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_15" class="padr15" onclick>Apt/Condo/Twnhm</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_rent_5" name="pt_rent_5" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
+      <label for="pt_rent_5" class="padr15" onclick>Multi-Family Home</label>
+    </span><br/>
+
+  </div>
+        </div>
+
+        <div class="as_tab_section_border clearfix">
+          <div class="fleft as_label padr25" style="width:80px;">
+            Features
+          </div>
+          <label id="amenities_ac_label" for="amenities_ac" class="padr15">
+<input id="amenities_ac"  type="checkbox" class="f_checkbox" name="amenities_ac"  />Air Conditioning</label>
+<label id="amenities_wd_label" for="amenities_wd" class="padr15">
+<input id="amenities_wd"  type="checkbox" class="f_checkbox" name="amenities_wd"  />Washer/Dryer in unit</label>
+<label id="amenities_dw_label" for="amenities_dw" class="padr15">
+<input id="amenities_dw"  type="checkbox" class="f_checkbox" name="amenities_dw"  />Dishwasher</label>
+<label id="amenities_cs_label" for="amenities_cs" class="padr15">
+<input id="amenities_cs"  type="checkbox" class="f_checkbox" name="amenities_cs"  />Cable/Satellite</label>
+
+        </div>
+
+        <div class="as_tab_section_noborder clearfix" id="keyword_section_rent">
+          <div class="fleft padr20">
+            <label for="keyword_rent" class="as_label" id="keyword_label_rent">Keyword search</label>
+            <input type="text" style="width:348px;" value="" class="as_input" size="20" id="keyword_rent" 
+              onkeypress="return keyword_keypress_filter(event);" name="keyword" /><br/>
+            <span>e.g. "<a onclick='xb_get_element("keyword_rent").value = "garage";return false;'>garage</a>", 
+            "<a onclick='xb_get_element("keyword_rent").value = "pool";return false;'>pool</a>", 
+            "<a onclick='xb_get_element("keyword_rent").value = "patio";return false;'>patio</a>", etc.</span>
+          </div>
+        </div>
+    </div>
+    <div class="bottom">
+      <div style="margin: 0px auto; width: 62px;" class="button"><a  href="#" onclick="return ASearch.validate_form('rent');"  class="orange"><span>Search</span></a></div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</form>
+
+<form onclick="doNothing(event);" method="get" onsubmit="return ASearch.validate_form();" id="as_content_form_buy" name="as_content_form_buy"
+action="/search_advanced_search_post.php" class="as_content_form ">
+
+  <div class="tab_container">
+    <div class="tab selected" id="city_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('city_tab');return false;" href="" class=""> City </a>
+    </div>
+    <div class="tab" id="zip_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('zip_tab');return false;" href="" class=""> ZIP or Neighborhood </a>
+    </div>
+    <div class="tab" id="address_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('address_tab');return false;" href="" class=""> Address </a>
+    </div>
+    <div class="tab" id="county_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('county_tab');return false;" href="" class=""> County </a>
+    </div>
+    <div class="tab" id="school_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('school_tab');return false;" href="" class=""> Schools </a>
+    </div>
+    <div class="tab" id="mls_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('mls_tab');return false;" href="" class=""> MLS ID </a>
+    </div>
+    <div class="tab gone" id="sold_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('sold_tab');return false;" href="" class=""> Sold Homes </a>
+    </div>
+    <div class="tab" id="price_tab">
+      <a onclick="ASearch.toggle_adv_search_tabs('price_tab');return false;" href="" class=""> Price changes </a>
+    </div>
+  </div>
+  <div class="module with_tabs">
+    <div class="content as_tab_content">
+      <div id="city_tab_content" class="clearfix ">
+        <div class="as_title clearfix padb0">
+          <div class="clearfix fleft">
+            Search for homes by city
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+        <div class="as_tab_section clear">
+          <div class="fleft padr20" style="width: 305px;">
+            <label for="city" class="as_label" id="city_label">City</label><span class="as_required f14">*</span><br />
+            <div style="width:305px;">
+              <input type="text" id="city" autocomplete="off" value="" name="city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
+              <div id="city_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft">
+            <label for="r_city" class="as_label">Search within</label>
+            <select id="r_city" name="r_city">
+              <option value="">City boundary</option>
+              <option value="1">1 mile radius</option>
+              <option value="5">5 mile radius</option>
+              <option value="10">10 mile radius</option>
+            </select>
+          </div>
+          <div class="fleft mart20 marl10">
+            <a  onclick="show_generic_popup(ASTips.area[0], ASTips.area[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+          <div class="clear as_required f10">* required</div>
+        </div>
+
+      </div>
+
+      <div id="zip_tab_content" class="clearfix gone">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Search for homes by ZIP or Neighborhood
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section clear" id="zip_section_form">
+          <div class="fleft padr20" style="width:60px;">
+            <label for="zip" class="as_label" id="zip_label">ZIP</label>
+            <div style="width:60px;">
+              <input type="text" id="zip" autocomplete="off" value="" name="zip" style="color: rgb(0, 0, 0);width:60px;" /><br/>
+              <div id="zip_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft padr25 padl5 padt20 f12">
+            OR
+          </div>
+          <div class="fleft padr20" style="width:280px;">
+            <label for="nh" class="as_label" id="nh_label">Neighborhood</label>
+            <div style="width: 280px;">
+              <input type="text" id="nh" autocomplete="off" value="" name="nh" style="color: rgb(0, 0, 0);width:280px;" /><br/>
+              <div id="nh_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft padr20">
+            <label for="r_zip" class="as_label">Search within</label>
+            <select id="r_zip" name="r_zip">
+              <option value="">ZIP or Neighborhood boundary</option>
+              <option value="1">1 mile radius</option>
+              <option value="5">5 mile radius</option>
+              <option value="10">10 mile radius</option>
+            </select>
+          </div>
+          <div class="fleft mart20 marl10">
+            <a  onclick="show_generic_popup(ASTips.area2[0], ASTips.area2[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="address_tab_content" class="clearfix padb20 gone ">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Search for an address
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section clear padb20">
+          <div class="fleft padr20">
+            <label for="address_street_number" class="as_label" id="address_street_number_label">Street number</label><span class="as_required f14">*</span><br />
+            <input type="text" style="width:85px;" value="" size="12" id="address_street_number" name="address_street_number"/>
+          </div>
+          <div class="fleft">
+            <label for="address_street" class="as_label" id="address_street_label">Street address</label><span class="as_required f14">*</span><br />
+            <input type="text" style="width:415px;" value="" size="12" id="address_street" name="address_street"/>
+          </div>
+          <div class="clear padt10 padr20" style="width:415px;">
+            <label for="address_city" class="as_label" id="address_city_label">City</label><span class="as_required f14">*</span><br />
+            <div style="width:415px;">
+              <input type="text" id="address_city" autocomplete="off" value="" name="address_city" style="color: rgb(0, 0, 0);width:415px;" /><br/>
+              <div id="address_city_form_query"></div>
+            </div>
+          </div>
+          <div class="as_required f10">* required</div>
+        </div>
+      </div>
+
+      <div id="mls_tab_content" class="clearfix padb20 gone ">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Search for a listing by MLS ID
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div><br/>
+        <div class="as_tab_section clear padb20">
+          <div class="fleft padr20">
+            <label for="mls" class="as_label" id="mls_label">MLS ID</label><span class="as_required f14">*</span><br />
+            <input type="text" style="width:226px;" value="" size="12" id="mls" name="mls" />
+          </div>
+          <div class="fleft padr20" style="width:330px;">
+            <label for="mls_city" class="as_label" id="mls_city_label">City</label><span class="as_required f14">*</span><br />
+            <div style="width:330px;">
+              <input type="text" id="mls_city" autocomplete="off" value="" name="mls_city" style="color: rgb(0, 0, 0);width:330px;" /><br/>
+              <div id="mls_city_form_query"></div>
+            </div>
+          </div>
+          <div class="clear as_required f10">* required</div>
+        </div>
+      </div>
+
+      <div id="county_tab_content" class="clearfix gone ">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Search for homes by county
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section clear">
+          <div class="fleft padr20" style="width:182px;">
+            <label for="county" class="as_label" id="county_label">County</label><span class="as_required f14">*</span><br />
+            <div style="width:182px;">
+              <input type="text" id="county" autocomplete="off" value="" name="county" style="color: rgb(0, 0, 0);width:182px;" /><br/>
+              <div id="county_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft">
+            <label for="r_county" class="as_label">Search within</label>
+            <select id="r_county" name="r_county">
+              <option value="">County boundary</option>
+              <option value="1">1 mile radius</option>
+              <option value="5">5 mile radius</option>
+              <option value="10">10 mile radius</option>
+            </select>
+          </div>
+  <!--        <div class="fleft mart20 marl10">-->
+  <!--          <a  onclick="show_generic_popup(ASTips.area3[0], ASTips.area3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>-->
+  <!--        </div>-->
+          <div class="clear as_required f10">* required</div>
+        </div>
+      </div>
+
+      <div id="school_tab_content" class="clearfix padb20 gone ">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Search for homes near a school location
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section clear padb20">
+          <div class="fleft padr20" style="width:415px;">
+            <label for="school" class="as_label" id="school_label">School Name or City, State</label><span class="as_required f14">*</span><br />
+            <div style="width:415px;">
+              <input type="text" style="width:415px;" value="" size="12" id="school" name="school"/><br/>
+              <div id="school_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft">
+            <label for="r_school" class="as_label">Search within</label>
+            <select id="r_school" name="r_school">
+              <option value="1">1 mile radius</option>
+              <option value="5">5 mile radius</option>
+              <option value="10">10 mile radius</option>
+            </select>
+          </div>
+          <div class="fleft mart20 marl10">
+            <a  onclick="show_generic_popup(ASTips.area3[0], ASTips.area3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+          <div class="clear as_required f10">* required</div>
+        </div>
+      </div>
+    
+      <div id="sold_tab_content" class="clearfix gone">
+        <div class="as_title clearfix padb0">
+          <div class="clearfix fleft">
+            Search for Sold homes
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+        <div class="as_tab_section clear">
+          <div class="fleft padr20" style="width:305px;">
+            <label for="sold_city" class="as_label" id="sold_label">City, ZIP or Neighborhood</label><span class="as_required f14">*</span><br />
+            <div style="width:305px;">
+              <input type="text" id="sold_city" autocomplete="off" value="" name="sold_city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
+              <div id="sold_city_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft">
+            <label for="date_sold_city" class="as_label">Search within</label>
+            <select id="date_sold_city" name="date_sold_city">
+              <option value="3">Last 3 months</option>
+              <option value="6">Last 6 months</option>
+              <option value="9" selected="selected" >Last 9 months</option>
+              <option value="12">Last 1 year</option>
+              <option value="24">Last 2 years</option>
+              <option value="36">Last 3 years</option>
+              <option value="60">Last 5 years</option>
+              <option value="120">Last 10 years</option>
+            </select>
+          </div>
+          <div class="fleft mart20 marl10">
+            <a  onclick="show_generic_popup(ASTips.area4[0], ASTips.area4[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+          <div class="clear as_required f10">* required</div>
+        </div>
+      </div>
+
+      <div id="price_tab_content" class="clearfix gone">
+        <div class="as_title clearfix padb0">
+          <div class="clearfix fleft">
+            Search for Price Changes
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+        <div class="as_tab_section clear">
+          <div class="fleft padr20" style="width:305px;">
+            <label for="price_city" class="as_label" id="price_city_label">City, ZIP or Neighborhood</label><span class="as_required f14">*</span><br />
+            <div style="width:305px;">
+              <input type="text" id="price_city" autocomplete="off" value="" name="price_city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
+              <div id="price_city_form_query"></div>
+            </div>
+          </div>
+          <div class="fleft padt2">
+            <label for="reduced_period" class="as_label">Price Reduced</label>
+            <select id="reduced_period" name="reduced_period" style="width:180px;">
+              <option value="365" selected="selected">In the past year</option>
+              <option value="7">In the past 7 days</option>
+              <option value="14">In the past 2 weeks</option>
+              <option value="30">In the past month</option>
+              <option value="60">In the past 2 months</option>
+              <option value="90">In the past 3 months</option>
+              <option value="120">In the past 4 months</option>
+            </select>
+          </div>
+          <div class="fleft padr15 padl15 padt20 mart2 f12">
+            by
+          </div>
+          <div class="fleft padt2">
+            <label for="reduced_percent" class="as_label">Percentage</label>
+            <select id="reduced_percent" name="reduced_percent" onchange="ASearch.toggle_custom_price_change();">
+              <option value="p" selected="selected">Any amount</option>
+              <option value="0-10">Up to 10%</option>
+              <option value="0-20">Up to 20%</option>
+              <option value="20p">20% or more</option>
+            </select>
+          </div>
+          <div class="clear as_required f10 padb10">* required</div>
+        </div>
+      </div>
+
+      <!-- START COMMON PROPERTY PARTS -->
+      <div id="common_filters" class="">
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+            Property details
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+        <div class="padt10 as_tab_section_border clearfix">
+          <div class="fleft padr50">
+            <label for="min_price" class="as_label" id="price_label">Price</label>
+            <span>
+              $ <input type="text" style="width:125px;" value="" size="12" id="min_price" name="min_price" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              $ <input type="text" style="width:125px;" value="" size="12" id="max_price" name="max_price" />  
+            </span>
+          </div>
+          <div class="fleft padr50">
+            <label for="min_beds" class="as_label" id="beds_label">Bedrooms</label>
+            <span>
+              <input type="text" style="width:93px;" value="" size="12" id="min_beds" name="min_beds" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" size="12" id="max_beds" name="max_beds" />  
+            </span>
+          </div>
+          <div class="fleft">
+            <label for="min_baths" class="as_label" id="baths_label">Bathrooms</label>
+            <span>
+              <input type="text" style="width:93px;" value="" size="12" id="min_baths" name="min_baths" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" size="12" id="max_baths" name="max_baths" />  
+            </span>   
+          </div>
+        </div>
+        <div class="as_tab_section_border clearfix">
+          <div class="fleft as_label padr25">
+              Property type
+          </div>
+            <div class="fleft">
+        <span class="bold">
+      <input type="checkbox" id="pt_all" name="pt_all" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" checked="checked"/>
+      <label for="pt_all" class="padr15" onclick>All</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_1" name="pt_1" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_1" class="padr15" onclick>Single-Family Home</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_2" name="pt_2" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_2" class="padr15" onclick>Condo</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_10" name="pt_10" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_10" class="padr15" onclick>Townhome</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_11" name="pt_11" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_11" class="padr15" onclick>Coop</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_12" name="pt_12" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_12" class="padr15" onclick>Apartment</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_13" name="pt_13" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_13" class="padr15" onclick>Loft</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_14" name="pt_14" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_14" class="padr15" onclick>TIC</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_15" name="pt_15" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_15" class="padr15" onclick>Apt/Condo/Twnhm</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_3" name="pt_3" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_3" class="padr15" onclick>Mobile/Manufactured</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_4" name="pt_4" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_4" class="padr15" onclick>Farm/Ranch</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_6" name="pt_6" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_6" class="padr15" onclick>Lot/Land</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_5" name="pt_5" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_5" class="padr15" onclick>Multi-Family Home</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_7" name="pt_7" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_7" class="padr15" onclick>Income/Investment</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_8" name="pt_8" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_8" class="padr15" onclick>Houseboat</label>
+    </span><br/>
+
+  </div>  <div class="fleft">
+        <span class="">
+      <input type="checkbox" id="pt_TYPE_NEW_COMMUNITY" name="pt_TYPE_NEW_COMMUNITY" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_TYPE_NEW_COMMUNITY" class="padr15" onclick>New Community</label>
+    </span><br/>
+    <span class="">
+      <input type="checkbox" id="pt_TYPE_APARTMENT_COMMUNITY" name="pt_TYPE_APARTMENT_COMMUNITY" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
+      <label for="pt_TYPE_APARTMENT_COMMUNITY" class="padr15" onclick>Apartment</label>
+    </span><br/>
+
+  </div>
+        </div>
+
+        <div class="padt10 as_tab_section_border clearfix" id="sizes_section">
+          <div class="fleft padr50">
+            <label for="min_sqft" class="as_label" id="sqft_label">Structure size (square feet)</label>
+            <span>
+              <input type="text" style="width:135px;" value="" size="12" id="min_sqft" name="min_sqft" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:135px;" value="" size="12" id="max_sqft" name="max_sqft" />  
+            </span>
+          </div>
+          <div class="fleft padr50">
+            <label for="min_lotsize" class="as_label" id="lotsize_label">Lot size (acres)</label>
+            <span>
+              <input type="text" style="width:93px;" value="" size="12" id="min_lotsize" name="min_lotsize" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" size="12" id="max_lotsize" name="max_lotsize" />  
+            </span>
+          </div>
+          <div class="fleft">
+            <label for="min_built" class="as_label" id="built_label">Year built</label>
+            <span>
+              <input type="text" style="width:93px;" value="" size="12" id="min_built" name="min_built" />
+              <span class="padr5 padl5 padt20 f12">
+              to
+              </span>
+              <input type="text" style="width:93px;" value="" size="12" id="max_built" name="max_built" />  
+            </span>
+          </div>
+        </div>
+
+        <div class="as_tab_section_noborder clearfix" id="keyword_section">
+          <div class="fleft padr20">
+            <label for="keyword" class="as_label" id="keyword_label">Keyword search</label>
+            <input type="text" style="width:348px;" value="" size="20" id="keyword" onkeypress="return keyword_keypress_filter(event);" name="keyword" /><br/>
+            <span>e.g. "<a onclick='xb_get_element("keyword").value = "garage";return false;'>garage</a>", "<a onclick='xb_get_element("keyword").value = "pool";return false;'>pool</a>", "<a onclick='xb_get_element("keyword").value = "patio";return false;'>patio</a>", etc.</span>
+          </div>
+        </div>
+      
+        <div class="as_title clearfix" id="listing_type_header">
+          <div class="clearfix fleft">
+          Listing type
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+      
+        <div class="as_tab_section_border_sml clearfix" id="for_sale_section">
+          <div class="fleft as_label" style="width:120px" id="listings">
+            For sale listings
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="lt_all" checked="checked" class="mar0" name="lt_all" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');" />
+            <label for="lt_all" class="as_label padr20" style="display:inline;">All</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="lt_resale" class="mar0" name="lt_resale" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');" />
+            <label for="lt_Resale" class="padr20">Resale (existing homes)</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="lt_new_construction" class="mar0" name="lt_new_construction" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');"/>
+            <label for="lt_new_construction" class="padr20">New construction</label>
+          </div>
+          <div class="fleft mart4 marl10">
+            <a  onclick="show_generic_popup(ASTips.lt1[0], ASTips.lt1[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+        </div>
+
+        <div class="clear as_tab_section_border_sml clearfix" id="foreclosure_section">
+          <div class="fleft as_label" style="width:120px" id="foreclosures">
+            Foreclosures
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="ft_all" class="mar0" name="ft_all" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');" />
+            <label for="ft_all" class="as_label padr20" style="display:inline;">All</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="ft_1" class="mar0" name="ft_1" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
+            <label for="ft_1" class="padr20">Notice of default</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="ft_2" class="mar0" name="ft_2" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
+            <label for="ft_2" class="padr20">Auction</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" id="ft_3" class="mar0" name="ft_3" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
+            <label for="ft_3" class="padr20">Bank owned</label>
+          </div>
+          <div class="fleft mart4 marl8">
+            <a  onclick="show_generic_popup(ASTips.lt2[0], ASTips.lt2[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+        </div>
+
+        <div class="clear as_tab_section_noborder clearfix" id="sold_section">
+          <div class="fleft as_label" style="width:120px" id="sold_listings_label">
+            Recently sold
+          </div>
+          <div class="fleft">
+            <input type="checkbox" name="sold" id="sold" value="9" class="mar0" />
+            <label for="sold" class="padr20">All homes sold in the <span class="bold">past 9 months</span></label>
+          </div>
+
+          <div class="fleft mart4 marl10">
+            <a  onclick="show_generic_popup(ASTips.lt3[0], ASTips.lt3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
+          </div>
+        </div>
+
+        <div class="as_title clearfix">
+          <div class="clearfix fleft">
+          Results display
+          </div>
+          <div class="fright">
+            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
+          </div>
+        </div>
+
+        <div class="as_tab_section_border_sml clearfix" id="new_listings_section">
+          <div class="fleft as_label" style="width:120px;">
+            New listings
+          </div>
+          <div class="fleft">
+            <input type="checkbox" name="nl" id="nl" value="7" class="mar0" />
+            <label for="nl" class="padr20">Show only new listings in the <span class="bold">past 7 days</span></label>
+          </div>
+        </div>
+
+        <div class="as_tab_section_border_sml clearfix" id="open_houses_section">
+          <div class="fleft as_label" style="width:120px;">
+            Open Houses
+          </div>
+          <div class="fleft">
+            <input type="checkbox" name="oh_p" id="oh_p" class="mar0" onclick="if(this.checked){ xb_get_element('oh_w').checked = false;xb_get_element('oh_t').checked = false;}" />
+            <label for="oh_p" class="padr20">Show all Open Houses</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" name="oh_w" id="oh_w" class="mar0" onclick="if(this.checked){ xb_get_element('oh_p').checked = false;}" />
+            <label for="oh_w" class="padr20">Show only Open Houses this weekend</label>
+          </div>
+          <div class="fleft">
+            <input type="checkbox" name="oh_t" id="oh_t" class="mar0" onclick="if(this.checked){ xb_get_element('oh_p').checked = false;}" />
+            <label for="oh_t" class="padr20">Show only today's Open Houses</label>
+          </div>
+        </div>
+
+        <div class="as_tab_section_noborder clearfix">
+          <div class="fleft as_label" style="width:120px;">
+            Sort results by
+          </div>
+          <div class="fleft">
+            <span class="padt5">
+              <input type="radio" id="default" name="sort" class="mar0" value="default" checked="checked" />
+              <label for="default" class="padr25">Best Match</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="date_d" value="date;d" name="sort" class="mar0" />
+              <label for="date_d" class="padr25">Newest</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="price_d" value="price;d" name="sort" class="mar0" />
+              <label for="price_d" class="padr25">Price (high to low)</label>
+            </span><br/>
+            <span class="padt5">
+              <input type="radio" id="price" value="price;a" name="sort" class="mar0" />
+              <label for="price" class="padr25">Price (low to high)</label>
+            </span><br/>
+          </div>  
+          <div class="fleft">
+            <span class="padt5">
+              <input type="radio" id="bed_d" value="beds;d" name="sort" class="mar0" />
+              <label for="bed_d" class="padr25">Bedrooms (high to low)</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="baths_d" value="baths;d" name="sort" class="mar0" />
+              <label for="baths_d" class="padr25">Baths (high to low)</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="type" value="type;a" name="sort" class="mar0" />
+              <label for="type" class="padr25">Property type (A-Z)</label>
+            </span><br/>
+            <span class="padt5">
+              <input type="radio" id="address" value="address;a" name="sort" class="mar0" />
+              <label for="address" class="padr25">Address (A-Z)</label>
+            </span><br/>
+          </div>  
+          <div class="fleft">
+            <span class="padt5">
+              <input type="radio" id="sqft_d" value="sqft;d" name="sort" class="mar0" />
+              <label for="sqft_d" class="padr25">Square Feet (high to low)</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="ppsqft_d" value="ppsqft;d" name="sort" class="mar0" />
+              <label for="ppsqft_d" class="padr25">Price/sqft (high to low)</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="ppsqft" value="ppsqft;a" name="sort" class="mar0" />
+              <label for="ppsqft" class="padr25">Price/sqft (low to high)</label>
+            </span><br/>
+            <span class="padt5">
+              <input type="radio" id="reducedamt_d" value="reducedamt;d" name="sort" class="mar0" />
+              <label for="reducedamt_d" class="padr25">Price Reduced $ (high to low)</label>
+            </span><br/>
+          </div>  
+          <div class="fleft">
+            <span class="padt5">
+              <input type="radio" id="reduceddt_d" value="reduceddt;d" name="sort" class="mar0" />
+              <label for="reduceddt_d" class="padr25">Price Reduced Date</label>
+            </span><br/>    
+            <span class="padt5">
+              <input type="radio" id="reducedpct_d" value="reducedpct;d" name="sort" class="mar0" />
+              <label for="reducedpct_d" class="padr25">Price Reduced % (high to low)</label>
+            </span><br/>    
+          </div>  
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div style="margin: 0px auto; width: 62px;" class="button"><a href="#" onclick="return ASearch.validate_form();"  class="orange"><span>Search</span></a></div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</form>
+
+    <table border="0" cellspacing="0" cellpadding="0" class="hidden popup_table " id="generic_confirmation_popup" onclick="doNothing(event);">
+  <tr>
+    <td class="popup_shadow popup_top_left">
+      <div class="popup_background">
+        <div class="new_popup_header clearfix ">
+          <div class="fleft" id="generic_confirmation_popup_popup_header" style="float: left;">Tip</div>
+          <a  href="" id="generic_confirmation_popup_popup_closer" onclick="toggle_menu(event, 'generic_confirmation_popup', 0); return false;" 
+            class="popup_closer "></a>
+        </div>
+        <div style="clear: both; display: block; height: 0; visibility: hidden;"></div>
+        <div class="popup_content clearfix" >
+          <div id="generic_confirmation_popup_content">
+</div>
+<div style="margin: 10px auto;width: 60px;">
+  <div class="button done_button">
+    <a href="" class="orange" style=""  onclick="toggle_menu(event, 'generic_confirmation_popup', 0); return false;" >
+      <span id="generic_confirmation_popup_button_title">DONE</span>
+    </a>
+    <input type="submit" class="transparent_btn" />
+  </div>
+</div>
+
+        </div>
+        
+      </div>
+    </td>
+    <td class="popup_shadow popup_top_right">&nbsp;</td>
+  </tr>
+  
+  <tr>
+    <td class="popup_shadow popup_bottom_left">&nbsp;</td>
+    <td class="popup_shadow popup_bottom_right">&nbsp;</td>
+  </tr>
+</table>
+
+
+      <div id="footer" class="mart40 clear">
+
+    <div id="footerlinks" class="clear ">
+      
+            <h2>Residential Real Estate</h2>
+      <p class="mar0 mart5">
+        <a href="/CA/San_Francisco/">San&nbsp;Francisco&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/NY/New_York/">New&nbsp;York&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/CA/Los_Angeles/">Los&nbsp;Angeles&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/FL/Orlando/">Orlando&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/FL/Miami/">Miami&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/PA/Philadelphia/">Philadelphia&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/AZ/Phoenix/">Phoenix&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/CA/San_Diego/">San&nbsp;Diego&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/CA/San_Jose/">San&nbsp;Jose&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/IL/Chicago/">Chicago&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Arizona-real-estate/">Arizona&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/California-real-estate/">California&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Florida-real-estate/">Florida&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Illinois-real-estate/">Illinois&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Massachusetts-real-estate/">Massachusetts&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/New_Jersey-real-estate/">New&nbsp;Jersey&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Pennsylvania-real-estate/">Pennsylvania&nbsp;real&nbsp;estate</a>
+          &nbsp;|&nbsp;
+        <a href="/sitemap/Texas-real-estate/">Texas&nbsp;real&nbsp;estate</a>
+         &nbsp;|&nbsp;
+        <a href="/sitemap/">Other&nbsp;local&nbsp;real&nbsp;estate</a>
+         &nbsp;|&nbsp;
+        <a href="/rent-sitemap/California-apartments/">California&nbsp;apartments</a>
+          &nbsp;|&nbsp;
+        <a href="/rent-sitemap/New-York-apartments/">New&nbsp;York&nbsp;apartments</a>
+         &nbsp;|&nbsp;
+        <a href="/rent-sitemap/Texas-apartments/">Texas&nbsp;apartments</a>
+         &nbsp;|&nbsp;
+        <a href="/rent-sitemap/">Apartments&nbsp;for&nbsp;rent</a>
+         &nbsp;|&nbsp;
+        <a href="/home_prices/">Home&nbsp;price&nbsp;maps</a>
+         &nbsp;|&nbsp;
+        <a href="/voices/sitemap/">Real&nbsp;estate&nbsp;community</a>
+         &nbsp;|&nbsp;
+        <a href="/property-sitemap/">U.S. Property records</a>
+         &nbsp;|&nbsp;
+        <a href="/mortgage-sitemap/">Mortgage site map</a>
+      </p>
+
+    </div>
+
+    <div id="footer_main" class="clearfix padb20 padt15 padl25">
+      <div id="ftr2">
+        <h2>Explore Trulia</h2>
+        <ul>
+          <li><a class="hfsale" href="/">Homes for Sale</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/rent/" >Homes for Rent</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/city/">Stats &amp; Trends</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/voices/">Real Estate Advice</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/mobile/">Real Estate Apps</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/explore/" rel="nofollow">Trulia Labs</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://developer.trulia.com/" rel="nofollow">Trulia API</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/trulia_estimates/">Trulia Estimates</a></li>
+        </ul>
+      </div>
+
+      <div id="ftr4">
+      <h2>For Professionals</h2>
+        <ul>
+          <li><a href="/agents/" >Agents</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/advertisers/brokers/" >Brokers</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/mls/" >MLS</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/advertisers/" >Partners</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/tools/" >Tools &amp; Extras</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a class="submit_listings" href="/submit_listings/">Submit Your Listings</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/truliapro/" >Real Estate Leads</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/sitemap/agent">Agent Site Map</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://activerain.com" target="_blank">ActiveRain</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/sitemap/directory">Directory Site Map</a></li>
+        </ul>
+      </div>
+
+      <div id="ftr1">
+        <h2>Corporate</h2>
+        <ul>
+          <li><a href="/about/" target="_self">About Trulia</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://info.trulia.com/" rel="nofollow">News Room</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://www.trulia.com/jobs/" rel="nofollow">Careers</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://ir.trulia.com/" rel="nofollow">Investor Relations</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/privacy/" rel="nofollow" target="_self">Privacy</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/terms/" rel="nofollow" target="_self">Terms of Use</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/ad/terms/" rel="nofollow" target="_self">Subscription Terms</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/guidelines/" rel="nofollow" target="_self">Community Guidelines</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="/terms/advertisers" rel="nofollow" target="_self">Advertising Terms</a><span>&nbsp; | &nbsp;</span></li>
+          <li><a href="http://preferences-mgr.truste.com/?type=trulia&pid=trulia01&aid=trulia01" target="_blank">Ad Choices</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer_desc_links" class="">
+    
+  </div>
+
+  <div class="clear padb20 padt5 f11">
+    <div class="fleft">
+      Copyright &copy; 2014
+      Trulia, Inc. All rights reserved. &nbsp; | &nbsp;
+      <a href="http://www.hud.gov/offices/fheo/index.cfm" target="_blank" rel="nofollow" class="blackcolortxtlink imgsheet" id="fheo_logo">Fair Housing and Equal Opportunity</a>
+    </div>
+    <div class="fright quote_icon imgsheet">Have a question? Visit our <a href="/help/" >Help Center</a> to find the answer</div>
+  </div>
+
+  <div><br/></div>
+
+  
+  <!-- Begin comScore Tag -->
+<script>
+  document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+function runBeacon()
+{
+  try {
+    var tempurl = window.location.href;
+    var regex = new RegExp("((http|https)://)([a-zA-Z0-9]+\.)(.*)");
+    var comurl = tempurl.match(regex);
+    var beacon_url = comurl[3]+comurl[4];
+
+    try {
+      var id = getCookie('tlftmusr');
+    } catch (e) {
+      var id = '';
+    }
+
+    COMSCORE.beacon({
+      c1:2,
+      c2:6036483,
+      c3:"",
+      c4:beacon_url,
+      c5:"",
+      c6:"",
+      c15:id
+    });
+  } catch (e) {}
+};
+runBeacon();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036483&c3=&c4=&c5=&c6=&c15=&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+
+  <script src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/library/3rd_party/jquery-ui/jquery-ui-1.8.10.min.js"></script>
+
+    <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{ (i[r].q=i[r].q||[]).push(arguments)}
+,i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-47944506-1', 'trulia.com');
+ga('send', 'pageview');
+
+trulia.PixelTracking.firePixel(trulia.PixelTracking.TYPE_GLOBAL_REMARKETING);
+trulia.PixelTracking.firePixel(trulia.PixelTracking.TYPE_UNIQUE_CONVERSION);
+
+
+  <!--[if !IE]> Script below Copyright 1997-2004 Omniture, Inc. <![endif]-->
+  s.channel = unescape('trulia');
+  s.events = unescape('event5');
+  s.prop11 = unescape('');
+  s.prop12 = unescape('Adv%20Search%20Re-Fail');
+  s.pageName = unescape('A_Srch');
+  s.prop58 = unescape('A_Srch');
+  s.eVar58 = unescape('A_Srch');
+  s.eVar15 = unescape('312');
+  s.eVar19 = unescape('cbs000');
+  s.eVar6 = unescape('2014.45');
+  s.eVar18 = unescape('45eb60e007f6225b87fe48b79e725e76');
+  s.eVar5 = unescape('14110745eb60e007f6225b87fe48b79e725e76');
+  s.prop38 = unescape('A_Srch%7CUnregistered');
+  s.eVar25 = unescape('20141107');
+  s.eVar39 = unescape('NULL');
+  s.eVar40 = unescape('NULL');
+  s.eVar41 = unescape('NULL');
+  s_campaign = unescape('');
+
+if(typeof s !== "undefined" && typeof s === "object"){ 
+s.prop75="399:7827";
+s.eVar73=s.prop75;
+}
+
+s_campaign = typeof s_campaign === 'undefined' ? '' : s_campaign;
+
+if (typeof s.doPlugins == 'function')
+{
+  s.doPlugins(s, s_campaign);
+}
+
+if (typeof s.t == 'function')
+{
+  var s_code = s.t();
+  if (s_code)
+  {
+    document.write(s_code);
+  }
+}
+
+
+
+
+  var utag_data = {"page_type":null,"page_name":"A_Srch","campaign":"","site_section":"trulia","server_code":"312","session_id":"45eb60e007f6225b87fe48b79e725e76","cobrand_site":"cbs000","date_first_visit":"20141107","page_reg_status":"A_Srch|Unregistered","user_id":"14110745eb60e007f6225b87fe48b79e725e76","user_type":"NULL","user_sub_type":"NULL"};
+
+</script>
+
+  
+
+<script type="text/javascript" src="//tags.tiqcdn.com/utag/trulia/main/prod/utag.js" async></script>
+
+  
+<!-- // --><script language='javascript' type='text/javascript'>
+<!--
+	req_1_1415426557=new Image();
+req_1_1415426557.src='/__ssobj/ard.png?6079210772255642112_1-1-'+(10160*139313+6477)+'&n=1';
+//-->
+<!-- // --></script>
+</body>
+</html>
+
+<!-- T:32ms H:312 S:89487 -->

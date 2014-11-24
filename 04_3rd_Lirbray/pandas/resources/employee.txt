@@ -1,0 +1,4 @@
+id	name	height	age	enroll_date
+1	bob	1.73	25	1/1/2014
+2	dan	1.82	43	3/7/2014
+3	jane	1.64	31	2/13/2014

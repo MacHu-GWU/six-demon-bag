@@ -1,0 +1,22 @@
+windows下python开发
+
+给windows cmd添加python命令关键字：
+	在windows中的环境变量中，添加python.exe所在的文件夹路径。
+
+	windows cmd命令工作原理：
+		默认安装python27之后，C:\Python27 文件夹下会有一个可执行文件python.exe。 当已经设置了环境变量之后，在命令行中输入命令python，windows就会在环境变量中的所有路径中寻找可执行文件。所以python.exe就会被找到。
+
+
+同时兼容python2和python3的方法：
+	在C:\python34 文件夹中修改python.exe文件名为python3.exe。然后重新安装pip一类的script文件，这样才能保证这些第三方脚本包能在修改python可执行文件名之后能顺利找到正确的python主程序进行工作。
+	这样在命令行中输入python name.py就是用python27运行，python3 name.py就是用python34运行了。
+
+
+从windows cmd运行python脚本的方法：
+	cd 到 name.py 所在目录，输入命令 >>> python name.py
+	等效于在idle中运行该脚本
+
+
+输出脚本中的打印output流到文件：
+	>>> python name.py > output.txt
+	即是把 name.py 中所有print出来的内容输出到output.txt

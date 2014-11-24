@@ -1,0 +1,15 @@
+Ref = http://python.cx.hu/python-cjson/
+
+To compile C extension modules for Python 2.4 or 2.5 with free tools you can use Giovanni Bajo's GCC 4.1.2 MINGW installer (I haven't tried it) or an older method using the official MinGW installer (this worked for me): 
+
+For Python 2.4 and 2.5 on Windows:
+
+1. Install MinGW from http://sourceforge.net/projects/mingw/
+2. Add C:\MinGW\bin to the system PATH (use the System applet from the Control panel)
+3. Build your extension with --compiler=mingw32 argument:
+python setup.py build --compiler=mingw32
+or put a distutils.cfg file under C:\python\lib\distutils dir (or where you installed python) containing the following entries:
+[build]
+compiler = mingw32
+After that you can install extension modules as usual (without the --compiler flag):
+python setup.py install

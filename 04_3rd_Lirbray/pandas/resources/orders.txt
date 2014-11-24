@@ -1,0 +1,2 @@
+id,product,quantity,price,date
+324998101,mac_airbook,1,1344$,2014-01-08

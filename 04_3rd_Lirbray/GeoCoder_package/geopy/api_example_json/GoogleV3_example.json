@@ -1,0 +1,94 @@
+{
+    "address_components": [
+        {
+            "long_name": "1411",
+            "short_name": "1411",
+            "types": [
+                "street_number"
+            ]
+        },
+        {
+            "long_name": "East-West Highway",
+            "short_name": "East-West Hwy",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "long_name": "Downtown Silver Spring",
+            "short_name": "Downtown Silver Spring",
+            "types": [
+                "neighborhood",
+                "political"
+            ]
+        },
+        {
+            "long_name": "Silver Spring",
+            "short_name": "Silver Spring",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "long_name": "13",
+            "short_name": "13",
+            "types": [
+                "administrative_area_level_3",
+                "political"
+            ]
+        },
+        {
+            "long_name": "Montgomery County",
+            "short_name": "Montgomery County",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "long_name": "Maryland",
+            "short_name": "MD",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "long_name": "United States",
+            "short_name": "US",
+            "types": [
+                "country",
+                "political"
+            ]
+        },
+        {
+            "long_name": "20910",
+            "short_name": "20910",
+            "types": [
+                "postal_code"
+            ]
+        }
+    ],
+    "formatted_address": "1411 East-West Highway, Silver Spring, MD 20910, USA",
+    "geometry": {
+        "location": {
+            "lat": 38.9947253,
+            "lng": -77.033046
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+            "northeast": {
+                "lat": 38.9960742802915,
+                "lng": -77.03169701970849
+            },
+            "southwest": {
+                "lat": 38.9933763197085,
+                "lng": -77.03439498029151
+            }
+        }
+    },
+    "types": [
+        "street_address"
+    ]
+}
