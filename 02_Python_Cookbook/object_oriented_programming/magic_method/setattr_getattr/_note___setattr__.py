@@ -55,4 +55,7 @@ def example2():
     print(t.data)
     print(t.data["node1"])
     
+    t.data = 100 # 如果属性和本身内置属性冲突，会发生什么？
+    print(t.data) # 并不会覆盖掉原本存在的属性，而会正确的被赋值到字典中
+    
 example2()

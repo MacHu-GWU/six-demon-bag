@@ -46,6 +46,8 @@ def example1():
 # example1()
 
 def example2():
+    """compare list comprehension and dict.fromkey() their performance
+    """
     n = 1000000
     
     a, b = list(), list()
@@ -69,3 +71,55 @@ def example3():
     print(data)
     
 # example3()
+
+def example4():
+    """delete operation
+    """
+    d = {1: {"a": 1},
+         2: {"b": 2}}
+    del d[1]
+    print(d)
+
+    d = {1: {"a": 1},
+         2: {"b": 2}}
+    del d[1]["a"]
+    print(d)
+
+    a = {"a": 1}
+    d = {1: a, 2: a}
+    del d[1]
+    print(d)
+
+    a = {"a": 1}
+    d = {1: a, 2: a}
+    del a["a"]
+    print(d)
+    
+    """interesting usage"""
+    print("{:=^100}".format("interesting usage"))
+    def locate_dict_by_reversed_path(dictionary, reversed_path):
+        """locate a node by reversed_path
+        Private method used in get_father method. You should never call this method explicitly
+        """
+        if len(reversed_path)>=1:
+            key = reversed_path.pop()
+            return locate_dict_by_reversed_path(dictionary[key], reversed_path)
+        else:
+            return dictionary
+    
+    def locate_dict_by_path(dictionary, path):
+        reversed_path = path[::-1]
+        return locate_dict_by_reversed_path(dictionary, reversed_path)
+    
+    d = {1: {"a": 3},
+         2: {"b": 4}}
+    
+    path = [1, "a"]
+    father_path = list(path)
+    last_key = father_path.pop()
+    father_path = father_path[::-1]
+    
+    del locate_dict_by_path(d, father_path)[last_key]
+    print(d)
+    
+example4()

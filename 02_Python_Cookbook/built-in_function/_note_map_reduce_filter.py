@@ -21,7 +21,16 @@ def example1():
     l = [1,2,3,4,5]
     print(map(add1, l))
     
-example1()
+# example1()
+
+def example11():
+    def add2value(value1, value2):
+        return value1 + value2
+    l = [(1,2), (3,4)]
+    
+    print(map(add2value, *l))
+    
+example11()
 
 def example2():
     """在python2中reduce是built-in
@@ -30,7 +39,7 @@ def example2():
     a = [1,2,3,4,5]
     print(reduce(lambda x, y : x + y, a, 3) )
 
-example2()
+# example2()
 
 def example3():
     """filter是通过一个能返回boolean值的函数，对iterable中的元素进行筛选。如果函数
@@ -56,4 +65,4 @@ def example3():
     l = [-1, 2, -2, 3, -3]
     print(filter(ispos, l))
     
-example3()
+# example3()

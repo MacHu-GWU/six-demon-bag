@@ -25,6 +25,7 @@ ref = https://docs.python.org/3.4/library/pickle.html
 
 from __future__ import print_function
 import pickle
+import base64
 import sys
 
 def example1():
@@ -41,4 +42,18 @@ def example1():
     pickle.dump(obj, open("obj.p", "wb"), protocol = 2) # 指定 protocol = 2，这样在python3中dump的pickle在python2也能读
     print( pickle.load(open("obj.p", "rb")) )
 
-example1()
+# example1()
+
+def example2():
+    """pickle any python object and make it string like. Then it's very easy to deliver and
+    save to database.
+    For more information, see base64 in python
+    """
+    obj = {1:"a", 2:"你好"}
+    pk = pickle.dumps(obj, protocol = 2) # make it 2, 3 compatible
+    encoded = base64.b64encode(pk) # encode arbitrary binary strings into text strings
+    print(type(encoded), encoded)  # it's a text string in bytes
+    print(type(str(encoded)), str(encoded))
+    print(pickle.loads(base64.b64decode(encoded) ) ) # see if we can recovery the obj from text string
+    
+example2()

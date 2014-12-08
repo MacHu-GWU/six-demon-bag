@@ -73,7 +73,7 @@ def example2():
     ax.scatter(X1[:, 0], X1[:, 1], c=color, cmap=plt.cm.Spectral)
     plt.show()
 
-example2()
+# example2()
 
 def example3():
     """验证sklearn中的pca算法是否使用了数据预处理。
@@ -98,4 +98,4 @@ def example3():
     ax.scatter(X1[:, 0], X1[:, 1], c=color, cmap=plt.cm.Spectral)
     plt.show()
 
-example3()
+# example3()

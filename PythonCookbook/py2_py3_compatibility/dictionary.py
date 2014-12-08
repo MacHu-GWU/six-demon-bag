@@ -14,7 +14,7 @@ Ref = http://python-future.org/compatible_idioms.html#dictionaries
 """
 
 from __future__ import print_function
-from six import iteritems
+from six import iterkeys, itervalues, iteritems
 
 def different1():
     """展示python2和3中dict.keys(), dict.values(), dict.items()的不同
@@ -24,12 +24,22 @@ def different1():
     print(type(d.values() ) ) # in in py2 <type "list">, in py3 <class "dict_values">
     print(type(d.items() ) )
     
+    print(type(iterkeys(d)))
+    print(type(itervalues(d)))
+    print(type(iteritems(d)))
+    
 different1() # run this script in both 2 and 3
 
 def solution():
     """python2,3中 iterkeys, itervalues, iteritems的兼容性解决方案
     """
     d = {1: "a", 2: "b", 3: "c"}
+    for k in iterkeys(d):
+        print(k)
+
+    for v in itervalues(d):
+        print(v)
+    
     for k, v in iteritems(d):
         print(k, v)
         

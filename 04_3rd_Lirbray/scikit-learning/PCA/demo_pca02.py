@@ -31,11 +31,11 @@ def example1():
     pca.fit(X) # 训练
     X1 = pca.fit_transform(X) # 自适应
     
-    print(X1[:,0].var(), X1[:,1].var(), X1[:,2].var()) # 降纬后各特征的方差
-    print(pca.get_covariance()) # 协方差矩阵
-    
-    eigvalue, eigvector = linalg.eig(np.cov(X.T) ) # 协方差矩阵的特征值，和特征变量
-    print(eigvalue)
-    print(eigvector)
+#     print(X1[:,0].var(), X1[:,1].var(), X1[:,2].var()) # 降纬后各特征的方差
+#     print(pca.get_covariance()) # 协方差矩阵
+#     
+#     eigvalue, eigvector = linalg.eig(np.cov(X.T) ) # 协方差矩阵的特征值，和特征变量
+#     print(eigvalue)
+#     print(eigvector)
 
 example1()

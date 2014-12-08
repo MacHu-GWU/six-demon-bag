@@ -65,9 +65,71 @@ def example2():
 # example2()
 
 def example3():
-    class ListContainer(object):
+    """
+    用generator expression括号，和iter实现：
+        对待字典中的key，有选择的迭代
+    """
+    class Myclass():
         def __init__(self):
-            self.data = list()
+            self.data = dict()
+            
+        def __iter__(self):
+            return (key for key in self.data if key != "special")
+        
+    mc = Myclass()
+    mc.data = {"a": 3, "b":1, "c":2, "special":0}
+    for key in mc:
+        print(key)
+        
+# example3()
+
+def example4():
+    """
+    stackoverflow上面看来的一个recipe
+    """
+    class Myclass():
+        def __init__(self):
+            self.data = dict()
+            self.current = 1
+            
+        def __iter__(self):
+            return self
+        
+        def next(self):
+            key = [k for k, v in self.data.items() if v == self.current]
+            if not key:
+                raise StopIteration
+            self.current += 1
+            return next(iter(key))
+        
+    mc = Myclass()
+    mc.data = {"a": 3, "b":1, "c":2, "d":4, "e": 2}
+    for key in mc:
+        print(key)
+        
+# example4()
+
+def example5():
+    """python3 only
+    """
+    class Fib(object):
+        def __init__(self, max):
+            self.max = max
+            
+        def __iter__(self):
+            self.a = 0
+            self.b = 1
+            return self
         
         def __next__(self):
-            
+            fib = self.a
+            if fib > self.max:
+                raise StopIteration
+            self.a, self.b = self.b, self.a + self.b
+            return fib
+    
+    fib = Fib(10)
+    for i in fib:
+        print(i)
+        
+example5()
