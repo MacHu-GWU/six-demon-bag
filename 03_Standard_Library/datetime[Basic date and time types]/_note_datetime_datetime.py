@@ -10,8 +10,13 @@
 #                                #
 ##################################
 
+"""
+parse and format a time string
+"""
+
 from __future__ import print_function
 from datetime import datetime, date, timedelta, tzinfo
+import time
 
 def example1():
     """create basic datetime or date object"""
@@ -51,3 +56,23 @@ def example3():
         print((dt1 + i*timedelta(1)))
     
 example3()
+
+def example4():
+    """handle time stamp
+    """
+    now_local = datetime.now() # get current local time ETZ (UTC-05:00)
+    now_utc = now_local + timedelta(hours=5) # get utc time
+
+    now_local_timestamp = now_local.timestamp() # convert datetime to timestamp
+    now_utc_timestamp = now_utc.timestamp()
+
+    print(now_local)
+    print(now_utc)
+    
+    print(now_local_timestamp)
+    print(now_utc_timestamp)
+    
+    print(datetime.fromtimestamp(now_local_timestamp)) # convert timestamp to datetime
+    print(datetime.fromtimestamp(now_utc_timestamp))
+    
+example4()

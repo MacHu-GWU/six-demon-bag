@@ -16,6 +16,7 @@
 from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import datetime, date, timedelta
 
 def example1():
     """matplotlib和matlab画图类似，抽象概念上从上到下分别是:
@@ -55,6 +56,20 @@ def example1():
 # example1()
 
 def example2():
+    from matplotlib import dates
+    from matplotlib.ticker import FormatStrFormatter
+    res = dates.date2num(datetime(2014,1,1,10,05,0))
+    x, y = [1, 2], [25, 33]
+    
+    f = plt.figure()
+    subplt = f.add_subplot(111)
+    subplt.plot(x,y)
+    subplt.yaxis.set_major_formatter(FormatStrFormatter("%s \\%"))
+    plt.show()
+
+# example2()
+
+def example3():
     """在图表上写上注释和文字
     """
     x, y, label = np.random.randn(5), np.random.randn(5), np.array([1, 1, 0, 0, 1])
@@ -70,4 +85,22 @@ def example2():
                                  shrink=0.05) ) # 箭头的粗细
     plt.show()
     
-# example2()
+# example3()
+
+def example4():
+    """Play with datetime
+    """
+    from matplotlib import dates
+    from matplotlib.ticker import FormatStrFormatter
+
+    st, td = date(2014,1,1), timedelta(1)
+    x, y = zip(*[(st + td * i, i) for i in range(365)])
+
+    fig = plt.figure()
+    sub = fig.add_subplot(111)
+    sub.plot(x, y)
+    print(sub.set_axis())
+
+    # plt.show()
+
+example4()

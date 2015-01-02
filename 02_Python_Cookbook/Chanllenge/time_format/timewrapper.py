@@ -59,7 +59,7 @@ class TimeWrapper(object):
         if self.default_template: # 如果已经有了默认的模板设置
             try:
                 return dt.strftime(dt.strptime(datestr, 
-                                               templates[self.default_template]), 
+                                               self.templates[self.default_template]), 
                                    "%Y-%m-%d")
             except: # 如果默认的模板不匹配，则重新尝试所有的模板
                 for ind, template in self.templates.items(): # 对每个template进行尝试，如果都不成功，抛出异常
@@ -79,3 +79,71 @@ class TimeWrapper(object):
                 except:
                     pass
             raise Exception("None template matching datestr")
+
+    @staticmethod
+    def day_interval(year, month, day, mode = "str"):
+        """
+        str mode return pair of str timestamp
+        dt mode return pair of datetime object
+        """
+        start, end = dt(year, month, day), dt(year, month, day) + td(days=1) - td(seconds=1)
+        if mode == "dt":
+            return start, end
+        elif mode == "str":
+            return str(start), str(end)
+    
+    @staticmethod
+    def month_interval(year, month, mode = "str"):
+        """
+        str mode return pair of str timestamp
+        dt mode return pair of datetime object
+        """
+        if month == 12:
+            start, end = dt(year, month, 1), dt(year+1, 1, 1) - td(seconds=1)
+        else:
+            start, end = dt(year, month, 1), dt(year, month+1, 1) - td(seconds=1)
+        if mode == "dt":
+            return start, end
+        elif mode == "str":
+            return str(start), str(end)
+    
+    @staticmethod
+    def year_interval(year, mode = "str"):
+        """
+        str mode return pair of str timestamp
+        dt mode return pair of datetime object
+        """
+        start, end = dt(year, 1, 1), dt(year+1, 1, 1) - td(seconds=1)
+        if mode == "dt":
+            return start, end
+        elif mode == "str":
+            return str(start), str(end)
+
+if __name__ == "__main__":
+    def UT1():
+        print("{:=^40}".format("UT1"))
+        print(TimeWrapper.day_interval(2012, 2, 29, mode = "str") )
+        print(TimeWrapper.month_interval(2014, 12, mode = "str") )
+        print(TimeWrapper.year_interval(1999, mode = "str") )
+        
+#     UT1()
+    
+    def UT2():
+        print("{:=^40}".format("UT2"))
+        timewrapper = TimeWrapper()
+        print(timewrapper.reformat("2/21/1998", "%m/%d/%Y", "%Y-%m-%d") )
+        try:
+            print(timewrapper.reformat("Feb/21/1998", "%m/%d/%Y", "%Y-%m-%d") )
+        except Exception as e:
+            print(e)
+            
+#     UT2()
+
+    def UT3():
+        print("{:=^40}".format("UT3"))
+        timewrapper = TimeWrapper()
+        print(timewrapper.iso_date("Feb/21/1998"))
+        print(timewrapper.iso_date("Dec/12/1998"))
+        print(timewrapper.iso_date("08/07/2014"))
+        
+#     UT3()
