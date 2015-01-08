@@ -8,8 +8,8 @@ def main():
     tw = TimeWrapper()
     res = list()
     with open("data.txt", "r") as f:
-        for line in f.xreadlines():
-            res.append(tw.iso_date(line.strip() ) )
+        for line in f.readlines():
+            res.append(str(tw.str2date(line.strip() ) ) )
     
     with open("result.txt", "w") as f:
         f.write("\n".join(res))
