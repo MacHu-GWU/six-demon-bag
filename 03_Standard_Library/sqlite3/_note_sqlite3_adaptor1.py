@@ -15,6 +15,10 @@ adaptor和converter是一种对类到字符串进行转换的函数
 adaptor负责把类转化成字符串
 converter负责把字符串转化为类
 
+在python中有两个默认的adaptor: DATE和DATETIME
+在数据库中其实储存的是字符串, 也就是说即使你选择的是的DATETIME而实际上储存的是字符串。
+而默认的adaptor会自动
+
 这样数据库就可以把任何自定义的类都以字符串的形式存放
 在数据库中了
 """

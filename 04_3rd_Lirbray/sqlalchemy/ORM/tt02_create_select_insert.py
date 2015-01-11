@@ -97,8 +97,28 @@ insert_data()
 
 def query_data():
     """
+    关于以ORM方式进行query的性能问题的一些结论
+    
+    我们对一个存放了200,000条User的表做了如下实验:
+    for user in session.query(User): # 12.0 second
+        break # 只返回了1条记录用了 12 秒
+    
+    for user in session.query(User): # 12.5 second
+        pass # 返回了所有200,000条记录也只用了 12.5 秒
+    
+    for user in session.query(User).limit(1): # 0.01
+        pass # 而如果query的结果只有1条记录, 则只用了0.01秒, 和直接执行sql语句相差无几
+    
+    for row in engine.connect.execute("SELECT * FROM user"): # 0.006 
+        break # 直接执行sql语句只用了0.006秒, 节省的0.004秒可能被用来将row转化为User(object)了
+        
+    可见ORM query的机制是先把所有的结果转化成对象, 最后再以生成器的形式返回给用户。在搜索结果很多的时候
+    会消耗大量时间
+    
     Query
         http://docs.sqlalchemy.org/en/rel_0_9/orm/tutorial.html#querying
+        
+        http://docs.sqlalchemy.org/en/rel_0_9/orm/query.html
     """
     from sqlalchemy import and_ # for SQL BETWEEN Clause
     

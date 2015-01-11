@@ -22,7 +22,7 @@ rollback(回滚)。而所有用户自定义的对象都是由sqlalchemy.ext.decl
         
 下面我们以sqlite电影数据库为例, 简单介绍如何定义ORM(对象到数据库的映射)。和创建Session准备和数据库通话。
 关于Data type, 不同的引擎有不同的定义, 对于sqlite推荐使用如下设置:
-    TEXT, REAL, DateTime, Date, PickleType
+    TEXT, Integer, REAL, DateTime, Date, PickleType
 """
 
 from __future__ import print_function
