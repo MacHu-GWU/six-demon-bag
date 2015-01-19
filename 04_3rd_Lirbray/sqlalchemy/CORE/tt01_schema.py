@@ -25,6 +25,7 @@ SqlAlchemy Core 提供了一种抽象的方式, 通过Table, Column这些抽象�
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, MetaData
 from sqlalchemy import Integer, String, ForeignKey, TEXT, Date
+from sqlalchemy import select
 import os
 
 try:
@@ -32,33 +33,37 @@ try:
 except:
     pass
 
-engine = create_engine('sqlite:///Core_tutorial.db', echo=True)
+engine = create_engine("sqlite:///Core_tutorial.db", echo=False) # define database engine
 
 metadata = MetaData()
-users = Table('users', metadata,
-    Column('id', Integer, primary_key=True),
-    Column('name', String),
-    Column('fullname', String), 
+users = Table("users", metadata,
+    Column("id", Integer, primary_key=True),
+    Column("name", String),
+    Column("fullname", String), 
 )
 
-addresses = Table('addresses', metadata,
-    Column('id', Integer, primary_key=True),
-    Column('user_id', None, ForeignKey('users.id')),
-    Column('email_address', String, nullable=False),
+addresses = Table("addresses", metadata,
+    Column("id", Integer, primary_key=True),
+    Column("user_id", None, ForeignKey("users.id")),
+    Column("email_address", String, nullable=False),
 )
-
 
 metadata.create_all(engine)
 
-ins = users.insert()
+"""
+How to get SQL Argument from an existing Database
+"""
 
-conn = engine.connect()
+meta = MetaData()
+meta.reflect(engine)
+print(meta.tables) # {Table name: Table object}
+addr = meta.tables["addresses"]
 
-records = [{"id": 3, "name": "wendy", "fullname": "bob"},
-           {"id": 4, "name": "wendy", "fullname": "bob"}]
+ins_addr = addr.insert()
+print(str(ins_addr) ) # Insert SQL argument
 
-# for record in records:
-#     try:
-#         conn.execute(ins, record) 
-#     except:
-#         pass
+sel_addr = select([addr])
+print(sel_addr) # Select SQL argument
+
+upd_addr = addr.update()
+print(upd_addr) # Update SQL argument

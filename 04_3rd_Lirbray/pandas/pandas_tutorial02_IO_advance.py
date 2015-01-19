@@ -34,4 +34,13 @@ def txt_file_is_better():
     df.to_csv(r"resources\long_int_good.txt", index=False) # txt不会丢失精度
     df.to_csv(r"resources\long_int_bad.csv", index=False) # csv会丢失精度
     
-txt_file_is_better()
+# txt_file_is_better()
+
+def handle_datetime():
+    """
+    """
+    df = pd.read_csv(r"resources\employee.txt", sep="\t", parse_dates=[4])
+    
+     
+handle_datetime()
+     

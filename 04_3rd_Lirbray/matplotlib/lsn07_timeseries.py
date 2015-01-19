@@ -66,8 +66,8 @@ def example3():
 	years = YearLocator()   # every year
 	months = MonthLocator([4,7,10])  	# range(1,13) = everymonth, [4,7,10] means draw a tick at
 										# 3, 6, 9 = every quarter
-	yearsFmt = DateFormatter("%Y")
-	monthFmt = DateFormatter("%m")
+	yearsFmt = DateFormatter("%Y") # the text on time axis major ticker
+	monthFmt = DateFormatter("%m") # the text on time axis minor ticker
 
 
 	ax.xaxis.set_major_locator(years)		# set major locator

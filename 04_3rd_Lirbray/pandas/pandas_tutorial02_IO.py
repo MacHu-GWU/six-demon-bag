@@ -145,7 +145,7 @@ def to_json():
                        ["sam", 34]], columns = ["name", "age"])
     df.to_json("person.json", orient="index")
     
-to_json()
+# to_json()
 
 def example1():
     """各种数据类型被写入Excel文件后的变化
