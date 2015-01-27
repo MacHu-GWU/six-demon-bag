@@ -63,7 +63,7 @@ def insert2():
             pass
     print(time.clock() - st)
 
-# insert2()
+insert2()
 
 def insert3():
     """测试原生Sqlite3 API插入速度, 0.01 - 0.05 跟SA中bulk insert速度相似
@@ -82,7 +82,7 @@ def insert3():
     conn.commit()
     print(time.clock() - st)
 
-insert3()
+# insert3()
 
 def select1():
     """测试通过SA执行SELECT的速度
@@ -94,7 +94,7 @@ def select1():
         pass
     print(time.clock() - st)
     
-select1()
+# select1()
 
 def select2():
     """测试通过原生sqlite3 API执行SELECT的速度
@@ -107,7 +107,7 @@ def select2():
         pass
     print(time.clock() - st)
     
-select2()
+# select2()
     
 try:
     os.remove("performance_test.db")
