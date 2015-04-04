@@ -25,6 +25,7 @@ converter负责把字符串转化为类
 
 from __future__ import print_function
 import sqlite3
+import datetime
 
 class Point(object):
     def __init__(self, x, y):
@@ -56,7 +57,7 @@ def unit_test1():
     s = '1.00;2.00'
     print(convert_point(s))
     
-unit_test1()
+# unit_test1()
     
 def unit_test2():
     """测试adaptor和convertor在数据库中的行为
@@ -74,4 +75,17 @@ def unit_test2():
     for row in c.fetchall():
         print(row)
                 
-unit_test2()
+# unit_test2()
+
+def unit_test3():
+    """测试默认的两个adapter, DATE, DATETIME.
+    注: python datetime.datetime 对应 TIMESTAMP
+    """
+    conn = sqlite3.connect(":memory:", detect_types=sqlite3.PARSE_DECLTYPES)
+    c = conn.cursor()
+    c.execute("CREATE TABLE test (value1 TIMESTAMP, value2 DATE)")
+    c.execute("INSERT INTO test (value1, value2) VALUES (?, ?)", (datetime.datetime.now(), datetime.date(2010,1,1)))
+    conn.commit()
+    print(c.execute("SELECT * FROM test").fetchall())    
+
+# unit_test3()

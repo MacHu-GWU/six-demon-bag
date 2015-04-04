@@ -11,7 +11,10 @@
 ##################################
 
 from __future__ import print_function
-
+try:
+    from functools import reduce
+except:
+    pass
 def example1():
     """map是通过一个函数，将iterable中的元素批量的通过该函数映射到新的iterable对象上
     """
@@ -30,14 +33,17 @@ def example11():
     
     print(map(add2value, *l))
     
-example11()
+# example11()
 
 def example2():
-    """在python2中reduce是built-in
+    """reduce是将一个iterable object中的元素, 1和2算, 结果再和3算, 结果再和4算, 这样不断reduce的过程
+    文档: http://www.python-course.eu/lambda.php
+    
+    在python2中reduce是built-in
     在python3中，需要 from functools import reduce
     """
     a = [1,2,3,4,5]
-    print(reduce(lambda x, y : x + y, a, 3) )
+    print(reduce(lambda x, y : x + y, a) )
 
 # example2()
 

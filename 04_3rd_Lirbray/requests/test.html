@@ -1,1712 +1,1094 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <title>Trulia Real Estate Search - Advanced Search</title>
-    <link rel="stylesheet" type="text/css" href="http://css.trulia-cdn.com/css/GOAT40_20b/css/base,mod-styles.css" />
+<!DOCTYPE html>
+<!--[if IE]>
+<html id="ie" lang="en-eg" ng-app="aqarmap">
+<![endif]-->
+<!--[if !(IE) ]><!-->
+<html lang="en-eg" ng-app="aqarmap">
+<!--<![endif]-->
+<head>
+<script src="//cdn.optimizely.com/js/239567299.js"></script>
+<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-9577040-1']);
+		  _gaq.push(['_trackPageview','/eg/en/alexandria/all/any.for_sell/any-any.egp/any-any.m2?city=alexandria']);		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			// ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<title>Real Estate Properties For Sale in Alexandria - Aqarmap.com</title>
+<meta property="og:title" content="Real Estate Properties For Sale in Alexandria - Aqarmap.com"/>
+<meta property="og:site_name" content="Aqarmap"/>
+<meta property="og:description" content="AqarMap is the #1 Real Estate portal in Egypt. Explore properties, compounds, and vacation homes in Alexandria"/> <meta property="og:type" content="website"/>
+<meta property="og:image" content="http://aqarmap.com/img/logo.png"/>
+<link rel="image_src" href="http://aqarmap.com/img/logo.png"/>
+<meta property="fb:admins" content="100001088041760,1214580340"/>
+<meta name="msvalidate.01" content="E052870A5AA518EEE36323EBE2EE7F9D"/>
+<meta property="fb:page_id" content="112239245484744"/>
+<meta name="description" content="AqarMap is the #1 Real Estate portal in Egypt. Explore properties, compounds, and vacation homes in Alexandria"/>
+<meta name="keywords" content="Buy, Sell, Real Estate, Property, Middle East, MENA, House, Villa, Apartment, Dubai, Cairo, Abu Dhabi, Doha, Riyadh"/>
+<link href="/favicon.ico" type="image/x-icon" rel="icon"/><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+<link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/4.0/960/960.css?1415088153"/>
+<script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.js?1415088153"></script>
+<script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.browser.js?1415088153"></script>
+<script type="text/javascript" src="http://cf.aqarmap.net/js/AngularJS/angular.min.js?1415088153"></script>
+<script type="text/javascript" src="http://cf.aqarmap.net/js/AngularJS/angular.app.js?1415088153"></script>
+<script type="text/javascript" src="http://cf.aqarmap.net/js/script.js?1415088153"></script> <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript">
+			var _={};
+			function __(msg){if(_[msg]) return _[msg]; else return msg;};
+			var locale={"language":"en","direction":"ltr","country":"eg","lang-code":"en-eg"};
+			var webroot="/";
+			var baseUrl="/";
+						var filteringSizes=[50,100,150,200,250,300,400,500,750,1000];
+			var organicTracking="";
+			// var organicTracking = true;
+			var updateCategoryCookieURL="/eg/en/listings/updateCategoryCookieURL";
+		</script>
+ 
+<script type="text/javascript">
+//<![CDATA[
+var is_seller_page = false;
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+var google_map_api_key = "AIzaSyAR7UK5rwbh3LqnFLLPh6wgFcTDZ7Li9gY";
+	var center_lat = "31.2195";
+	var center_lng = "29.94621";
+	var map_zoom = 14;
+	var filteringPrices={"KWD_FOR_RENT_MIN_PRICE":["10","50","100","200","500","1000"],"JOD_FOR_RENT_MIN_PRICE":["10","50","100","500","1000","2000"],"LYD_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"OMR_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"TND_FOR_RENT_MIN_PRICE":["20","100","500","1000","1500","2000"],"BHD_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"SDG_FOR_RENT_MIN_PRICE":["50","250","500","1000","2000","2500"],"JOD_FOR_RENT_MAX_PRICE":["50","100","500","1000","2000","3000"],"KWD_FOR_RENT_MAX_PRICE":["50","100","200","500","1000","1500"],"IQD_FOR_RENT_MIN_PRICE":["60","600","2500","6000"],"BHD_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"OMR_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"LYD_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"TND_FOR_RENT_MAX_PRICE":["100","500","1000","1500","2000","3000"],"EUR_FOR_RENT_MIN_PRICE":["100","500","1000","2000","3000"],"USD_FOR_RENT_MAX_PRICE":["100","500","1000","2000","3000","5000","10000"],"EUR_FOR_RENT_MAX_PRICE":["100","500","1000","2000","3000","4000","5000"],"USD_FOR_RENT_MIN_PRICE":["100","500","1000","2000","3000","5000","10000"],"MAD_FOR_RENT_MIN_PRICE":["200","1000","2000","4000","6000","8000"],"SDG_FOR_RENT_MAX_PRICE":["250","500","1000","2000","2500","3000","4000","150000"],"SAR_FOR_RENT_MIN_PRICE":["500","1000","3000"],"SAR_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"KWD_FOR_SALE_MIN_PRICE":["500","1000","5000","20000","50000","100000"],"EGP_FOR_RENT_MAX_PRICE":["500","1000","2000","3000","4000","6000","10000","20000","50000"],"EGP_FOR_RENT_MIN_PRICE":["500","1000","2000","3000","4000","6000","10000","20000","50000"],"AED_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"AED_FOR_RENT_MIN_PRICE":["500","1000","3000"],"QAR_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"QAR_FOR_RENT_MIN_PRICE":["500","1000","3000"],"IQD_FOR_RENT_MAX_PRICE":["600","2500","6000"],"BHD_FOR_SALE_MIN_PRICE":["1000","5000","20000","40000","80000","100000"],"SYP_FOR_RENT_MIN_PRICE":["1000","2000","4000","10000","20000","50000"],"OMR_FOR_SALE_MIN_PRICE":["1000","5000","20000","40000","80000","100000"],"DZD_FOR_RENT_MIN_PRICE":["1000","5000","10000","20000","30000","40000"],"KWD_FOR_SALE_MAX_PRICE":["1000","5000","20000","50000","100000","150000"],"MAD_FOR_RENT_MAX_PRICE":["1000","2000","4000","6000","8000","10000"],"TND_FOR_SALE_MIN_PRICE":["2000","10000","50000","100000","300000","500000"],"JOD_FOR_SALE_MIN_PRICE":["2000","10000","50000","100000","250000","500000"],"SYP_FOR_RENT_MAX_PRICE":["2000","4000","10000","20000","50000","60000"],"LYD_FOR_SALE_MIN_PRICE":["2000","5000","20000","50000","100000","300000"],"LBP_FOR_RENT_MIN_PRICE":["3000","25000","100000","250000","500000","1000000","1500000","100000000"],"DZD_FOR_RENT_MAX_PRICE":["5000","10000","20000","30000","40000","60000"],"LYD_FOR_SALE_MAX_PRICE":["5000","20000","50000","100000","300000","500000"],"BHD_FOR_SALE_MAX_PRICE":["5000","20000","40000","80000","100000","150000"],"OMR_FOR_SALE_MAX_PRICE":["5000","20000","40000","80000","100000","150000"],"YER_FOR_RENT_MIN_PRICE":["5000","15000","50000","100000","150000","200000"],"SDG_FOR_SALE_MIN_PRICE":["5000","25000","50000","300000","500000"],"IQD_FOR_SALE_MIN_PRICE":["6000","60000","120000","600000","1200000"],"EUR_FOR_SALE_MAX_PRICE":["10000","50000","100000","500000","1000000","2000000"],"EUR_FOR_SALE_MIN_PRICE":["10000","50000","100000","500000","1000000"],"TND_FOR_SALE_MAX_PRICE":["10000","50000","100000","300000","500000","1000000"],"JOD_FOR_SALE_MAX_PRICE":["10000","50000","100000","250000","500000","1000000"],"YER_FOR_RENT_MAX_PRICE":["15000","50000","100000","150000","200000","300000","15000000"],"AED_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"AED_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"USD_FOR_SALE_MAX_PRICE":["20000","50000","100000","200000","500000","1000000"],"SAR_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"MAD_FOR_SALE_MIN_PRICE":["20000","100000","200000","500000","1000000","2000000"],"QAR_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"USD_FOR_SALE_MIN_PRICE":["20000","50000","100000","200000","500000","1000000"],"QAR_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"SAR_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"SDG_FOR_SALE_MAX_PRICE":["25000","50000","150000","300000","500000","1000000"],"IQD_FOR_SALE_MAX_PRICE":["60000","120000","600000","1200000"],"MAD_FOR_SALE_MAX_PRICE":["100000","200000","500000","1000000","2000000","3000000"],"EGP_FOR_SALE_MAX_PRICE":["100000","250000","500000","750000","1000000","2000000","5000000"],"DZD_FOR_SALE_MIN_PRICE":["100000","500000","1000000","5000000","10000000","20000000"],"LBP_FOR_RENT_MAX_PRICE":["100000","250000","500000","750000","1500000","2000000"],"EGP_FOR_SALE_MIN_PRICE":["100000","250000","500000","750000","1000000","2000000","5000000"],"SYP_FOR_SALE_MIN_PRICE":["100000","200000","400000","1000000","2000000","4000000"],"SYP_FOR_SALE_MAX_PRICE":["200000","400000","1000000","2000000","4000000","6000000"],"YER_FOR_SALE_MIN_PRICE":["350000","750000","1500000","3000000","30000000"],"DZD_FOR_SALE_MAX_PRICE":["500000","1000000","5000000","10000000","20000000","30000000"],"YER_FOR_SALE_MAX_PRICE":["750000","1500000","3000000","15000000","30000000","50000000"],"LBP_FOR_SALE_MIN_PRICE":["2500000","5000000","10000000","20000000","200000000"],"LBP_FOR_SALE_MAX_PRICE":["5000000","10000000","20000000","100000000","200000000","500000000"]};
+	var selected_min = 0;
+	var selected_max = 0;
+	
+//]]>
+</script><script type="text/javascript" src="http://cf.aqarmap.net/js/listings/list_view.js?1415088153"></script><script type="text/javascript">
+//<![CDATA[
 
-    <script language="JavaScript" type="text/JavaScript">var site_root = '/';</script>
+	var rates={"USD":{"title":"US $","value":"1"},"EUR":{"title":"Euro","value":"0.74"},"SAR":{"title":"Saudi Rial","value":"3.7503"},"EGP":{"title":"Egyptian Pound","value":"6.8989"},"AED":{"title":"Emirates Dirham","value":"3.6731"},"JOD":{"title":"Jordanian Dinar","value":"0.7086"},"YER":{"title":"Yemeni Rial","value":"214.805"},"OMR":{"title":"Omani Rial","value":"0.3848"},"QAR":{"title":"Qatar Rial","value":"3.6411"},"BHD":{"title":"Bahrain Dinar","value":"0.377"},"KWD":{"title":"Kuwaiti Dinar","value":"0.281"},"IQD":{"title":"Iraqi Dinar","value":"1165"},"SYP":{"title":"Syrian Pound","value":"68.15"},"LBP":{"title":"Lebanese Pound","value":"1504"},"SDG":{"title":"Sudanese Pound","value":"4.4118"},"LYD":{"title":"Libyan Dinars","value":"1.2512"},"TND":{"title":"Tunisian Dinar","value":"1.5801"},"MAD":{"title":"Moroccan Dirham","value":"8.6097"},"DZD":{"title":"Algerian Dinar","value":"79.805"}};
+	var units={"M2":{"title":"Meter \u00b2","value":1},"SQFT":{"title":"Feet \u00b2","value":10.7639104}};
+	
+//]]>
+</script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.meta.data.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.ui.widget.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.ui.lightbox.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.ui.tooltip.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.compare.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.monnaTip.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.cookie.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.validate.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.ui.currency.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.ui.unit.js?1415088153"></script><script type="text/javascript" src="http://cf.aqarmap.net/js/jquery/jquery.populateSelect.js?1415088153"></script><script type="text/javascript">
+//<![CDATA[
+function applyPlugins(context){ try {$.MetaData.apply(context);} catch(err){} try {$.ui.Widget.apply(context);} catch(err){} try {$.ui.Lightbox.apply(context);} catch(err){} try {$.ui.Tooltip.apply(context);} catch(err){} try {$.Compare.apply(context);} catch(err){} try {$.MonnaTip.apply(context);} catch(err){} try {$.Cookie.apply(context);} catch(err){} try {$.Validate.apply(context);} catch(err){} try {$.ui.Tooltip.apply(context);} catch(err){} try {$.ui.Currency.apply(context);} catch(err){} try {$.ui.Unit.apply(context);} catch(err){} try {$.PopulateSelect.apply(context);} catch(err){} } $(function(){applyPlugins(document);});
+//]]>
+</script><script type="text/javascript" src="http://cf.aqarmap.net/js/wbo.layout.js?1415088153"></script><script type="text/javascript">
+//<![CDATA[
+
+var cities = [{"City":{"title":"Greater Cairo","slug":"cairo","lat":"30.06263","lng":"31.24967","geoname_id":"360630","zoom":"0"}},{"City":{"title":"Alexandria","slug":"alexandria","lat":"31.2195","lng":"29.94621","geoname_id":"361058","zoom":"14"}},{"City":{"title":"North Coast","slug":"north-coast","lat":"30.822239249221","lng":"29.0519106274414","geoname_id":"7577134","zoom":"0"}},{"City":{"title":"Marsa Matruh","slug":"marsa-matruh","lat":"31.35","lng":"27.23333","geoname_id":"352733","zoom":"0"}},{"City":{"title":"Ain ElSokhna","slug":"ain-elsokhna","lat":"29.65406","lng":"32.34021","geoname_id":"7577139","zoom":"11"}},{"City":{"title":"Red Sea \/ Hurghada","slug":"red-sea","lat":"27.25738","lng":"33.81291","geoname_id":"361291","zoom":"12"}},{"City":{"title":"Ras Sidr","slug":"ras-sidr","lat":"29.58891","lng":"32.71686","geoname_id":"7577141","zoom":"12"}},{"City":{"title":"Sharm el Sheikh","slug":"sharm-el-sheikh","lat":"27.86361","lng":"34.28806","geoname_id":"349340","zoom":"0"}},{"City":{"title":"Dakahlia \/ Mansoura","slug":"dakahlia","lat":"31.04306","lng":"31.37667","geoname_id":"360761","zoom":"0"}},{"City":{"title":"Sharqia \/ Zagazig","slug":"sharqia","lat":"30.59139","lng":"31.51028","geoname_id":"359493","zoom":"0"}},{"City":{"title":"Gharbia \/ Tanta","slug":"gharbia","lat":"30.79111","lng":"30.99806","geoname_id":"347497","zoom":"0"}},{"City":{"title":"Ismailia","slug":"ismailia","lat":"30.60528","lng":"32.27722","geoname_id":"361055","zoom":"0"}},{"City":{"title":"Dumiat","slug":"dumiat","lat":"31.41944","lng":"31.815","geoname_id":"358048","zoom":"0"}},{"City":{"title":"Suez","slug":"suez","lat":"29.96667","lng":"32.55","geoname_id":"359796","zoom":"0"}},{"City":{"title":"Beheira \/ Damanhur","slug":"beheira","lat":"31.03333","lng":"30.46667","geoname_id":"358448","zoom":"12"}},{"City":{"title":"Aswan","slug":"aswan","lat":"24.0875","lng":"32.89889","geoname_id":"359792","zoom":"0"}},{"City":{"title":"Luxor","slug":"luxor","lat":"25.69893","lng":"32.6421","geoname_id":"360502","zoom":"0"}},{"City":{"title":"Asyut","slug":"asyut","lat":"27.1628","lng":"31.20023","geoname_id":"359781","zoom":"9"}},{"City":{"title":"Monufia \/ Shebeen El-Kom","slug":"monufia","lat":"30.558649","lng":"31.007752","geoname_id":"7577142","zoom":"11"}},{"City":{"title":"Qina","slug":"qina","lat":"26.17","lng":"32.72722","geoname_id":"350550","zoom":"0"}},{"City":{"title":"Sohag","slug":"sohag","lat":"26.55774","lng":"31.69685","geoname_id":"347794","zoom":"13"}},{"City":{"title":"Sinai \/ Arish","slug":"sinai","lat":"29.883","lng":"34.12517","geoname_id":"347930","zoom":"7"}},{"City":{"title":"El Fayoum","slug":"el-fayoum","lat":"29.30778","lng":"30.84","geoname_id":"361320","zoom":"0"}},{"City":{"title":"Port Said","slug":"port-said","lat":"31.26941","lng":"32.30819","geoname_id":"358619","zoom":"12"}},{"City":{"title":"Kafr el-Sheikh","slug":"kafr-el-sheikh","lat":"31.11","lng":"30.93","geoname_id":"354500","zoom":"13"}},{"City":{"title":"Bani Suef","slug":"bani-suef","lat":"29.06675","lng":"31.07732","geoname_id":"359171","zoom":"11"}},{"City":{"title":"El minia","slug":"el-minia","lat":"28.0894","lng":"30.75956","geoname_id":"7577140","zoom":"13"}},{"City":{"title":"New Valley","slug":"new-valley","lat":"24.8143","lng":"30.47415","geoname_id":"360483","zoom":"6"}},{"City":{"title":"Qalyubia \/ Banha","slug":"banha","lat":"30.46584","lng":"31.1845","geoname_id":"359280","zoom":"13"}}];
+var neighborhoods = {"360630":[{"id":"98379","title":"New Cairo Fifth District","slug":"new-cairo-fifth-district"},{"id":"98410","title":"6th Of October","slug":"6th-of-october"},{"id":"98394","title":"El-Sheikh Zayed City","slug":"el-sheikh-zayed-city"},{"id":"98246","title":"Heliopolis","slug":"heliopolis"},{"id":"98285","title":"Nasr City","slug":"nasr-city"},{"id":"98398","title":"El Shorouk & New Heliopolis","slug":"el-shorouk-city"},{"id":"98384","title":"El Maadi","slug":"el-maadi"},{"id":"98994","title":"El Hadabh El Wosta","slug":"maadi-ring-road-medium-plateau"},{"id":"98380","title":"Al Oubour ","slug":"al-oubour"},{"id":"75170","title":"Madinaty ","slug":"madinaty"},{"id":"65578","title":"Rehab","slug":"al-rehab"},{"id":"98543","title":"Faisal","slug":"faisal"},{"id":"99438","title":"Alex-Cairo Desert Road","slug":"alex-cairo-desert-road"},{"id":"75265","title":"Al Zamalek","slug":"al-zamalek"},{"id":"98541","title":"El Mohandesen","slug":"el-mohandesen"},{"id":"98402","title":"Dokki ","slug":"dokki"},{"id":"98401","title":"El Haram","slug":"el-haram"},{"id":"98567","title":"Al Jizah district ","slug":"al-jaizah-district"},{"id":"98390","title":"Mokattam","slug":"mokattam"},{"id":"98375","title":"Ain Shams","slug":"ain-shams"},{"id":"98286","title":"Helwan","slug":"helwan"},{"id":"98399","title":"Badr City","slug":"badr-city"},{"id":"98845","title":"Hadayek El Ahram","slug":"Hadayek-El-Ahram"},{"id":"98561","title":"10th of Ramadan","slug":"10th-of-ramadan"},{"id":"98389","title":"EL Koba Gardens","slug":"el-koba-gardens"},{"id":"98386","title":"Al Zaytun","slug":"al-zaytun"},{"id":"98374","title":"Downtown ","slug":"downtown"},{"id":"54053","title":"Garden City","slug":"garden-city"},{"id":"80849","title":"Shoubra","slug":"shoubra"},{"id":"98403","title":"EL Agouza ","slug":"el-agouza"},{"id":"98395","title":"Imbaba","slug":"imbaba"},{"id":"98377","title":"EL Abbasiya  ","slug":"el-abbasiya"},{"id":"98378","title":"15th of May ","slug":"15th-of-may"},{"id":"98332","title":"Manial","slug":"manial"},{"id":"89883","title":"Other Neighborhoods","slug":"neighborhoods"}],"361058":[{"id":"26033","title":"Smouha","slug":"smouha"},{"id":"19201","title":"San Stefano","slug":"san-stefano"},{"id":"24041","title":"Miami","slug":"miami"},{"id":"16884","title":"Roshdy","slug":"roshdy"},{"id":"15490","title":"Sidi Gaber","slug":"sidi-gaber"},{"id":"19772","title":"Victoria ","slug":"victoria"},{"id":"98518","title":"Borg El Arab","slug":"borg-el-arab"},{"id":"26231","title":"El Hanouvel","slug":"el-hanouvel"},{"id":"26193","title":"Sidi Bishr ","slug":"sidi-bishr"},{"id":"19425","title":"Lauran","slug":"lauran"},{"id":"14260","title":"Kafr Abdo","slug":"kafr-abdo"},{"id":"25058","title":"El Mandara","slug":"el-mandara"},{"id":"26230","title":"El Bitash","slug":"el-bitash"},{"id":"10020","title":"Camp Cesar","slug":"camp-cesar"},{"id":"17598","title":"Glim ","slug":"glim"},{"id":"98551","title":"Abo Qir","slug":"abo-qir"},{"id":"25392","title":"El Asafra","slug":"el-asafra"},{"id":"16860","title":"El Seyouf ","slug":"el-seyouf"},{"id":"4348","title":"Moharram Bey","slug":"moharram-bey"},{"id":"13212","title":"Ibrahimia","slug":"ibrahimia"},{"id":"15720","title":"Fleming","slug":"fleming"},{"id":"17188","title":"Stanley","slug":"stanley"},{"id":"15293","title":"Bolekly","slug":"bolekly"},{"id":"25759","title":"El Mamoura ","slug":"el-mamoura"},{"id":"20069","title":"Ganaklis","slug":"ganaklis"},{"id":"18037","title":"Bakoos","slug":"bakoos"},{"id":"18022","title":"Zezenia","slug":"zezenia"},{"id":"13848","title":"Sporting","slug":"sporting"},{"id":"17333","title":"Saba Basha","slug":"saba-basha"},{"id":"98520","title":"King Maryot","slug":"king-maryot"},{"id":"7150","title":"Alhadara","slug":"alhadara"},{"id":"9281","title":"El Chatby","slug":"el-chatby"},{"id":"12976","title":"Cleopatra","slug":"cleopatra"},{"id":"98956","title":"6 October\/Shatee El-Nakheel","slug":"6-october"},{"id":"6478","title":"Mansheya","slug":"mansheya"},{"id":"98519","title":"EL Amreya","slug":"el-amreya"},{"id":"25722","title":"El Montazah","slug":"el-montazah"},{"id":"12067","title":"Bahray El Anfoshy","slug":"bahray-el-anfoshy"},{"id":"98955","title":"Abu Yusuf","slug":"abu-yusuf"},{"id":"98957","title":"Abu Talat","slug":"abu-talat"}]};
+var default_city_geoname_id = 361058;
+var default_neighborhood_id = 0;
+var default_property_category = "FOR_SALE";
+var default_min_price = 0;
+var default_max_price = 0;
+var filteringPrices={"KWD_FOR_RENT_MIN_PRICE":["10","50","100","200","500","1000"],"JOD_FOR_RENT_MIN_PRICE":["10","50","100","500","1000","2000"],"LYD_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"OMR_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"TND_FOR_RENT_MIN_PRICE":["20","100","500","1000","1500","2000"],"BHD_FOR_RENT_MIN_PRICE":["20","100","200","400","800","1000"],"SDG_FOR_RENT_MIN_PRICE":["50","250","500","1000","2000","2500"],"JOD_FOR_RENT_MAX_PRICE":["50","100","500","1000","2000","3000"],"KWD_FOR_RENT_MAX_PRICE":["50","100","200","500","1000","1500"],"IQD_FOR_RENT_MIN_PRICE":["60","600","2500","6000"],"BHD_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"OMR_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"LYD_FOR_RENT_MAX_PRICE":["100","200","400","800","1000","1500"],"TND_FOR_RENT_MAX_PRICE":["100","500","1000","1500","2000","3000"],"EUR_FOR_RENT_MIN_PRICE":["100","500","1000","2000","3000"],"USD_FOR_RENT_MAX_PRICE":["100","500","1000","2000","3000","5000","10000"],"EUR_FOR_RENT_MAX_PRICE":["100","500","1000","2000","3000","4000","5000"],"USD_FOR_RENT_MIN_PRICE":["100","500","1000","2000","3000","5000","10000"],"MAD_FOR_RENT_MIN_PRICE":["200","1000","2000","4000","6000","8000"],"SDG_FOR_RENT_MAX_PRICE":["250","500","1000","2000","2500","3000","4000","150000"],"SAR_FOR_RENT_MIN_PRICE":["500","1000","3000"],"SAR_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"KWD_FOR_SALE_MIN_PRICE":["500","1000","5000","20000","50000","100000"],"EGP_FOR_RENT_MAX_PRICE":["500","1000","2000","3000","4000","6000","10000","20000","50000"],"EGP_FOR_RENT_MIN_PRICE":["500","1000","2000","3000","4000","6000","10000","20000","50000"],"AED_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"AED_FOR_RENT_MIN_PRICE":["500","1000","3000"],"QAR_FOR_RENT_MAX_PRICE":["500","1000","3000","5000"],"QAR_FOR_RENT_MIN_PRICE":["500","1000","3000"],"IQD_FOR_RENT_MAX_PRICE":["600","2500","6000"],"BHD_FOR_SALE_MIN_PRICE":["1000","5000","20000","40000","80000","100000"],"SYP_FOR_RENT_MIN_PRICE":["1000","2000","4000","10000","20000","50000"],"OMR_FOR_SALE_MIN_PRICE":["1000","5000","20000","40000","80000","100000"],"DZD_FOR_RENT_MIN_PRICE":["1000","5000","10000","20000","30000","40000"],"KWD_FOR_SALE_MAX_PRICE":["1000","5000","20000","50000","100000","150000"],"MAD_FOR_RENT_MAX_PRICE":["1000","2000","4000","6000","8000","10000"],"TND_FOR_SALE_MIN_PRICE":["2000","10000","50000","100000","300000","500000"],"JOD_FOR_SALE_MIN_PRICE":["2000","10000","50000","100000","250000","500000"],"SYP_FOR_RENT_MAX_PRICE":["2000","4000","10000","20000","50000","60000"],"LYD_FOR_SALE_MIN_PRICE":["2000","5000","20000","50000","100000","300000"],"LBP_FOR_RENT_MIN_PRICE":["3000","25000","100000","250000","500000","1000000","1500000","100000000"],"DZD_FOR_RENT_MAX_PRICE":["5000","10000","20000","30000","40000","60000"],"LYD_FOR_SALE_MAX_PRICE":["5000","20000","50000","100000","300000","500000"],"BHD_FOR_SALE_MAX_PRICE":["5000","20000","40000","80000","100000","150000"],"OMR_FOR_SALE_MAX_PRICE":["5000","20000","40000","80000","100000","150000"],"YER_FOR_RENT_MIN_PRICE":["5000","15000","50000","100000","150000","200000"],"SDG_FOR_SALE_MIN_PRICE":["5000","25000","50000","300000","500000"],"IQD_FOR_SALE_MIN_PRICE":["6000","60000","120000","600000","1200000"],"EUR_FOR_SALE_MAX_PRICE":["10000","50000","100000","500000","1000000","2000000"],"EUR_FOR_SALE_MIN_PRICE":["10000","50000","100000","500000","1000000"],"TND_FOR_SALE_MAX_PRICE":["10000","50000","100000","300000","500000","1000000"],"JOD_FOR_SALE_MAX_PRICE":["10000","50000","100000","250000","500000","1000000"],"YER_FOR_RENT_MAX_PRICE":["15000","50000","100000","150000","200000","300000","15000000"],"AED_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"AED_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"USD_FOR_SALE_MAX_PRICE":["20000","50000","100000","200000","500000","1000000"],"SAR_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"MAD_FOR_SALE_MIN_PRICE":["20000","100000","200000","500000","1000000","2000000"],"QAR_FOR_SALE_MIN_PRICE":["20000","100000","500000","1000000"],"USD_FOR_SALE_MIN_PRICE":["20000","50000","100000","200000","500000","1000000"],"QAR_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"SAR_FOR_SALE_MAX_PRICE":["20000","100000","500000","1000000","2000000"],"SDG_FOR_SALE_MAX_PRICE":["25000","50000","150000","300000","500000","1000000"],"IQD_FOR_SALE_MAX_PRICE":["60000","120000","600000","1200000"],"MAD_FOR_SALE_MAX_PRICE":["100000","200000","500000","1000000","2000000","3000000"],"EGP_FOR_SALE_MAX_PRICE":["100000","250000","500000","750000","1000000","2000000","5000000"],"DZD_FOR_SALE_MIN_PRICE":["100000","500000","1000000","5000000","10000000","20000000"],"LBP_FOR_RENT_MAX_PRICE":["100000","250000","500000","750000","1500000","2000000"],"EGP_FOR_SALE_MIN_PRICE":["100000","250000","500000","750000","1000000","2000000","5000000"],"SYP_FOR_SALE_MIN_PRICE":["100000","200000","400000","1000000","2000000","4000000"],"SYP_FOR_SALE_MAX_PRICE":["200000","400000","1000000","2000000","4000000","6000000"],"YER_FOR_SALE_MIN_PRICE":["350000","750000","1500000","3000000","30000000"],"DZD_FOR_SALE_MAX_PRICE":["500000","1000000","5000000","10000000","20000000","30000000"],"YER_FOR_SALE_MAX_PRICE":["750000","1500000","3000000","15000000","30000000","50000000"],"LBP_FOR_SALE_MIN_PRICE":["2500000","5000000","10000000","20000000","200000000"],"LBP_FOR_SALE_MAX_PRICE":["5000000","10000000","20000000","100000000","200000000","500000000"]};
+
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+
+	var newsletter_alex_neighborhoods = null;
+	var newsletter_cairo_neighborhoods = null;
+	
+//]]>
+</script> <script type="text/javascript">_["MIN_PRICE2"]="MIN_PRICE2";_["MAX_PRICE2"]="MAX_PRICE2";_["MIN_SIZE"]="Min Size";_["MAX_SIZE"]="Max Size";</script> <link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/listings/list_view.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.ui.lightbox.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.ui.tooltip.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.compare.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.monnaTip.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.ui.tooltip.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.ui.currency.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/jquery/jquery.ui.unit.css?1415088153"/><link rel="stylesheet" type="text/css" href="http://cf.aqarmap.net/css/wbo.layout.css?1415088153"/>  
+<script type="text/javascript">
+			var compare_list = [];
+			$(function(){
+				$("#compare-bar *[title]").monnaTip();
+
+				$("#compare-bar").Compare({
+					items: compare_list,
+					default_pic: "/img/none-ar.gif",
+					compareURL: "/eg/en/listings/compare",
+					onAdd: function(listing){
+						$.get("/ajax/eg/en/listings/compare_add/" + listing.id);
+					},
+					onRemove: function(listing_id) {
+						$.get("/ajax/eg/en/listings/compare_remove/" + listing_id);
+					},
+					onCompare: function(){
+						_gaq.push(["_trackEvent", "Compare", "listings-list_view", window.location.pathname]);
+					},
+					onHideShow: function(status){
+						// $.get("/ajax/eg/en/listings/compare_bar/" + status);
+						$.cookie('compare_show_hide', status);
+					},
+					default_bar_show_hide: (($.cookie('compare_show_hide') === 'hide' || !$(compare_list).length) ? 'hide' : 'show'),
+					messages: {
+						reached_the_maximum: "You have been reached the maximum number of items in the comparison list.",
+						one_item_compare: "Please select more than one item to compare."
+					},
+					debug: false
+				});
+				$('.flashable').each(function(){
+					$(this).hide().animate({opacity:'show',height:'show'},'slow',function(){
+						var $this=$(this);
+						setTimeout(function(){
+							$this.animate({opacity:'hide',height:'hide'},'slow');
+						},10000);
+					});
+				});
+
+				$('li.support a, #Problem').click(function(){
+					$('#FeedbackForm').Lightbox('show');
+					setTimeout(function(){
+						$('#FeedbackForm textarea').select().focus();
+					},500);
+					return false;
+				});
+				$('#FeedbackForm').submit(function(){
+					var comment=$.trim($('textarea',this).val());
+					if(!comment.length){
+						alert('You should type your problem to continue.')
+						$('textarea',this).focus();
+						return false;
+					}
+					var name=$.trim($('#FeedbackName',this).val());
+					if(!name.length){
+						alert('You should type your name to continue')
+						$('#FeedbackName',this).focus();
+						return false;
+					}
+					var contact=$.trim($('#FeedbackContact',this).val());
+					if(!contact.length){
+						alert('You should type your email to continue')
+						$('#FeedbackContact',this).focus();
+						return false;
+					}
+					if($('#FeedbackCaptcha').length){
+						var captcha=$.trim($('#FeedbackCaptcha').val());
+						if(captcha.length!=6){
+							alert('You should type 6 chars for the code')
+							$('#FeedbackCaptcha').select().focus();
+							return false;
+						}
+						var self=this;
+						if(!$(this).hasClass('verified')){
+							$.ajax({
+								url:baseUrl + locale.country + '/' + locale.language + '/comments/check_captcha/feedback/' + captcha,
+								dataType:'json',
+								success:function(result){
+									if(result){
+										$(self).addClass('verified').submit();
+									} else {
+										$('button',self).removeClass('inactive').addClass('active').html('Send');
+										var src=$('img:last',self).attr('src');
+										$('img:last',self).attr('src',src.replace(/\/\d+$/,'/' + (new Date()).getTime()));
+										$('#FeedbackCaptcha').val('').focus();
+										alert('Sorry, the code you have entered is incorrect');
+									}
+								}
+							});
+							$('button',this).removeClass('active').addClass('inactive').html('Verifying ...');
+							return false;
+						}
+					}
+					var version=$.browser.version.match(/\d+(\.\d+)?/);
+					version=version?version[0]:$.browser.version;
+					$(this).append('<input class="mine" type="text" style="display:none;" name="data[Feedback][browser]" value="' + $.browser.name + ' ' + version + '" />');
+					$(this).append('<input class="mine" type="text" style="display:none;" name="data[Feedback][url]" value="' + window.location + '" />');
+					$(this).append('<input class="mine" type="text" style="display:none;" name="data[Feedback][os]" value="' + navigator.platform + '" />');
+					$(this).append('<input class="mine" type="text" style="display:none;" name="data[Feedback][page_title]" value="' + document.title + '" />');
+					var data={};
+					$(':text, textarea',this).each(function(){
+						data[$(this).attr('name')]=$(this).val();
+					});
+					$('button',this).removeClass('inactive').addClass('active').html('Send');
+					$('.mine',this).remove();
+					$('#FeedbackComment, #FeedbackName, #FeedbackContact, #FeedbackCaptcha',this).val('').first().focus();
+					$(this).Lightbox('hide');
+					$.ajax({
+						url:baseUrl + locale.country + '/' + locale.language + '/feedbacks/add',
+						data:data,
+						type:'POST',
+						dataType:'json',
+						success:function(ok){
+							if(ok){
+
+							}
+						}
+					})
+					alert('Thank you for telling us about this problem, we will work on it immediately and will get in touch with you within 48 hours.')
+					return false;
+				});
+			});
+		</script>
+<meta name="google-site-verification" content="HmkAf6vrocl1Lsfk15zQt3DwO3VvW07DujsUrxSaaaU"/>
+<meta name="viewport" content="width=960"/>
+<script type='text/javascript'>
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+			})();
+		</script>
+<script type='text/javascript'>
+			googletag.cmd.push(function() {
+				googletag.defineSlot('/34628225/Leaderboard_728*90', [728, 90], 'div-gpt-ad-1375135791578-0').addService(googletag.pubads());
+				googletag.defineSlot('/34628225/Medium_Rectangle_300*250', [300, 250], 'div-gpt-ad-1375135791578-1').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+		</script>
+ 
+<script>(function() {
+			var _fbq = window._fbq || (window._fbq = []);
+			if (!_fbq.loaded) {
+				var fbds = document.createElement('script');
+				fbds.async = true;
+				fbds.src = '//connect.facebook.net/en_US/fbds.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(fbds, s);
+				_fbq.loaded = true;
+		  }
+			_fbq.push(['addPixelId', '242217799322921']);
+		})();
+		window._fbq = window._fbq || [];
+		window._fbq.push(['track', 'PixelInitialized', {}]);
+		</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=242217799322921&amp;ev=NoScript"/></noscript>
+ 
 <script>
-  var qpn_NAMES = {
-        'site':'Trulia',
-        'site_possessive':'Trulia\'s',
-        'mytrulia':'My Trulia',
-        'email_domain':'trulia.com',
-        'truliamap':'TruliaMap',
-        'voices':'Trulia Voices',
-        'account_source':'trulia'
-      },
-      _trulia_logged_in = +'0',
-      _is_real_estate_pro = +'0',
-      _supports_my_trulia = +'1',
-      _release_version_tab = 'GOAT40_20b',
-      _js_server_root = 'http://static.trulia-cdn.com/javascript/GOAT40_20b/',
-      _fb_app_home_story_id = '{FACEBOOK_APP_HOME_STORY_ID}',
-      _fb_app_id = '183577541666001';
 
-      trulia = (typeof(trulia) !== "undefined") ? trulia : {} ;
-      trulia.is_agent_paid = '';
-      trulia.agent_user_id = '';
-  var _feature_auth_popup_center_text_enabled = false;
-var _feature_auth_popup_form_toggle_buttons_enabled = false;
-var _feature_srp_save_search_ux_v1_enabled = false;
-var _feature_srp_save_search_ux_v2_enabled = false;
-var _feature_hp_search_tsa_enabled = false;
-var _feature_srp_sort_default_newest_enabled = false;
-var _feature_srp_sort_default_newest_repeat_users_enabled = false;
-var _feature_pdp_photo_player_ad_enabled = false;
-var _feature_pdp_for_sale_lead_upsell_v1_enabled = false;
-var _feature_moving_postlead_v1_enabled = false;
-var _feature_moving_postlead_v2_enabled = false;
-var _feature_lead_recommender_bypass_a_enabled = false;
-var _feature_pdp_board_walk_v1_enabled = false;
-var _feature_pdp_board_walk_v2_enabled = true;
-var _feature_pdp_board_walk_v3_enabled = false;
+	$(document).ready(function(){
+
+		var callAjax = function(){
+
+			$.ajax({
+
+				method:'get',
+
+				url:'/eg/ar/users_notifiers/user_cron_send_alerts',
+
+				success:function(data){
+
+					
+
+				}
+
+		 	});
+
+		}
+
+
+
+		if( Math.random() < 0.01 ) {
+
+			 // setInterval(callAjax, 60000);
+
+		}
+
+	});
+
+	// document.write("<iframe src=\"http://experiments.khal3d.com/image.gif\" width=\"0\" height=\"0\" style=\"display: none; width: 0px; height: 0px;\">></iframe>");
 
 </script>
-
-    <script language="JavaScript" type="text/JavaScript" src="http://yui.yahooapis.com/combo?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&2.9.0/build/connection/connection-min.js&2.9.0/build/selector/selector-min.js"></script>
-    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/first_step.js?v=GOAT40_20b"></script>
-    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/site_js.js?v=GOAT40_20b"></script>
-    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/advanced_search.js?v=GOAT40_20b"></script>
-    <script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/voices_qa.js?v=GOAT40_20b"></script>
-    <script language="JavaScript" type="text/JavaScript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/account.js?v=GOAT40_20b"></script>
-    <script language="JavaScript" type="text/JavaScript">
-      var _SITE_ROOT = site_root = '/';
-      var SITE_PATH_ROOT = '';
-
-      var ASearch = null;
-
-      trulia.ready(function ()
-      {
-        ASearch = new AdvancedSearch();
-        ASearch.page_load = true;
-        ASearch.old_tab = 'city_tab';
-        ASearch.active_tab_elem.value = 'city_tab';
-        ASearch.switch_form('buy');
-        ASearch.init_autofill('city_tab');
-
-        if (ASearch.active_tab_elem.value == 'sold_tab')
-        {
-          ASearch.sold_only_search(true);
-        }
-
-        ASearch.page_load = false;
-      });
-
-      var ASTips = {
-        'area':['Search within area boundary','Confine search results to the city or neighborhood boundary, which will be displayed on the map as a red outline. This option is useful if you are interested in staying within a particular area, and want to be sure where the precise boundary limits are.'],
-        'area2':['ZIP &amp; Neighborhood search','ZIP and neighborhood boundaries are provided by a third-party who compiles the data from community resources, municipalities, and real estate professionals.'],
-        'area3':['Schools search','Search by school returns homes for sale closest to the school you provided. Proximity does not guarantee enrollment eligibility. Please consult a real estate agent or school district to confirm the schools which are zoned for your specific property or area.'],
-        'area4':['Sold Homes search','Search properties that have been sold and recorded as a public record at the local assessor, tax collector or recorder offices across the US. You can specify the time range on how far back to search. This is helpful is you are interested in seeing homes matching certain criteria that have been sold in the past few months or in the past 5 years.'],
-        'lt1':['For sale listing types','<div class="bold">Resale</div>Resale listings comprise homes that are listed with agents and brokers. ' + qpn_NAMES.site + ' works directly with thousands of U.S. brokers who send us data feeds of their listings, tens of thousands of agents who directly submit their listings to ' + qpn_NAMES.site + ', as well as certain Multiple Listing Services and Web site vendors.<br/><br/><div class="bold">New Construction</div>Listings that are provided by builders and new home listing providers showing current availability in new home communities across the US.'],
-        'lt2':['Foreclosures',
-          '<div class="bold">Foreclosures</div>All foreclosure listings are provided by Realty Trac and display basic foreclosure information. In order to view full foreclosure details, users must register with Realty Trac.<br/><br/><div class="bold">Pre-Foreclosure (Notice of Default or Lis Pendens)</div>The foreclosure process begins when a borrower/owner defaults on loan payments and the lender files a public default notice, called a Notice of Default or Lis Pendens. Buying a property in pre-foreclosure involves approaching the borrower/owner and offering to buy the property outright.<br/><br/><div class="bold">Auction (Notice of Trustee Sale or Notice of Foreclosure Sale)</div>If the loan is not reinstated by the end of the pre-foreclosure period, potential buyers can bid on the property at a public auction. Buyers often are required to pay in cash at the auction and may not have much time to research the title and condition of the property beforehand; however, a public auction often offers some of the best bargains and avoids the unpredictability of dealing directly with the borrower/owner.<br/><br/><div class="bold">Bank-owned (Real Estate Owned)</div>If the lender takes ownership of the property, either through an agreement with the owner during pre-foreclosure or at the public auction, the lender will usually want to re-sell the property to recover the unpaid loan amount. The lender will then typically clear the title and perform needed maintenance and repair; however, the potential bargain for these REO homes is typically less than a pre-foreclosure or auction property.'],
-        'lt3':['Recently Sold Homes','Recently sold homes represent homes that have sold within the last 9 months and have been recorded as a public record at the local assessor, tax collector or recorder offices across the US.'],
-        '':['','']
-      };
-      </script>
-  </head>
-  <body class="home_pez greenpanda">
-    <div id="cobrand_custom_header">
-      
-    </div>
-      <header class="globalNav oocss" id="globalNavNormal" data-role="global_nav">
-
-  <div class="backgroundHighlight txtL">
-    <nav class="container containerResponsive line h6 typeWeightNormal mvn" role="navigation" data-role="global_nav_menu">
-      <div class="col phn">
-        
-        <div class="pbm">
-         <a href="/" class="globalNavLogo reversedLogo" data-role="global_nav_logo" title="Trulia real estate, homes for sale and apartments for rent">Trulia</a>
-        </div>
-      </div>
-
-      
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__buy">
-            <div class="typeReversed">
-                          <a href="/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Buy">Buy</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/veterans/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__veteranhomebuyercentral" data-track="Buy|VeteranHomebuyerCentral">Veteran Homebuyer Central</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/advanced/city/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__advancedsearch" data-track="Buy|AdvancedSearch">More Search Options</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/submit_listings/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__sls" data-track="Buy|SLS">FREE List a property</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__sell">
-            <div class="typeReversed">
-                          <a href="/sell/?ts=trulia&tscamp=global_nav_sell" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Sell">Sell</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/sell/?ts=trulia&tscamp=global_nav_whats_my_home_worth" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__whats my home worth" data-track="Sell|Whats My Home Worth">What's My Home Worth</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__rent">
-            <div class="typeReversed">
-                          <a href="/for_rent/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Rent">Rent</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/advanced/rent/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__advancedsearch" data-track="Rent|AdvancedSearch">More Search Options</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/post-rental/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__sls" data-track="Rent|SLS">FREE List a property</a>
-                                          </li>
-                                                          <li>
-                                              <a href="https://support.trulia.com/hc/en-us/articles/201896207-Rental-Listing-Scams-Read-Before-You-Search" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__fraud faqs" data-track="Rent|Fraud FAQs">Rental Fraud FAQs</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__voices">
-            <div class="typeReversed">
-                          <a href="/voices/qa/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Voices">Advice</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                                                        <li>
-                                              <a href="/voices/qa/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__qa" data-track="Voices|QA">Q&amp;A</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/voices/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__voices" data-track="Voices|Voices">Advice</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/voices/blogs/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__blogs" data-track="Voices|Blogs">Blogs</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/voices/guides/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__guides" data-track="Voices|Guides">Guides</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/guides-afi/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__amfamguides" data-track="Voices|AmFamGuides">Insurance Guide</a>
-                                          </li>
-                                                          <li>
-                                              <a href="http://activerain.com" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__activerainblogs" data-track="Voices|activeRainBlogs">ActiveRain Blogs</a>
-                                          </li>
-                                          <li class="dropdownDivider"></li>
-                                                                                            <li>
-                                              <a href="/ask/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__ask" data-track="Voices|Ask">Ask a Question</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/blog/post/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__writeblog" data-track="Voices|WriteBlog">Write a Blog Post</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__mortgage">
-            <div class="typeReversed">
-                          <a href="/loan/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Mortgage">Mortgage</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/loan/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__homeloan" data-track="Mortgage|HomeLoan">Home Loans</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/mortgages/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__mortgage" data-track="Mortgage|Mortgage">Mortgage</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/refinance/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__refinance" data-track="Mortgage|Refinance">Refinance</a>
-                                          </li>
-                                          <li class="dropdownDivider"></li>
-                                                                                            <li>
-                                              <a href="/mortgage-calculators/06/rent-or-buy/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__calculators" data-track="Mortgage|Calculators">Rent vs Buy Calculator</a>
-                                          </li>
-                                                          <li>
-                                              <a href="/mortgage-calculators/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__calculators" data-track="Mortgage|Calculators">Mortgage Calculators</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__local|home">
-            <div class="typeReversed">
-                          <a href="/local/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="Local|Home">Local Info</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/local/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__local|home" data-track="Local|Home|Local|Home">Local Home</a>
-                                          </li>
-                                          <li class="dropdownDivider"></li>
-                                                                                            <li>
-                                              <a href="/city/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__local" data-track="Local|Home|Local">Directory</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-              <div class="col phn">
-          <div class="pvm globalNavMenuItem globalNavMenuItemWithSubmenu dropdown" role="button" data-role="global_nav_menu_item global_nav_menu_item__findpro">
-            <div class="typeReversed">
-                          <a href="/directory/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link" data-track="FindPro">Find an Agent</a>
-                        </div>
-            <div class="dropdownBox box boxBasic backgroundLowlight zIndexNavigation">
-              <ul class="dropdownList" data-role="global_nav_menu_submenu">
-                                                      <li>
-                                              <a href="/directory/" class="dropdownLink" data-ignore-filters="1" data-role="global_nav_link global_nav_menu_submenu_item global_nav_menu_submenu_item__findpro" data-track="FindPro|FindPro">Agent Directory</a>
-                                          </li>
-                                                                    </ul>
-            </div>
-          </div>
-        </div>
-      
-      
-            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
-                <a href="/mobile/" class="globalNavMenuItemLink linkTypeReversed pam clickable iconMobile" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__mobile" data-track="Mobile">Mobile</a>
-              </div>
-            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
-                <a href="/truliapro/?src=000022" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__pro" data-track="Pro">For Professionals</a>
-              </div>
-            <div class="globalNavMenuItem colExt typeReversed phn pvm" data-role="global_nav_menu_item global_nav_menu_item__extra">
-                <a href="/submit_listings/" class="globalNavMenuItemLink linkTypeReversed pam clickable" data-role="global_nav_link global_nav_menu_item_link global_nav_menu_item_link__listings" data-track="Listings">Submit Listings</a>
-              </div>
-            
-    </nav>
-  </div>
-
-    <div class="backgroundBasic txtL pvs" id="global-sub-nav">
-  <div class="container containerResponsive" >
-    <div class="line mln">
-      
-      
-      
-    
-    
-        
-    <div class="colExt pln pts userIcons">
-            <div class="col txtC pvn pls" data-role="global_saved_properties">
-        <ul class="listInline listInlineHover h7 pan man">
-  <li id="propertyDropdown" class="dropdownTopContainer mbn mlm" data-role="dropdown_container">
-    <span class="clickable triggerDropdown overlayContainer linkLowlight">
-      <div class="mts txtC">
-        <i class="iconHeart h4 typeDeemphasize"></i>
-        <span class="iconBadge badgePrimary hideFully" data-role="notify_badge">1</span>
-      </div>
-      <span class="dropdownText">My Homes</span>
-    </span>
-    <div class="propertyDropdownContainer dropdownContent zIndexPopup">
-      <div id="propertyDropdownBody"></div>
-    </div>
-  </li>
-  <li id="mySearchesDropdown" class="dropdownTopContainer mhm mbn" data-role="dropdown_container ss_action" data-action="/account/searches/">
-    <span class="clickable triggerDropdown linkLowlight">
-      <div class="mts txtC">
-        <i class="iconSearch h4 typeDeemphasize"></i>
-        <span class="iconBadge badgePrimary hideFully" data-role="notify_badge">1</span>
-      </div>
-      <span class="dropdownText">My Searches</span>
-      </span>
-    <div class="propertyDropdownContainer dropdownContent zIndexPopup">
-      <div id="searchDropdownBody"></div>
-    </div>
-  </li>
-</ul>
-
-<script type="text/template" id="iconWithBadgeTemplate">
-  <i class="<%= iconToggleClass %> overlayContainer"></i>
+</head>
+<body class="ltr listings-list_view"><script type="text/javascript">
+//<![CDATA[
+try{(function(a){var b="http://",c="aqarmap.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
 </script>
-
-<script type="text/template" id="propertyRowTemplate">
-  <li class="pan">
-    <div class="media mbn pbs clickable" id="<%= propertyId %>">
-      <a href="<%= pdpUrl %>" class="mediaImg pls">
-        <img src="<%= thumbnail %>" width="50" height="50" alt="<%= description %>">
-      </a>
-      <div class="mediaBody prs">
-        <div class="h7 typeEmphasize typeTruncate propertyBoxPropertyTitle mbn"><%= topTitle %></div>
-        <div class="h7 typeLowlight typeTruncate propertyBoxPropertyType mtn"><%= description %></div>
-      </div>
-    </div>
-  </li>
-</script>
-
-<script type="text/template" id="suggestedPropertyRowTemplate">
-  <li class="mhs">
-    <div class="starMenuCarouselImage imageContainer120x80">
-      <a class="overlayContainer" href="<%= pdpUrl %>">
-        <img src="<%= photoUrl %>">
-        <div class="overlayLowlight overlayFull txtC h7 mvn phs pvl hideVisually">
-          <%= formattedBedAndBath.replace(/\//g, '|').replace(/(^|)(\d+)(|$)/g, '$1<b>$2</b>$3') %> <br>
-          <%= formattedSqft.replace(/(^|)(\d+)(|$)/g, '$1<b>$2</b>$3') %>
-        </div>
-      </a>
-    </div>
-    <div class="pbs txtL">
-      <div class="h7 typeEmphasize typeTruncate mbn" style="width: 120px;"><%= addressShort %></div>
-      <div class="h7 typeLowlight typeTruncate mtn" style="width: 120px;"><%= formattedPrice %></div>
-    </div>
-  </li>
-</script>
-
-<script type="text/template" id="suggestedHomesLinkTemplate">
-  <li class="mhs" style="vertical-align: top;">
-   <div class="backgroundLowlight txtC typeEmphasize h7 mvn phm pvl">
-      <a id="viewAllSuggestedHomesSlide" data-tracking-string="ViewAllSuggestedHomesSlide" href="<%= site_root %>account/suggestions/">
-        View All <br>
-        Suggested Homes
-      </a>
-    </div>
-  </li>
-</script>
-
-<script type="text/template" id="suggestedPropertyContainerTemplate">
-
-  <div class="boxHeadBasic boxFootBasic plm pvs mhn typeEmphasize typeLowlight backgroundLowlight">
-    <span>Suggested just for you</span>
-    <a id="viewAllSuggestedHomesLink" data-tracking-string="ViewAllSuggestedHomesLink" class="h8 typeEmphasize typeCaps" href="<%= site_root %>account/suggestions/">View All</a>
-  </div>
-
-  <ul id="suggestedPropertyList" class="carouselContainer plm listInline lhn mbn">
-    <li class="mbl"><div class="btn mbl phn prev btnDisabled"><i class="iconLeftOpen"></i></div></li>
-    <li class="carousel typeTruncate mbn">
-      <ol class="listInline lhn mbn">
-
-      </ol>
-    </li>
-    <li class="mbl"><div class="btn mbl phn next"><i class="iconRightOpen"></i></div></li>
-  </ul>
-
-</script>
-
-<script type="text/template" id="suggestedPropertyEmptyContainerTemplate">
-  <div class="txtC boxFootBasic h7 typeEmphasize typeCaps man pam">
-    <a href="<%= site_root %>account/suggestions/">
-      <i class="iconThumbsUp h5 mvn"></i>Unlock your personalized home suggestions
-    </a>
-  </div>
-</script>
-
-<script type="text/template" id="myHomesContainerTemplate">
-  <div class="savedPropertiesDropdownBox box dropdownArrowRight dropdownBoxHighlight backgroundLowlight txtL">
-    <div class="boxHead boxHeadBasic typeLowlight line man pvm h6">
-      <div class="col cols14 plm">
-        <%= header %>
-        <a id="viewAllFollowedHomesLink" href="<%= site_root %>account/properties/" class="h8 typeEmphasize typeCaps"><%= viewAllLinkText %></a>
-      </div>
-      <div class="colExt txtR">
-        <ul id="globalNavMyHomesTabHeader" class="tabs tabDefault pln man" data-body="#searchHistoryList">
-
-        </ul>
-      </div>
-    </div>
-    <div class="boxBody backgroundBasic pan">
-
-      <div id="starMenuSavedMessage" class="typeHighlight h7 typeEmphasize phs pts mtn hideFully"></div>
-      <div id="savedPropertyList">
-        <ul class="listBorderedHover mvn pan">
-
-        </ul>
-      </div>
-
-      <div id="suggestedPropertyContainer"></div>
-
-    </div>
-
-    <div id="globalNavMyHomesFooter" class="boxFoot boxFootBasic mhn pvs h7 txtC"></div>
-  </div>
-</script>
-
-<script type="text/template" id="myHomesActiveTab">
-  <li class="pvn phm man"><a href="#" data-tab="<%= tabName %>"><%= tabName %></a></li>
-</script>
-<script type="text/template" id="myHomesInactiveTab">
-  <li class="pvn phm man"><span class="typeLowlight"><%= tabName %></span></li>
-</script>
-
-<script type="text/template" id="savedRentalContainerFooterTemplate">
-  <div class="pas mts" style="white-space: normal;line-height: 1.3;">
-    <i class="h6 iconTrophy"></i>Smart renters contact multiple properties <br> and find a place to live sooner.
-  </div>
-  <div class="mts mbl">
-    <a href="<%= viewAllRentalHomesLink %>" class="btn btnPrimary btnSml btn-primary viewSavedProperties">View All Saved Homes</a>
-  </div>
-</script>
-
-<script type="text/template" id="loggedOutOrNoPropertyContainerTemplate">
-  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundBasic txtL ">
-    <div class="boxBody txtC pvm">
-      <p class="h5 typeEmphasize">Saved Homes</p>
-      <p class="h5 typeWeightNormal txtC mvm">Keep track of your favorite homes from one easy location.</p>
-
-      <% if (is_logged_in) { %>
-        <p class="h5 typeWeightNormal txtC">Save a home to get started.</p>
-      <% } else { %>
-        <p class="txtC mvl phl">
-          <button class="signUpButton btn btnPrimary btn-primary"><span class="phl">Sign in</span></button>
-        </p>
-      <% } %>
-
-    </div>
-  </div>
-</script>
-
-<script type="text/template" id="loadingSavedPropertiesContainerTemplate">
-  <div class="box boxHighlight backgroundBasic txtL">
-    <p class="txtC typeWeightNormal h6 txtM"><i class="iconSpinner"></i>Loading</p>
-  </div>
-</script>
-
-<script type="text/template" id="firstTimeUserContainerTemplate">
-  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundLowlight txtL">
-    <div class="boxBody backgroundBasic pan">
-      <img src="http://static.trulia-cdn.com/images/global_nav/saved_properties/one_time_howto_20130903.jpg"/>
-      <div class="pal ptm">
-        <p class="h4 txtC">
-          <span class="typeHighlight typeEmphasize">New.</span> Keep track of your favorite homes.
-        </p>
-        <div class="txtC ptm">
-          <a href="#" class="btn btnDefault">Got It</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</script>
-
-<script type="text/template" id="loggedOutSearchContainerTemplate">
-  <div class="box dropdownArrowRight dropdownBoxHighlight backgroundBasic txtL ">
-    <div class="boxBody txtC pvm">
-      <p class="h5 typeEmphasize">Saved Searches</p>
-      <p class="h5 typeWeightNormal txtC mvm">Get notified when homes in your search criteria hit the market.</p>
-
-      <p class="txtC mvl phl">
-        <button class="signUpButton btn btnPrimary btn-primary"><span class="phl">Sign in</span></button>
-      </p>
-
-    </div>
-  </div>
-</script>
-
-      </div>
-      
-      
-            <div class="globalUserCard colExt pln" data-role="global_user_card">
-                    <div class="globalUserCardLinks mts" data-role="global_user_card_links">
-    <div class="globalUserCardLink globalUserCardSigninLink txtC mrl typeHighlight" data-action="%2Flogin" data-role="global_user_card_link global_user_card_signin_link" data-track="UpperRightUniversalLinks|LogIn_Link">
-      <i class="iconUser h5 man"></i><br>
-      <span class="h7 man pan">Sign In</span>
-    </div>
-  </div>
-              </div>
-      
-
-    </div>
-
-    <script type="text/template" id="emptyListItemTemplate">
-	<li class="pvn mvn"></li>
-</script>
-
-
-<script type="text/template" id="autoSuggestItemTemplate">
-  <li class="man pvs" data-title="<%= title %>" data-value="<%= value %>" data-location-id="<%= locationId %>" data-pid="<%= pid %>" data-property-Index="<%= propertyIndex %>" data-ac_index="<%= ac_index %>" data-location-type="<%= locationType %>">
-    <div class="line man">
-    		<div class="col cols20 pan typeTruncate">
-    			<%= display %>
-    		</div>
-    	<div class="colExt txtR typeLowlight pan"><%= suffix %></div>
-    </div>
-  </li>
-</script>
-  </div>
-</div>
-
-
-
-</header>
-
-
-
-
-<script>
-  if (typeof trulia == 'undefined')
-  {
-    trulia = {};
-  }
-
-  if (!trulia.page_name)
-  {
-    trulia.page_name = 'advanced_search';
-  }
-
-  var site_root = site_root ? site_root : '';
-  var _SITE_ROOT = _SITE_ROOT ? _SITE_ROOT : '';
-  var _IMAGE_SERVER = _IMAGE_SERVER ? _IMAGE_SERVER : '';
-  var _IMAGE_SERVER_ROOT = _IMAGE_SERVER_ROOT ? _IMAGE_SERVER_ROOT : '';
-  var _qa_remct_tkn = _qa_remct_tkn ? _qa_remct_tkn : '';
-  var _puid = _puid ? _puid : '';0;
-  var _release_version_tab = _release_version_tab ? _release_version_tab : '';
-</script>
-<script type="text/javascript" src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/global_nav.js?v=GOAT40_20b"></script>
-
-    <div class="minwidth mart15">
-    <div id="home_page_error_display" class="mar0 pad0">
-    <div class="qa_error_summary">
-  <h3 class="error_title"><strong>Sorry! Your search for <span style="color:black;">""</span> returned no results.</strong></h3>
-<p class="error_content">Please refine your search in the box below.</p>
-
-</div>
-
-    </div>
-
-    <h1 class="f22">More search options</h1>
-
-<div class="module mar0 marb20 mart20 pad10 f16 bold ">
-  <div class="content">
-  <label class="marr20"><input type="radio" name="search_type" value="buy" class="marb5" onclick="ASearch.switch_form(this.value);"  checked>Buy</input></label>
-  <label class="marl20"><input type="radio" name="search_type" value="rent" class="marb5" onclick="ASearch.switch_form(this.value);" >Rent</input></label>
-  </div>
-</div>
-
-<div id="error_summary" class="as_error_summary gone tcenter">
-  <span class="f16 mar2 pad0 normal">
-    <strong>Sorry!</strong> We found a few errors. Please scroll down for details.
-  </span>
-</div>
-<div id="no_listings_found" class="as_error_summary gone" style="padding: 10px 20px; font-weight: normal;">
-  <div class="f12 bold">0 properties matched your search.</div>   
-  <div class="f15 bold padt10">Try these search tips:</div>   
-  <div class="black">     
-    <ul style="margin: 0px; padding: 0px 0px 0px 20px;">       
-      <li>Broaden your search by expanding your search criteria.</li>       
-      <li>Expand your search area to include more areas.</li>            
-    </ul>  
-  </div>   
-</div>
-<div id="no_listings_mls" class="as_error_summary gone" style="padding: 10px 20px; font-weight: normal;">
-  <div class="f12 bold">Sorry, we did not find MLS ID# <span id="mlsid"></span> in <span id="mlsloc"></span></div>   
-  <div class="f15 bold padt10">Try these search tips:</div>   
-  <div class="black">     
-    <ul style="margin: 0px; padding: 0px 0px 0px 20px;">       
-      <li><a href="" onclick="ASearch.toggle_adv_search_tabs('address_tab');return false;">Search by street address</a>.</li>
-      <li>Search by <a href="" onclick="ASearch.toggle_adv_search_tabs('city_tab');return false;">City</a>, <a href="" onclick="ASearch.toggle_adv_search_tabs('zip_tab');return false;">ZIP or Neighborhood</a> to expand your area.</li>
-      <li class=""><a href="/alerts/search/">Set up an email alert</a> to be notified when the property is listed on Trulia.</li>
-    </ul>  
-  </div>   
-</div>
-
-<input type="hidden" value="" name="as_autocomplete_value" id="as_autocomplete_value" />
-<input type="hidden" value="" name="active_tab" id="active_tab" value="city_tab" />
-
-<form onclick="doNothing(event);" method="get" onsubmit="return ASearch.validate_form('rent');" id="as_content_form_rent" name="as_content_form_rent" 
-action="/search_advanced_search_post.php" class="as_content_form gone">
-  <div class="module">
-    <div class="content as_tab_content">
-      <div id="rent_tab_content" class="clearfix gone">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-          Location
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form('rent');" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section clear" id="location_section_form_rent">
-          <div class="fleft padr20" style="width:300px;">
-            <label class="as_label" id="location_label_rent" for="location_rent">
-              City <span class="normal">OR</span> neighborhood <span class="normal">OR</span> ZIP <span class="normal">OR</span> Street address
-              <span class="as_required f14">*</span>
-            </label>
-            <div style="width:300px;">
-              <input type="text" id="location_rent" autocomplete="off" value="" class="as_input" name="location_rent" style="color: rgb(0, 0, 0);width:300px;" /><br/>
-              <div id="location_rent_form_query"></div>
-            </div>
-            <div class="clear as_required f10">* required</div>
-          </div>
-        </div>
-      </div>
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Property details
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form('rent');" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-        <div class="padt10 as_tab_section_border clearfix">
-          <div class="fleft padr50">
-            <label for="min_price_rent" class="as_label" id="price_label_rent">Monthly rent</label>
-            <span>
-              $ <input type="text" style="width:125px;" value="" class="as_input" size="12" id="min_price_rent" name="min_price" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              $ <input type="text" style="width:125px;" value="" class="as_input" size="12" id="max_price_rent" name="max_price" />  
-            </span>
-          </div>
-          <div class="fleft padr50">
-            <label for="min_beds_rent" class="as_label" id="beds_label_rent">Bedrooms</label>
-            <span>
-              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="min_beds_rent" name="min_beds" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="max_beds_rent" name="max_beds" />  
-            </span>
-          </div>
-          <div class="fleft">
-            <label for="min_baths_rent" class="as_label" id="baths_label_rent">Bathrooms</label>
-            <span>
-              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="min_baths_rent" name="min_baths" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" class="as_input" size="12" id="max_baths_rent" name="max_baths" />  
-            </span>   
-          </div>
-        </div>
-
-        <div class="padt10 as_tab_section_border clearfix" id="sizes_section_rent">
-          <div class="fleft padr50">
-            <label for="min_sqft_rent" class="as_label" id="sqft_label_rent">Square feet</label>
-            <span>
-              <input type="text" style="width:135px;" value="" class="as_input" size="12" id="min_sqft_rent" name="min_sqft" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:135px;" value="" class="as_input" size="12" id="max_sqft_rent" name="max_sqft" />  
-            </span>
-          </div>
-          <div class="fleft padr50">
-            <label for="filter_pets" class="as_label" id="pets_label_rent">Pets allowed</label>
-            <span>
-                <select id="filter_pets" name="filter_pets" onchange="">
-    <option value="">No Preference</option>
-    <option  value="cats">Cats</option>
-    <option  value="sm_dogs">Small Dogs</option>
-    <option  value="lg_dogs">Large Dogs</option>
-    <option  value="other">Other</option>
-  </select>
-
-            </span>
-          </div>
-        </div>
-
-        <div class="as_tab_section_border clearfix">
-          <div class="fleft as_label padr25" style="width:80px;">
-            Property type
-          </div>
-            <div class="fleft">
-        <span class="bold">
-      <input type="checkbox" id="pt_rent_all" name="pt_rent_all" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" checked="checked"/>
-      <label for="pt_rent_all" class="padr15" onclick>All</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_rent_1" name="pt_rent_1" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_1" class="padr15" onclick>Single-Family Home</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_rent_2" name="pt_rent_2" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_2" class="padr15" onclick>Condo</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_rent_10" name="pt_rent_10" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_10" class="padr15" onclick>Townhome</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_rent_12" name="pt_rent_12" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_12" class="padr15" onclick>Apartment</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_rent_13" name="pt_rent_13" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_13" class="padr15" onclick>Loft</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_rent_15" name="pt_rent_15" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_15" class="padr15" onclick>Apt/Condo/Twnhm</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_rent_5" name="pt_rent_5" onclick="ASearch.handle_checkbox('pt_rent_all', this, 'type');" />
-      <label for="pt_rent_5" class="padr15" onclick>Multi-Family Home</label>
-    </span><br/>
-
-  </div>
-        </div>
-
-        <div class="as_tab_section_border clearfix">
-          <div class="fleft as_label padr25" style="width:80px;">
-            Features
-          </div>
-          <label id="amenities_ac_label" for="amenities_ac" class="padr15">
-<input id="amenities_ac"  type="checkbox" class="f_checkbox" name="amenities_ac"  />Air Conditioning</label>
-<label id="amenities_wd_label" for="amenities_wd" class="padr15">
-<input id="amenities_wd"  type="checkbox" class="f_checkbox" name="amenities_wd"  />Washer/Dryer in unit</label>
-<label id="amenities_dw_label" for="amenities_dw" class="padr15">
-<input id="amenities_dw"  type="checkbox" class="f_checkbox" name="amenities_dw"  />Dishwasher</label>
-<label id="amenities_cs_label" for="amenities_cs" class="padr15">
-<input id="amenities_cs"  type="checkbox" class="f_checkbox" name="amenities_cs"  />Cable/Satellite</label>
-
-        </div>
-
-        <div class="as_tab_section_noborder clearfix" id="keyword_section_rent">
-          <div class="fleft padr20">
-            <label for="keyword_rent" class="as_label" id="keyword_label_rent">Keyword search</label>
-            <input type="text" style="width:348px;" value="" class="as_input" size="20" id="keyword_rent" 
-              onkeypress="return keyword_keypress_filter(event);" name="keyword" /><br/>
-            <span>e.g. "<a onclick='xb_get_element("keyword_rent").value = "garage";return false;'>garage</a>", 
-            "<a onclick='xb_get_element("keyword_rent").value = "pool";return false;'>pool</a>", 
-            "<a onclick='xb_get_element("keyword_rent").value = "patio";return false;'>patio</a>", etc.</span>
-          </div>
-        </div>
-    </div>
-    <div class="bottom">
-      <div style="margin: 0px auto; width: 62px;" class="button"><a  href="#" onclick="return ASearch.validate_form('rent');"  class="orange"><span>Search</span></a></div>
-      <div class="clear"></div>
-    </div>
-  </div>
-</form>
-
-<form onclick="doNothing(event);" method="get" onsubmit="return ASearch.validate_form();" id="as_content_form_buy" name="as_content_form_buy"
-action="/search_advanced_search_post.php" class="as_content_form ">
-
-  <div class="tab_container">
-    <div class="tab selected" id="city_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('city_tab');return false;" href="" class=""> City </a>
-    </div>
-    <div class="tab" id="zip_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('zip_tab');return false;" href="" class=""> ZIP or Neighborhood </a>
-    </div>
-    <div class="tab" id="address_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('address_tab');return false;" href="" class=""> Address </a>
-    </div>
-    <div class="tab" id="county_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('county_tab');return false;" href="" class=""> County </a>
-    </div>
-    <div class="tab" id="school_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('school_tab');return false;" href="" class=""> Schools </a>
-    </div>
-    <div class="tab" id="mls_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('mls_tab');return false;" href="" class=""> MLS ID </a>
-    </div>
-    <div class="tab gone" id="sold_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('sold_tab');return false;" href="" class=""> Sold Homes </a>
-    </div>
-    <div class="tab" id="price_tab">
-      <a onclick="ASearch.toggle_adv_search_tabs('price_tab');return false;" href="" class=""> Price changes </a>
-    </div>
-  </div>
-  <div class="module with_tabs">
-    <div class="content as_tab_content">
-      <div id="city_tab_content" class="clearfix ">
-        <div class="as_title clearfix padb0">
-          <div class="clearfix fleft">
-            Search for homes by city
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-        <div class="as_tab_section clear">
-          <div class="fleft padr20" style="width: 305px;">
-            <label for="city" class="as_label" id="city_label">City</label><span class="as_required f14">*</span><br />
-            <div style="width:305px;">
-              <input type="text" id="city" autocomplete="off" value="" name="city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
-              <div id="city_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft">
-            <label for="r_city" class="as_label">Search within</label>
-            <select id="r_city" name="r_city">
-              <option value="">City boundary</option>
-              <option value="1">1 mile radius</option>
-              <option value="5">5 mile radius</option>
-              <option value="10">10 mile radius</option>
-            </select>
-          </div>
-          <div class="fleft mart20 marl10">
-            <a  onclick="show_generic_popup(ASTips.area[0], ASTips.area[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-          <div class="clear as_required f10">* required</div>
-        </div>
-
-      </div>
-
-      <div id="zip_tab_content" class="clearfix gone">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Search for homes by ZIP or Neighborhood
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section clear" id="zip_section_form">
-          <div class="fleft padr20" style="width:60px;">
-            <label for="zip" class="as_label" id="zip_label">ZIP</label>
-            <div style="width:60px;">
-              <input type="text" id="zip" autocomplete="off" value="" name="zip" style="color: rgb(0, 0, 0);width:60px;" /><br/>
-              <div id="zip_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft padr25 padl5 padt20 f12">
-            OR
-          </div>
-          <div class="fleft padr20" style="width:280px;">
-            <label for="nh" class="as_label" id="nh_label">Neighborhood</label>
-            <div style="width: 280px;">
-              <input type="text" id="nh" autocomplete="off" value="" name="nh" style="color: rgb(0, 0, 0);width:280px;" /><br/>
-              <div id="nh_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft padr20">
-            <label for="r_zip" class="as_label">Search within</label>
-            <select id="r_zip" name="r_zip">
-              <option value="">ZIP or Neighborhood boundary</option>
-              <option value="1">1 mile radius</option>
-              <option value="5">5 mile radius</option>
-              <option value="10">10 mile radius</option>
-            </select>
-          </div>
-          <div class="fleft mart20 marl10">
-            <a  onclick="show_generic_popup(ASTips.area2[0], ASTips.area2[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="address_tab_content" class="clearfix padb20 gone ">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Search for an address
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section clear padb20">
-          <div class="fleft padr20">
-            <label for="address_street_number" class="as_label" id="address_street_number_label">Street number</label><span class="as_required f14">*</span><br />
-            <input type="text" style="width:85px;" value="" size="12" id="address_street_number" name="address_street_number"/>
-          </div>
-          <div class="fleft">
-            <label for="address_street" class="as_label" id="address_street_label">Street address</label><span class="as_required f14">*</span><br />
-            <input type="text" style="width:415px;" value="" size="12" id="address_street" name="address_street"/>
-          </div>
-          <div class="clear padt10 padr20" style="width:415px;">
-            <label for="address_city" class="as_label" id="address_city_label">City</label><span class="as_required f14">*</span><br />
-            <div style="width:415px;">
-              <input type="text" id="address_city" autocomplete="off" value="" name="address_city" style="color: rgb(0, 0, 0);width:415px;" /><br/>
-              <div id="address_city_form_query"></div>
-            </div>
-          </div>
-          <div class="as_required f10">* required</div>
-        </div>
-      </div>
-
-      <div id="mls_tab_content" class="clearfix padb20 gone ">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Search for a listing by MLS ID
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div><br/>
-        <div class="as_tab_section clear padb20">
-          <div class="fleft padr20">
-            <label for="mls" class="as_label" id="mls_label">MLS ID</label><span class="as_required f14">*</span><br />
-            <input type="text" style="width:226px;" value="" size="12" id="mls" name="mls" />
-          </div>
-          <div class="fleft padr20" style="width:330px;">
-            <label for="mls_city" class="as_label" id="mls_city_label">City</label><span class="as_required f14">*</span><br />
-            <div style="width:330px;">
-              <input type="text" id="mls_city" autocomplete="off" value="" name="mls_city" style="color: rgb(0, 0, 0);width:330px;" /><br/>
-              <div id="mls_city_form_query"></div>
-            </div>
-          </div>
-          <div class="clear as_required f10">* required</div>
-        </div>
-      </div>
-
-      <div id="county_tab_content" class="clearfix gone ">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Search for homes by county
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section clear">
-          <div class="fleft padr20" style="width:182px;">
-            <label for="county" class="as_label" id="county_label">County</label><span class="as_required f14">*</span><br />
-            <div style="width:182px;">
-              <input type="text" id="county" autocomplete="off" value="" name="county" style="color: rgb(0, 0, 0);width:182px;" /><br/>
-              <div id="county_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft">
-            <label for="r_county" class="as_label">Search within</label>
-            <select id="r_county" name="r_county">
-              <option value="">County boundary</option>
-              <option value="1">1 mile radius</option>
-              <option value="5">5 mile radius</option>
-              <option value="10">10 mile radius</option>
-            </select>
-          </div>
-  <!--        <div class="fleft mart20 marl10">-->
-  <!--          <a  onclick="show_generic_popup(ASTips.area3[0], ASTips.area3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>-->
-  <!--        </div>-->
-          <div class="clear as_required f10">* required</div>
-        </div>
-      </div>
-
-      <div id="school_tab_content" class="clearfix padb20 gone ">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Search for homes near a school location
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section clear padb20">
-          <div class="fleft padr20" style="width:415px;">
-            <label for="school" class="as_label" id="school_label">School Name or City, State</label><span class="as_required f14">*</span><br />
-            <div style="width:415px;">
-              <input type="text" style="width:415px;" value="" size="12" id="school" name="school"/><br/>
-              <div id="school_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft">
-            <label for="r_school" class="as_label">Search within</label>
-            <select id="r_school" name="r_school">
-              <option value="1">1 mile radius</option>
-              <option value="5">5 mile radius</option>
-              <option value="10">10 mile radius</option>
-            </select>
-          </div>
-          <div class="fleft mart20 marl10">
-            <a  onclick="show_generic_popup(ASTips.area3[0], ASTips.area3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-          <div class="clear as_required f10">* required</div>
-        </div>
-      </div>
-    
-      <div id="sold_tab_content" class="clearfix gone">
-        <div class="as_title clearfix padb0">
-          <div class="clearfix fleft">
-            Search for Sold homes
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-        <div class="as_tab_section clear">
-          <div class="fleft padr20" style="width:305px;">
-            <label for="sold_city" class="as_label" id="sold_label">City, ZIP or Neighborhood</label><span class="as_required f14">*</span><br />
-            <div style="width:305px;">
-              <input type="text" id="sold_city" autocomplete="off" value="" name="sold_city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
-              <div id="sold_city_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft">
-            <label for="date_sold_city" class="as_label">Search within</label>
-            <select id="date_sold_city" name="date_sold_city">
-              <option value="3">Last 3 months</option>
-              <option value="6">Last 6 months</option>
-              <option value="9" selected="selected" >Last 9 months</option>
-              <option value="12">Last 1 year</option>
-              <option value="24">Last 2 years</option>
-              <option value="36">Last 3 years</option>
-              <option value="60">Last 5 years</option>
-              <option value="120">Last 10 years</option>
-            </select>
-          </div>
-          <div class="fleft mart20 marl10">
-            <a  onclick="show_generic_popup(ASTips.area4[0], ASTips.area4[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-          <div class="clear as_required f10">* required</div>
-        </div>
-      </div>
-
-      <div id="price_tab_content" class="clearfix gone">
-        <div class="as_title clearfix padb0">
-          <div class="clearfix fleft">
-            Search for Price Changes
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-        <div class="as_tab_section clear">
-          <div class="fleft padr20" style="width:305px;">
-            <label for="price_city" class="as_label" id="price_city_label">City, ZIP or Neighborhood</label><span class="as_required f14">*</span><br />
-            <div style="width:305px;">
-              <input type="text" id="price_city" autocomplete="off" value="" name="price_city" style="color: rgb(0, 0, 0);width:305px;" /><br/>
-              <div id="price_city_form_query"></div>
-            </div>
-          </div>
-          <div class="fleft padt2">
-            <label for="reduced_period" class="as_label">Price Reduced</label>
-            <select id="reduced_period" name="reduced_period" style="width:180px;">
-              <option value="365" selected="selected">In the past year</option>
-              <option value="7">In the past 7 days</option>
-              <option value="14">In the past 2 weeks</option>
-              <option value="30">In the past month</option>
-              <option value="60">In the past 2 months</option>
-              <option value="90">In the past 3 months</option>
-              <option value="120">In the past 4 months</option>
-            </select>
-          </div>
-          <div class="fleft padr15 padl15 padt20 mart2 f12">
-            by
-          </div>
-          <div class="fleft padt2">
-            <label for="reduced_percent" class="as_label">Percentage</label>
-            <select id="reduced_percent" name="reduced_percent" onchange="ASearch.toggle_custom_price_change();">
-              <option value="p" selected="selected">Any amount</option>
-              <option value="0-10">Up to 10%</option>
-              <option value="0-20">Up to 20%</option>
-              <option value="20p">20% or more</option>
-            </select>
-          </div>
-          <div class="clear as_required f10 padb10">* required</div>
-        </div>
-      </div>
-
-      <!-- START COMMON PROPERTY PARTS -->
-      <div id="common_filters" class="">
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-            Property details
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-        <div class="padt10 as_tab_section_border clearfix">
-          <div class="fleft padr50">
-            <label for="min_price" class="as_label" id="price_label">Price</label>
-            <span>
-              $ <input type="text" style="width:125px;" value="" size="12" id="min_price" name="min_price" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              $ <input type="text" style="width:125px;" value="" size="12" id="max_price" name="max_price" />  
-            </span>
-          </div>
-          <div class="fleft padr50">
-            <label for="min_beds" class="as_label" id="beds_label">Bedrooms</label>
-            <span>
-              <input type="text" style="width:93px;" value="" size="12" id="min_beds" name="min_beds" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" size="12" id="max_beds" name="max_beds" />  
-            </span>
-          </div>
-          <div class="fleft">
-            <label for="min_baths" class="as_label" id="baths_label">Bathrooms</label>
-            <span>
-              <input type="text" style="width:93px;" value="" size="12" id="min_baths" name="min_baths" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" size="12" id="max_baths" name="max_baths" />  
-            </span>   
-          </div>
-        </div>
-        <div class="as_tab_section_border clearfix">
-          <div class="fleft as_label padr25">
-              Property type
-          </div>
-            <div class="fleft">
-        <span class="bold">
-      <input type="checkbox" id="pt_all" name="pt_all" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" checked="checked"/>
-      <label for="pt_all" class="padr15" onclick>All</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_1" name="pt_1" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_1" class="padr15" onclick>Single-Family Home</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_2" name="pt_2" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_2" class="padr15" onclick>Condo</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_10" name="pt_10" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_10" class="padr15" onclick>Townhome</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_11" name="pt_11" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_11" class="padr15" onclick>Coop</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_12" name="pt_12" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_12" class="padr15" onclick>Apartment</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_13" name="pt_13" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_13" class="padr15" onclick>Loft</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_14" name="pt_14" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_14" class="padr15" onclick>TIC</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_15" name="pt_15" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_15" class="padr15" onclick>Apt/Condo/Twnhm</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_3" name="pt_3" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_3" class="padr15" onclick>Mobile/Manufactured</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_4" name="pt_4" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_4" class="padr15" onclick>Farm/Ranch</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_6" name="pt_6" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_6" class="padr15" onclick>Lot/Land</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_5" name="pt_5" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_5" class="padr15" onclick>Multi-Family Home</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_7" name="pt_7" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_7" class="padr15" onclick>Income/Investment</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_8" name="pt_8" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_8" class="padr15" onclick>Houseboat</label>
-    </span><br/>
-
-  </div>  <div class="fleft">
-        <span class="">
-      <input type="checkbox" id="pt_TYPE_NEW_COMMUNITY" name="pt_TYPE_NEW_COMMUNITY" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_TYPE_NEW_COMMUNITY" class="padr15" onclick>New Community</label>
-    </span><br/>
-    <span class="">
-      <input type="checkbox" id="pt_TYPE_APARTMENT_COMMUNITY" name="pt_TYPE_APARTMENT_COMMUNITY" onclick="ASearch.handle_checkbox('pt_all', this, 'type');" />
-      <label for="pt_TYPE_APARTMENT_COMMUNITY" class="padr15" onclick>Apartment</label>
-    </span><br/>
-
-  </div>
-        </div>
-
-        <div class="padt10 as_tab_section_border clearfix" id="sizes_section">
-          <div class="fleft padr50">
-            <label for="min_sqft" class="as_label" id="sqft_label">Structure size (square feet)</label>
-            <span>
-              <input type="text" style="width:135px;" value="" size="12" id="min_sqft" name="min_sqft" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:135px;" value="" size="12" id="max_sqft" name="max_sqft" />  
-            </span>
-          </div>
-          <div class="fleft padr50">
-            <label for="min_lotsize" class="as_label" id="lotsize_label">Lot size (acres)</label>
-            <span>
-              <input type="text" style="width:93px;" value="" size="12" id="min_lotsize" name="min_lotsize" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" size="12" id="max_lotsize" name="max_lotsize" />  
-            </span>
-          </div>
-          <div class="fleft">
-            <label for="min_built" class="as_label" id="built_label">Year built</label>
-            <span>
-              <input type="text" style="width:93px;" value="" size="12" id="min_built" name="min_built" />
-              <span class="padr5 padl5 padt20 f12">
-              to
-              </span>
-              <input type="text" style="width:93px;" value="" size="12" id="max_built" name="max_built" />  
-            </span>
-          </div>
-        </div>
-
-        <div class="as_tab_section_noborder clearfix" id="keyword_section">
-          <div class="fleft padr20">
-            <label for="keyword" class="as_label" id="keyword_label">Keyword search</label>
-            <input type="text" style="width:348px;" value="" size="20" id="keyword" onkeypress="return keyword_keypress_filter(event);" name="keyword" /><br/>
-            <span>e.g. "<a onclick='xb_get_element("keyword").value = "garage";return false;'>garage</a>", "<a onclick='xb_get_element("keyword").value = "pool";return false;'>pool</a>", "<a onclick='xb_get_element("keyword").value = "patio";return false;'>patio</a>", etc.</span>
-          </div>
-        </div>
-      
-        <div class="as_title clearfix" id="listing_type_header">
-          <div class="clearfix fleft">
-          Listing type
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-      
-        <div class="as_tab_section_border_sml clearfix" id="for_sale_section">
-          <div class="fleft as_label" style="width:120px" id="listings">
-            For sale listings
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="lt_all" checked="checked" class="mar0" name="lt_all" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');" />
-            <label for="lt_all" class="as_label padr20" style="display:inline;">All</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="lt_resale" class="mar0" name="lt_resale" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');" />
-            <label for="lt_Resale" class="padr20">Resale (existing homes)</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="lt_new_construction" class="mar0" name="lt_new_construction" onclick="ASearch.handle_checkbox('lt_all', this, 'listings');"/>
-            <label for="lt_new_construction" class="padr20">New construction</label>
-          </div>
-          <div class="fleft mart4 marl10">
-            <a  onclick="show_generic_popup(ASTips.lt1[0], ASTips.lt1[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-        </div>
-
-        <div class="clear as_tab_section_border_sml clearfix" id="foreclosure_section">
-          <div class="fleft as_label" style="width:120px" id="foreclosures">
-            Foreclosures
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="ft_all" class="mar0" name="ft_all" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');" />
-            <label for="ft_all" class="as_label padr20" style="display:inline;">All</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="ft_1" class="mar0" name="ft_1" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
-            <label for="ft_1" class="padr20">Notice of default</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="ft_2" class="mar0" name="ft_2" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
-            <label for="ft_2" class="padr20">Auction</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" id="ft_3" class="mar0" name="ft_3" onclick="ASearch.handle_checkbox('ft_all', this, 'foreclosures');"/>
-            <label for="ft_3" class="padr20">Bank owned</label>
-          </div>
-          <div class="fleft mart4 marl8">
-            <a  onclick="show_generic_popup(ASTips.lt2[0], ASTips.lt2[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-        </div>
-
-        <div class="clear as_tab_section_noborder clearfix" id="sold_section">
-          <div class="fleft as_label" style="width:120px" id="sold_listings_label">
-            Recently sold
-          </div>
-          <div class="fleft">
-            <input type="checkbox" name="sold" id="sold" value="9" class="mar0" />
-            <label for="sold" class="padr20">All homes sold in the <span class="bold">past 9 months</span></label>
-          </div>
-
-          <div class="fleft mart4 marl10">
-            <a  onclick="show_generic_popup(ASTips.lt3[0], ASTips.lt3[1]);return false;" href="" class="imgsheet action info_white">Tip</a>
-          </div>
-        </div>
-
-        <div class="as_title clearfix">
-          <div class="clearfix fleft">
-          Results display
-          </div>
-          <div class="fright">
-            <div class="small_button"><a href="#"  onclick="return ASearch.validate_form();" class="orange"><span>Search</span></a></div>
-          </div>
-        </div>
-
-        <div class="as_tab_section_border_sml clearfix" id="new_listings_section">
-          <div class="fleft as_label" style="width:120px;">
-            New listings
-          </div>
-          <div class="fleft">
-            <input type="checkbox" name="nl" id="nl" value="7" class="mar0" />
-            <label for="nl" class="padr20">Show only new listings in the <span class="bold">past 7 days</span></label>
-          </div>
-        </div>
-
-        <div class="as_tab_section_border_sml clearfix" id="open_houses_section">
-          <div class="fleft as_label" style="width:120px;">
-            Open Houses
-          </div>
-          <div class="fleft">
-            <input type="checkbox" name="oh_p" id="oh_p" class="mar0" onclick="if(this.checked){ xb_get_element('oh_w').checked = false;xb_get_element('oh_t').checked = false;}" />
-            <label for="oh_p" class="padr20">Show all Open Houses</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" name="oh_w" id="oh_w" class="mar0" onclick="if(this.checked){ xb_get_element('oh_p').checked = false;}" />
-            <label for="oh_w" class="padr20">Show only Open Houses this weekend</label>
-          </div>
-          <div class="fleft">
-            <input type="checkbox" name="oh_t" id="oh_t" class="mar0" onclick="if(this.checked){ xb_get_element('oh_p').checked = false;}" />
-            <label for="oh_t" class="padr20">Show only today's Open Houses</label>
-          </div>
-        </div>
-
-        <div class="as_tab_section_noborder clearfix">
-          <div class="fleft as_label" style="width:120px;">
-            Sort results by
-          </div>
-          <div class="fleft">
-            <span class="padt5">
-              <input type="radio" id="default" name="sort" class="mar0" value="default" checked="checked" />
-              <label for="default" class="padr25">Best Match</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="date_d" value="date;d" name="sort" class="mar0" />
-              <label for="date_d" class="padr25">Newest</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="price_d" value="price;d" name="sort" class="mar0" />
-              <label for="price_d" class="padr25">Price (high to low)</label>
-            </span><br/>
-            <span class="padt5">
-              <input type="radio" id="price" value="price;a" name="sort" class="mar0" />
-              <label for="price" class="padr25">Price (low to high)</label>
-            </span><br/>
-          </div>  
-          <div class="fleft">
-            <span class="padt5">
-              <input type="radio" id="bed_d" value="beds;d" name="sort" class="mar0" />
-              <label for="bed_d" class="padr25">Bedrooms (high to low)</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="baths_d" value="baths;d" name="sort" class="mar0" />
-              <label for="baths_d" class="padr25">Baths (high to low)</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="type" value="type;a" name="sort" class="mar0" />
-              <label for="type" class="padr25">Property type (A-Z)</label>
-            </span><br/>
-            <span class="padt5">
-              <input type="radio" id="address" value="address;a" name="sort" class="mar0" />
-              <label for="address" class="padr25">Address (A-Z)</label>
-            </span><br/>
-          </div>  
-          <div class="fleft">
-            <span class="padt5">
-              <input type="radio" id="sqft_d" value="sqft;d" name="sort" class="mar0" />
-              <label for="sqft_d" class="padr25">Square Feet (high to low)</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="ppsqft_d" value="ppsqft;d" name="sort" class="mar0" />
-              <label for="ppsqft_d" class="padr25">Price/sqft (high to low)</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="ppsqft" value="ppsqft;a" name="sort" class="mar0" />
-              <label for="ppsqft" class="padr25">Price/sqft (low to high)</label>
-            </span><br/>
-            <span class="padt5">
-              <input type="radio" id="reducedamt_d" value="reducedamt;d" name="sort" class="mar0" />
-              <label for="reducedamt_d" class="padr25">Price Reduced $ (high to low)</label>
-            </span><br/>
-          </div>  
-          <div class="fleft">
-            <span class="padt5">
-              <input type="radio" id="reduceddt_d" value="reduceddt;d" name="sort" class="mar0" />
-              <label for="reduceddt_d" class="padr25">Price Reduced Date</label>
-            </span><br/>    
-            <span class="padt5">
-              <input type="radio" id="reducedpct_d" value="reducedpct;d" name="sort" class="mar0" />
-              <label for="reducedpct_d" class="padr25">Price Reduced % (high to low)</label>
-            </span><br/>    
-          </div>  
-        </div>
-      </div>
-    </div>
-    <div class="bottom">
-      <div style="margin: 0px auto; width: 62px;" class="button"><a href="#" onclick="return ASearch.validate_form();"  class="orange"><span>Search</span></a></div>
-      <div class="clear"></div>
-    </div>
-  </div>
-</form>
-
-    <table border="0" cellspacing="0" cellpadding="0" class="hidden popup_table " id="generic_confirmation_popup" onclick="doNothing(event);">
-  <tr>
-    <td class="popup_shadow popup_top_left">
-      <div class="popup_background">
-        <div class="new_popup_header clearfix ">
-          <div class="fleft" id="generic_confirmation_popup_popup_header" style="float: left;">Tip</div>
-          <a  href="" id="generic_confirmation_popup_popup_closer" onclick="toggle_menu(event, 'generic_confirmation_popup', 0); return false;" 
-            class="popup_closer "></a>
-        </div>
-        <div style="clear: both; display: block; height: 0; visibility: hidden;"></div>
-        <div class="popup_content clearfix" >
-          <div id="generic_confirmation_popup_content">
-</div>
-<div style="margin: 10px auto;width: 60px;">
-  <div class="button done_button">
-    <a href="" class="orange" style=""  onclick="toggle_menu(event, 'generic_confirmation_popup', 0); return false;" >
-      <span id="generic_confirmation_popup_button_title">DONE</span>
-    </a>
-    <input type="submit" class="transparent_btn" />
-  </div>
-</div>
-
-        </div>
-        
-      </div>
-    </td>
-    <td class="popup_shadow popup_top_right">&nbsp;</td>
-  </tr>
-  
-  <tr>
-    <td class="popup_shadow popup_bottom_left">&nbsp;</td>
-    <td class="popup_shadow popup_bottom_right">&nbsp;</td>
-  </tr>
+<!--[if IE 7]>
+		<div style="background: #ffffff;height: 100%; position: fixed; right: 0; top: 0;width: 100%;z-index: 2147483647;">
+			<p style="text-align: center; padding-top: 200px; font-size: 14pt;">Sorry, your browser is outdated. Please upgrade your IE browser or use Firefox or Chrome</p>
+		</div>
+		<![endif]-->
+ 
+<div id="fb-root"></div>
+<script type="text/javascript">
+			(function(d){
+				var js, id = "facebook-jssdk"; if (d.getElementById(id)) {return;}
+				js = d.createElement('script'); js.id = id; js.async = true;
+				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				d.getElementsByTagName('head')[0].appendChild(js);
+			}(document));
+		</script>
+ 
+<div class="top-orange-bar">
+<table class="content">
+<tr>
+<td style="text-align: left;width2:380px;">
+Like our <a target="_blank" href="http://www.facebook.com/aqarmapcom" style="font-weight: bold;">facebook page</a> to get the best property deals <div style="position:absolute;margin-left:10px;" class="fb-like" data-href="http://www.facebook.com/aqarmapcom" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+</td>
+<td style="text-align: right;">
+Did you watch Aqarmap's video? <a href="http://vimeo.com/55157709?autoplay=1" target="_blank">Watch Now !</a>
+</td>
+<td>
+<div class="close">&times;</div>
+</td>
+</tr>
 </table>
-
-
-      <div id="footer" class="mart40 clear">
-
-    <div id="footerlinks" class="clear ">
-      
-            <h2>Residential Real Estate</h2>
-      <p class="mar0 mart5">
-        <a href="/CA/San_Francisco/">San&nbsp;Francisco&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/NY/New_York/">New&nbsp;York&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/CA/Los_Angeles/">Los&nbsp;Angeles&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/FL/Orlando/">Orlando&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/FL/Miami/">Miami&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/PA/Philadelphia/">Philadelphia&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/AZ/Phoenix/">Phoenix&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/CA/San_Diego/">San&nbsp;Diego&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/CA/San_Jose/">San&nbsp;Jose&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/IL/Chicago/">Chicago&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Arizona-real-estate/">Arizona&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/California-real-estate/">California&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Florida-real-estate/">Florida&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Illinois-real-estate/">Illinois&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Massachusetts-real-estate/">Massachusetts&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/New_Jersey-real-estate/">New&nbsp;Jersey&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Pennsylvania-real-estate/">Pennsylvania&nbsp;real&nbsp;estate</a>
-          &nbsp;|&nbsp;
-        <a href="/sitemap/Texas-real-estate/">Texas&nbsp;real&nbsp;estate</a>
-         &nbsp;|&nbsp;
-        <a href="/sitemap/">Other&nbsp;local&nbsp;real&nbsp;estate</a>
-         &nbsp;|&nbsp;
-        <a href="/rent-sitemap/California-apartments/">California&nbsp;apartments</a>
-          &nbsp;|&nbsp;
-        <a href="/rent-sitemap/New-York-apartments/">New&nbsp;York&nbsp;apartments</a>
-         &nbsp;|&nbsp;
-        <a href="/rent-sitemap/Texas-apartments/">Texas&nbsp;apartments</a>
-         &nbsp;|&nbsp;
-        <a href="/rent-sitemap/">Apartments&nbsp;for&nbsp;rent</a>
-         &nbsp;|&nbsp;
-        <a href="/home_prices/">Home&nbsp;price&nbsp;maps</a>
-         &nbsp;|&nbsp;
-        <a href="/voices/sitemap/">Real&nbsp;estate&nbsp;community</a>
-         &nbsp;|&nbsp;
-        <a href="/property-sitemap/">U.S. Property records</a>
-         &nbsp;|&nbsp;
-        <a href="/mortgage-sitemap/">Mortgage site map</a>
-      </p>
-
-    </div>
-
-    <div id="footer_main" class="clearfix padb20 padt15 padl25">
-      <div id="ftr2">
-        <h2>Explore Trulia</h2>
-        <ul>
-          <li><a class="hfsale" href="/">Homes for Sale</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/rent/" >Homes for Rent</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/city/">Stats &amp; Trends</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/voices/">Real Estate Advice</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/mobile/">Real Estate Apps</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/explore/" rel="nofollow">Trulia Labs</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://developer.trulia.com/" rel="nofollow">Trulia API</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/trulia_estimates/">Trulia Estimates</a></li>
-        </ul>
-      </div>
-
-      <div id="ftr4">
-      <h2>For Professionals</h2>
-        <ul>
-          <li><a href="/agents/" >Agents</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/advertisers/brokers/" >Brokers</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/mls/" >MLS</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/advertisers/" >Partners</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/tools/" >Tools &amp; Extras</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a class="submit_listings" href="/submit_listings/">Submit Your Listings</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/truliapro/" >Real Estate Leads</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/sitemap/agent">Agent Site Map</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://activerain.com" target="_blank">ActiveRain</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/sitemap/directory">Directory Site Map</a></li>
-        </ul>
-      </div>
-
-      <div id="ftr1">
-        <h2>Corporate</h2>
-        <ul>
-          <li><a href="/about/" target="_self">About Trulia</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://info.trulia.com/" rel="nofollow">News Room</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://www.trulia.com/jobs/" rel="nofollow">Careers</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://ir.trulia.com/" rel="nofollow">Investor Relations</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/privacy/" rel="nofollow" target="_self">Privacy</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/terms/" rel="nofollow" target="_self">Terms of Use</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/ad/terms/" rel="nofollow" target="_self">Subscription Terms</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/guidelines/" rel="nofollow" target="_self">Community Guidelines</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="/terms/advertisers" rel="nofollow" target="_self">Advertising Terms</a><span>&nbsp; | &nbsp;</span></li>
-          <li><a href="http://preferences-mgr.truste.com/?type=trulia&pid=trulia01&aid=trulia01" target="_blank">Ad Choices</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div id="footer_desc_links" class="">
-    
-  </div>
-
-  <div class="clear padb20 padt5 f11">
-    <div class="fleft">
-      Copyright &copy; 2014
-      Trulia, Inc. All rights reserved. &nbsp; | &nbsp;
-      <a href="http://www.hud.gov/offices/fheo/index.cfm" target="_blank" rel="nofollow" class="blackcolortxtlink imgsheet" id="fheo_logo">Fair Housing and Equal Opportunity</a>
-    </div>
-    <div class="fright quote_icon imgsheet">Have a question? Visit our <a href="/help/" >Help Center</a> to find the answer</div>
-  </div>
-
-  <div><br/></div>
-
-  
-  <!-- Begin comScore Tag -->
-<script>
-  document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
-</script>
-<script>
-function runBeacon()
-{
-  try {
-    var tempurl = window.location.href;
-    var regex = new RegExp("((http|https)://)([a-zA-Z0-9]+\.)(.*)");
-    var comurl = tempurl.match(regex);
-    var beacon_url = comurl[3]+comurl[4];
-
-    try {
-      var id = getCookie('tlftmusr');
-    } catch (e) {
-      var id = '';
+</div>
+<script type="text/javascript">
+    function showComparePush(){
+        var $checkbox = $('input[type=checkbox].compare:visible').first();
+        if ($.cookie('closed-compare-push-tooltip') !== '1' && $checkbox.length) {
+            $(function() {
+                var lang = "en";
+                $('.compare-push-tooltip').show().css({
+                    left: $checkbox.offset().left - 3 - (lang == 'ar' ? $('.compare-push-tooltip').width() : 0),
+                    top: $checkbox.offset().top - 70
+                });
+                $('.compare-push-tooltip .close').click(function() {
+                    $('.compare-push-tooltip').fadeOut('fast');
+                    $.cookie('closed-compare-push-tooltip', 1, {expires: 365, path: '/'});
+                })
+            })
+        }
     }
-
-    COMSCORE.beacon({
-      c1:2,
-      c2:6036483,
-      c3:"",
-      c4:beacon_url,
-      c5:"",
-      c6:"",
-      c15:id
-    });
-  } catch (e) {}
-};
-runBeacon();
+    $(window).load(function() {
+        setTimeout(function() {
+            if (!$.cookie('hide_top_orange_bar'))
+                $('.top-orange-bar').css({visibility: 'visible', position: 'relative'}).hide().slideDown('slow',showComparePush).find('.close').click(function() {
+                    $('.top-orange-bar').slideUp('fast');
+                    $.cookie('hide_top_orange_bar', 1);
+                });
+            else
+                showComparePush();
+        }, 0);
+    })
 </script>
-<noscript>
-  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6036483&c3=&c4=&c5=&c6=&c15=&cj=1" />
-</noscript>
-<!-- End comScore Tag -->
+<div id="top-menu">
+<div class="container_12">
+<div class="grid_1 right-section">
+&nbsp;
+</div> 
+<div class="grid_11 left-section">
+<ul> <li><a href="http://ksa.aqarmap.com/?switch_country=true" class="country egypt">Egypt</a></li>
+<li><a href="/">Search</a></li>
+<li class="login"><a href="/eg/en/users/login" class="login-btn">Login</a>
+<div class="dropdown-login-form" style="display: none">
+<div class="content-space">
+<form action="/eg/en/users/login" id="UserLoginListViewForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div> <div class="rows">
+<div class="input text"><label for="UserLoginNameSlug">Email</label><input name="data[UserLogin][name_slug]" placeholder="Enter your email address." type="text" id="UserLoginNameSlug"/></div> </div>
+<div class="rows">
+<div class="input password"><label for="UserLoginPassword">Password</label><input name="data[UserLogin][password]" placeholder="Enter your password." value="" type="password"/></div> </div>
+<div class="rows" @style="float: left;">
+											<div class="submit"><input  class="button orange" type="submit" value="Login"/></div>										</div>
+										<div style="float: right;">
+											<div class="input checkbox"><input type="hidden" name="data[UserLogin][remember_me]" id="UserLoginRememberMe_" value="0"/><input type="checkbox" name="data[UserLogin][remember_me]"  checked="checked" value="1" id="UserLoginRememberMe"/><label for="UserLoginRememberMe">Remember Me?</label></div>										</div>
+										</form>									<div class="clear"></div>
+									<p><a href="/eg/en/users/register">Register</a></p>
+									<p><a href="/eg/en/users/forgot_password">Forgot Password?</a></p>
+								</div>
+							</div><!-- end .dropdown-login-form -->
+</li>
+											<li><a href="/eg/en/users/register">Register</a></li>
+											<li><a href="/eg/ar/home/swiche_language">عربي</a></li>
+					</ul>
+				</div><!-- end .grid_11 -->
+			</div>
+		</div><!-- end #top-menu -->
+					<div id="header">
+							<div class="container_24">
+									<div class="grid_5 logo">
+											<a href="/" title="Aqarmap homepage"></a>									</div>
+									<div class="grid_19">
+											<div class="ad-space">
+													<!-- Leaderboard_728*90 -->
+													<div id='div-gpt-ad-1375135791578-0' style='width:728px; height:90px;'>
+															<script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1375135791578-0'); });</script>
+													</div>
+											</div>
+									</div><!-- end .grid_19 -->
+							</div>
+							<div class="clear"></div>
+					</div><!-- end #header -->
 
-  <script src="http://static.trulia-cdn.com/javascript/GOAT40_20b/include/js/library/3rd_party/jquery-ui/jquery-ui-1.8.10.min.js"></script>
+										<div id="blue-navbar">
+							<div class="container_12">
+									<div class="grid_8 right-section">
+											<ul id="categories-tabs">
+													<li><a href="http://aqarmap.com/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2" class="categoryLink active" value="FOR_SALE">For Sale</a></li><li><a href="http://aqarmap.com/eg/en/alexandria/all/any.for_rent/any-any.egp/any-any.m2" class="categoryLink" value="FOR_RENT">For Rent</a></li><li><a href="/eg/en/compounds/cairo">Projects</a></li>											</ul>&nbsp;
+									</div>
+									<div class="grid_4 left-section">
+											<a href="/eg/en/listings/sell" class="add-property">Add your listing</a>									</div>
+							</div>
+					</div>
+											<div class="clear"></div>
+		<!--[if IE 6]><div class="container_12">
+			<div class="grid_12">
+				<div id="ie-warning">
+					<strong>Warning:</strong> You are using a very old browser. Aqar map has advanced browsing technologies that will not work on you browser. We highly recommend that you download one of the following free browsers : <a href="https://www.google.com/chrome/?system=true&standalone=1&hl=en" target="_blank">Google Chrome</a> or <a href="http://www.mozilla.com/firefox" target="_blank">Mozilla Firefox</a>.				</div>
+							</div>
+		</div><![endif]-->
+						<div class="content-for-layout">
+					<div class="compare-push-tooltip">
+						<div class="close"><span>&times;</span></div>
+						Click here to add this property to your Compare List						<img src="/img/compare-popup-arrow-en.png?1415088153" alt="" />					</div>
+					<script type="text/javascript">_["MIN_PRICE"]="Min Price";_["MAX_PRICE"]="Max Price";_["All Neighborhoods"]="All Neighborhoods";</script><div class="container_12" style="padding-top: 15px;">
+	<div class="grid_3">
+		<div class="content-space">
+						<form action="/eg/en/alexandria" id="ListingListViewForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>			<div class="rows">
+				<div class="input select"><select name="" ng-options="item.City as item.City.title for item in citiesList" ng-model="data.city" class="medium" required="required" id="ListingNgCity">
+</select></div><input type="hidden" name="data[Listing][city]" value="{{ data.city.geoname_id }}" id="ListingCity"/>			</div>
 
-    <script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-{ (i[r].q=i[r].q||[]).push(arguments)}
-,i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-47944506-1', 'trulia.com');
-ga('send', 'pageview');
+			<div class="rows">
+				<div class="input select"><select name="data[Listing][ng_neighborhood]" ng-options="neighborhood as neighborhood.title for neighborhood in filteredNeighborhoodsList" ng-model="data.neighborhood" ng-show="showNeighborhoods" class="medium" id="ListingNgNeighborhood">
+</select></div><input type="hidden" name="data[Listing][neighborhood_id]" value="{{ data.neighborhood.slug }}" id="ListingNeighborhoodId"/>			</div>
 
-trulia.PixelTracking.firePixel(trulia.PixelTracking.TYPE_GLOBAL_REMARKETING);
-trulia.PixelTracking.firePixel(trulia.PixelTracking.TYPE_UNIQUE_CONVERSION);
+			<div class="rows">
+				<div class="input select required"><select name="data[Listing][category]" class="medium" style="display: none;" id="ListingCategory">
+<option value="">(Category)</option>
+<option value="FOR_SALE" selected="selected">For Sale</option>
+<option value="FOR_RENT">For Rent</option>
+</select></div>			</div>
+			<div class="rows">
+			<div class="input select"><select name="data[Listing][property_type]" class="medium" id="ListingPropertyType">
+<option value="APARTMENT">Apartment</option>
+<option value="FURNISHED_APARTMENT">Furnished Apartment</option>
+<option value="CHALET">Chalet</option>
+<option value="BUILDING">Building</option>
+<option value="VILLA">Villas</option>
+<option value="LAND_OR_FARM">Land</option>
+<option value="SHOP_OR_SHOWROOM">Shop / Showroom</option>
+<option value="OFFICE_OR_COMPANY">Office / Company</option>
+<option value="LAND_OR_COMMERCIAL">Other Types</option>
+</select></div>			</div>
+			<div class="rows">
+			<div class="input select"><select name="data[FilteringPrice][min_price]" class="medium" id="FilteringPriceMinPrice">
+<option value="">(Min Price)</option>
+</select></div>			</div>
+			<div class="rows">
+			<div class="input select"><select name="data[FilteringPrice][max_price]" class="medium" id="FilteringPriceMaxPrice">
+<option value="">(Max Price)</option>
+</select></div>			</div>
+
+			<div class="rows" style="display: none;">
+			<div class="input select"><select name="data[FilteringSize][min]" class="medium" id="FilteringMinSize">
+<option value="">(Min Size)</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="150">150</option>
+<option value="200">200</option>
+<option value="250">250</option>
+<option value="300">300</option>
+<option value="400">400</option>
+<option value="500">500</option>
+<option value="750">750</option>
+<option value="1000">1000</option>
+</select></div>			</div>
+			<div class="rows" style="display: none;">
+			<div class="input select"><select name="data[FilteringSize][max]" class="medium" id="FilteringMaxSize">
+<option value="">(Max Size)</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="150">150</option>
+<option value="200">200</option>
+<option value="250">250</option>
+<option value="300">300</option>
+<option value="400">400</option>
+<option value="500">500</option>
+<option value="750">750</option>
+<option value="1000">1000</option>
+</select></div>			</div>
+									<div class="rows search-type">
+				<p>Search Type: </p>
+				<input type="radio" name="data[Listing][view_type]" id="ListingViewTypePhotos" value="photos" /><label for="ListingViewTypePhotos">Photos <sup>New</sup></label><input type="radio" name="data[Listing][view_type]" id="ListingViewTypeList" value="list" checked="checked" /><label for="ListingViewTypeList">List</label><input type="radio" name="data[Listing][view_type]" id="ListingViewTypeMap" value="map" /><label for="ListingViewTypeMap">Map</label>			</div>
+						
+			<div class="rows">
+
+			<input type="hidden" name="data[FilteringPrice][currency]" value="EGP" id="FilteringPriceCurrency"/>
+			<div class="submit"><input  class="buttons blue" type="submit" value="Search"/></div></form>			</div>
+
+			<div class="clear"></div>
+
+					</div><!-- end .content-space -->
+	</div><!-- end .grid_3 -->
+	<div class="grid_9">
+		<div class="breadcrumb">
+			<a href="/">Egypt Real Estate</a> &raquo; <a href="/eg/en/alexandria">Alexandria</a>		</div><!-- end .breadcrumb -->
+		<div class="h-l">
+			<h1 class="headline">Alexandria Properties</h1>
+			<div class="sort-by">Sort by:
+			<a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/sort:usd_price/direction:asc">Price</a> |
+			<a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/sort:area/direction:asc">Size</a>			</div>			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+					<div class="list-view-listings">
+			
+
+			
+
+										<div style="min-height:190px;" class="items PREMIUM-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/472294-apartment-for-sale-in-lauran-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/cd/1a/4b853e23c9e915b0742bc9fd95cb5164.png" alt="Apartment For Sale In Lauran Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/472294-apartment-for-sale-in-lauran-alexandria" title="Apartment For Sale In Lauran Alexandria" target="_blank">Apartment For Sale In Lauran Alexandria</a></h4>
+					<div class="listing-address">Address: 191 شارع عبد السلام عارف</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">1545000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">213</span><span class="unit"></span></span></li>
+						<li>Rooms: 3</li>						<li>Baths: 3</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][472294]" id="compare472294_" value="0"/><input type="checkbox" name="data[compare][472294]"  data-item-id="472294" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/cd/1a/4b853e23c9e915b0742bc9fd95cb5164.png" data-item-title="Apartment For Sale In Lauran Alexandria" data-item-link="/eg/en/472294-apartment-for-sale-in-lauran-alexandria" class="compare" value="1" id="compare472294"/><label for="compare472294"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/472294-apartment-for-sale-in-lauran-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/328244-apartment-for-sale-in-lauran-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/40/36/a5d8c9883e38b627b391986f83c7f105.jpg" alt="Apartment For Sale In Lauran Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/328244-apartment-for-sale-in-lauran-alexandria" title="Apartment For Sale In Lauran Alexandria" target="_blank">Apartment For Sale In Lauran Alexandria</a></h4>
+					<div class="listing-address">Address:  لوران على البحر مباشر</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">2250000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">233</span><span class="unit"></span></span></li>
+						<li>Rooms: 3</li>						<li>Baths: 3</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][328244]" id="compare328244_" value="0"/><input type="checkbox" name="data[compare][328244]"  data-item-id="328244" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/40/36/a5d8c9883e38b627b391986f83c7f105.jpg" data-item-title="Apartment For Sale In Lauran Alexandria" data-item-link="/eg/en/328244-apartment-for-sale-in-lauran-alexandria" class="compare" value="1" id="compare328244"/><label for="compare328244"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/328244-apartment-for-sale-in-lauran-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/347204-apartment-for-sale-in-el-bitash-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/eb/1c/36e9c93b60830ce76260e2ffeb4bb18e.jpg" alt="Apartment For Sale In El Bitash Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/347204-apartment-for-sale-in-el-bitash-alexandria" title="Apartment For Sale In El Bitash Alexandria" target="_blank">Apartment For Sale In El Bitash Alexandria</a></h4>
+					<div class="listing-address">Address: البيطاش</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">130000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">120</span><span class="unit"></span></span></li>
+						<li>Rooms: 2</li>						<li>Baths: 1</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][347204]" id="compare347204_" value="0"/><input type="checkbox" name="data[compare][347204]"  data-item-id="347204" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/eb/1c/36e9c93b60830ce76260e2ffeb4bb18e.jpg" data-item-title="Apartment For Sale In El Bitash Alexandria" data-item-link="/eg/en/347204-apartment-for-sale-in-el-bitash-alexandria" class="compare" value="1" id="compare347204"/><label for="compare347204"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/347204-apartment-for-sale-in-el-bitash-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/410424-land-or-farm-for-sale-in-moharram-bey-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/fe/49/4231969ed8b5dcd03dcf9665d12137ab.jpg" alt="Land Or Farm For Sale In Moharram Bey Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/410424-land-or-farm-for-sale-in-moharram-bey-alexandria" title="Land Or Farm For Sale In Moharram Bey Alexandria" target="_blank">Land Or Farm For Sale In Moharram Bey Alexandria</a></h4>
+					<div class="listing-address">Address: الاسكندرية.محرم بك.الطريق الدائري.الداون تاون.كارفور</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">900000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Land</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">700</span><span class="unit"></span></span></li>
+																	</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][410424]" id="compare410424_" value="0"/><input type="checkbox" name="data[compare][410424]"  data-item-id="410424" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/fe/49/4231969ed8b5dcd03dcf9665d12137ab.jpg" data-item-title="Land Or Farm For Sale In Moharram Bey Alexandria" data-item-link="/eg/en/410424-land-or-farm-for-sale-in-moharram-bey-alexandria" class="compare" value="1" id="compare410424"/><label for="compare410424"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/410424-land-or-farm-for-sale-in-moharram-bey-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/493374-apartment-for-sale-in-el-hanouvel-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/52/3f/4dbeb61d85441dd4cb72e8fbe53ce2a7.jpg" alt="Apartment For Sale In El Hanouvel Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/493374-apartment-for-sale-in-el-hanouvel-alexandria" title="Apartment For Sale In El Hanouvel Alexandria" target="_blank">Apartment For Sale In El Hanouvel Alexandria</a></h4>
+					<div class="listing-address">Address: العجمى بمنطقة الصفا</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">105000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">85</span><span class="unit"></span></span></li>
+						<li>Rooms: 2</li>						<li>Baths: 1</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][493374]" id="compare493374_" value="0"/><input type="checkbox" name="data[compare][493374]"  data-item-id="493374" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/52/3f/4dbeb61d85441dd4cb72e8fbe53ce2a7.jpg" data-item-title="Apartment For Sale In El Hanouvel Alexandria" data-item-link="/eg/en/493374-apartment-for-sale-in-el-hanouvel-alexandria" class="compare" value="1" id="compare493374"/><label for="compare493374"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/493374-apartment-for-sale-in-el-hanouvel-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/493370-apartment-for-sale-in-sporting-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/73/c8/7a1b0b52815913d56399f802f75a8870.jpg" alt="Apartment For Sale In Sporting Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/493370-apartment-for-sale-in-sporting-alexandria" title="Apartment For Sale In Sporting Alexandria" target="_blank">Apartment For Sale In Sporting Alexandria</a></h4>
+					<div class="listing-address">Address: شارع طيبة متفرع من شارع الدلتا	</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">425000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">130</span><span class="unit"></span></span></li>
+						<li>Rooms: 3</li>						<li>Baths: 1</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][493370]" id="compare493370_" value="0"/><input type="checkbox" name="data[compare][493370]"  data-item-id="493370" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/73/c8/7a1b0b52815913d56399f802f75a8870.jpg" data-item-title="Apartment For Sale In Sporting Alexandria" data-item-link="/eg/en/493370-apartment-for-sale-in-sporting-alexandria" class="compare" value="1" id="compare493370"/><label for="compare493370"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/493370-apartment-for-sale-in-sporting-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/493359-apartment-for-sale-in-glim-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/01/bc/37e570c87937f2808ad455b859822edd.jpg" alt="Apartment For Sale In Glim  Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/493359-apartment-for-sale-in-glim-alexandria" title="Apartment For Sale In Glim  Alexandria" target="_blank">Apartment For Sale In Glim  Alexandria</a></h4>
+					<div class="listing-address">Address: جليم</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">1271000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">205</span><span class="unit"></span></span></li>
+						<li>Rooms: 3</li>						<li>Baths: 3</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][493359]" id="compare493359_" value="0"/><input type="checkbox" name="data[compare][493359]"  data-item-id="493359" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/01/bc/37e570c87937f2808ad455b859822edd.jpg" data-item-title="Apartment For Sale In Glim  Alexandria" data-item-link="/eg/en/493359-apartment-for-sale-in-glim-alexandria" class="compare" value="1" id="compare493359"/><label for="compare493359"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/493359-apartment-for-sale-in-glim-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/493350-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/11/5b/161378d96ae46c88c2ca0a78a5eb9f33.jpg" alt="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/493350-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" title="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" target="_blank">Apartment For Sale In 6 October/shatee El-nakheel Alexandria</a></h4>
+					<div class="listing-address">Address: العجمى النخيل2</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">85000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">75</span><span class="unit"></span></span></li>
+						<li>Rooms: 2</li>						<li>Baths: 1</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][493350]" id="compare493350_" value="0"/><input type="checkbox" name="data[compare][493350]"  data-item-id="493350" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/11/5b/161378d96ae46c88c2ca0a78a5eb9f33.jpg" data-item-title="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" data-item-link="/eg/en/493350-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" class="compare" value="1" id="compare493350"/><label for="compare493350"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/493350-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+										<div style="min-height:190px;" class="items FREE-items LIVE-items">
+					<div class="photo">
+						<a href="/eg/en/493207-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" target="_blank"><img src="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/3b/72/bfb3949f8a59775f6054b5416b25748c.jpg" alt="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" width="190" height="190" /></a>					</div>
+					<h4 class="listing-title"><a href="/eg/en/493207-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" title="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" target="_blank">Apartment For Sale In 6 October/shatee El-nakheel Alexandria</a></h4>
+					<div class="listing-address">Address: العجمى النخيل2</div>
+					<span class="price"><span currency="EGP" to="EGP"><span class="value">70000</span> <span class="currency">Egyptian Pound</span></span> </span>
+					<ul class="specifications">
+						<li>Type: Apartment</li>
+						<li>Size: <span to="M2" unit="M2"><span class="value">75</span><span class="unit"></span></span></li>
+						<li>Rooms: 2</li>						<li>Baths: 1</li>					</ul>
+					<div class="clear"></div>
+					<div class="meta">
+						<input type="hidden" name="data[compare][493207]" id="compare493207_" value="0"/><input type="checkbox" name="data[compare][493207]"  data-item-id="493207" data-item-picture="http://cf.aqarmap.net/scaling/aqarmap/list-view-large/listings/3b/72/bfb3949f8a59775f6054b5416b25748c.jpg" data-item-title="Apartment For Sale In 6 October/shatee El-nakheel Alexandria" data-item-link="/eg/en/493207-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" class="compare" value="1" id="compare493207"/><label for="compare493207"><a href="http://magazine.aqarmap.com/?p=2602" target="_blank" class="compare_text" tooltip="This feature allows you to compare your preferred properties. Click here for more details.">Compare</a></label>						| <a href="/eg/en/493207-apartment-for-sale-in-6-october-shatee-el-nakheel-alexandria" class="view-details" target="_blank">View Details</a>					</div>
+					<div class="clear"></div>
+				</div>
+					</div><!-- end .list-view-listings -->
+				<div class='pagination'>
+					<span class="current">1</span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:2">2</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:3">3</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:4">4</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:5">5</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:6">6</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:7">7</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:8">8</a></span> | <span><a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2/page:9">9</a></span>				</div>
+		
+	</div><!-- end .grid_9 -->
+</div><!-- end .container_12 -->
+
+					<div id="compare-bar">
+						<div class="container_12">
+							<div class="grid_12">
+								<a href="javascript:void(0)" id="compare-toggle-button">Compare List</a>
+								<ul style="padding: 5px;">
+								</ul>
+								<a href="javascript:void(0)" target='_blank' class="button orange compare-button">Compare</a>
+							</div>
+						</div>
+					</div><!-- end #compare-bar -->
+				</div>
+
+						<div class="container_12" style="padding: 15px 0 25px;">
+												<div class="grid_12">
+				<p class="newsletter-subscribe">Property Notifier: Signup to get email notifications of new properties that match your preferences</p>
+			</div>
+			
+			<div class="clear"></div>
+
+			<div class="grid_12">
+				<form action="/eg/en/users_notifiers/add" id="UsersNotifierFooter" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+<select name="" ng-options="item.City as item.City.title for item in citiesList" ng-model="data.city" required="1" id="UsersNotifierCityGeonameId">
+</select><input type="hidden" name="data[UsersNotifier][city_geoname_id]" value="{{data.city.geoname_id}}" id="UsersNotifierCityGeonameId"/>
+<select name="" ng-model="data.neighborhood" ng-show="showNeighborhoods" ng-options="neighborhood as neighborhood.title for neighborhood in filteredNeighborhoodsList" id="UsersNotifierNgNeighborhoodId">
+</select><input type="hidden" name="data[UsersNotifier][neighborhood_id]" value="{{data.neighborhood.id}}" id="UsersNotifierNeighborhoodId"/>
+<select name="data[UsersNotifier][property_type]" id="UsersNotifierPropertyType">
+<option value="APARTMENT">Apartment</option>
+<option value="FURNISHED_APARTMENT">Furnished Apartment</option>
+<option value="CHALET">Chalet</option>
+<option value="BUILDING">Building</option>
+<option value="VILLA">Villas</option>
+<option value="LAND_OR_FARM">Land</option>
+<option value="SHOP_OR_SHOWROOM">Shop / Showroom</option>
+<option value="OFFICE_OR_COMPANY">Office / Company</option>
+<option value="LAND_OR_COMMERCIAL">Other Types</option>
+</select>
+<select name="data[UsersNotifier][property_category]" ng-model="data.property_category" id="UsersNotifierPropertyCategory">
+<option value="FOR_SALE">For Sale</option>
+<option value="FOR_RENT">For Rent</option>
+</select>
+<select name="data[UsersNotifier][ng_min_price]" ng-options="Price | number:0 for Price in getMinPriceList(data.max_price, data.currency, data.property_category )" ng-model="data.min_price" ng-required="true" id="UsersNotifierNgMinPrice">
+<option value="">(Min Price)</option>
+</select><input type="hidden" name="data[UsersNotifier][min_price]" value="{{data.min_price}}" id="UsersNotifierMinPrice"/>
+<select name="" ng-model="data.max_price" ng-options="Price | number:0 for Price in getMaxPriceList(data.min_price, data.currency, data.property_category )" ng-required="true" id="UsersNotifierNgMaxPrice">
+<option value="">(Max Price)</option>
+</select><input type="hidden" name="data[UsersNotifier][max_price]" value="{{data.max_price}}" id="UsersNotifierMaxPrice"/>
+<input name="data[UsersNotifier][email]" class="email required" placeholder="Type your email" required="1" type="email" id="UsersNotifierEmail"/><input type="hidden" name="data[UsersNotifier][currency]" ng-model="data.currency" ng-init="data.currency=&#039;EGP&#039;" id="UsersNotifierCurrency"/><input type="hidden" name="data[UsersNotifier][source]" value="notifier_form" id="UsersNotifierSource"/><input type="hidden" ng-model="data.currency" ng-init="data.currency='EGP'">
+<input type="hidden" name="data[UsersNotifier][campaign]" value="Footer" id="UsersNotifierCampaign"/><input type="hidden" name="data[UsersNotifier][after_submit]" id="UsersNotifierAfterSubmit"/>
+<input  class="button blue" type="submit" value="Send"/>
+</form>			</div><!-- end .grid_12 -->
+									<div class="clear"></div>
+		</div><!-- end .container_12 -->
+				
+									<div id="whats-aqarmap" style="">
+							<div class="container_24">
+									<div class="grid_5">
+											<a href="/" title="Aqarmap homepage"><img src="/img/logo-en.png?1415088153" alt="" /></a>									</div>
+									<div class="grid_14" style="margin-bottom: 25px;">
+											<h4>What is Aqarmap?</h4>
+											<p>A Real Estate Search Engine that allows you to search thousands of properties and projects from Real Estate companies and private owners in Egypt. If you are interested in a specific property, simply email the seller or call the number by clicking on the call button.</p>
+									</div><!-- end .grid_14 -->
+
+									<div class="grid_5">
+											<a href="http://vimeo.com/55157709?autoplay=1" class="aqarmap-video" target="_blank">&nbsp;</a>
+									</div><!-- end .grid_5 -->
+							</div>
+
+							<div class="clear"></div>
+
+							<div class="container_12">
+									<div class="grid_3">
+											<h4>New Projects</h4>
+											<ul>
+													<li>
+													<a href="/eg/en/compounds/cairo">New Projects in Cairo</a>													</li>
+													<li>
+													<a href="/eg/en/compounds/giza">New Projects in Giza</a>													</li>
+													<li>
+													<a href="/eg/en/compounds/red-sea-and-north-coast">New Projects in Red Sea and North Coast</a>													</li>
+													<li>
+													<a href="/eg/en/compounds/giza">New Projects in El-Sheikh Zayed</a>													</li>
+													<li>
+													<a href="/eg/en/compounds/cairo">New Projects in Fifth District</a>													</li>
+											</ul>
+									</div>
+									<div class="grid_3">
+											<h4>
+													<a href="/eg/en/cairo/all/any.for_sale/any-any.egp/any-any.m2">Cairo Real Estate</a>											</h4>
+											<ul>
+													<li>
+													<a href="/eg/en/cairo/new-cairo-fifth-district/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in New Cairo</a>													</li>
+													<li>
+													<a href="/eg/en/cairo/6th-of-october/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in 6th Of October</a>													</li>
+													<li>
+													<a href="/eg/en/cairo/el-sheikh-zayed-city/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in El-Sheikh Zayed</a>													</li>
+													<li>
+													<a href="/eg/en/cairo/el-shorouk-city/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in El Shorouk City</a>													</li>
+													<li>
+													<a href="/eg/en/cairo/nasr-city/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in Nasr City</a>													</li>
+													<li>
+													<a href="/eg/en/cairo/heliopolis/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in Heliopolis</a>													</li>
+											</ul>
+									</div>
+									<div class="grid_3">
+											<h4>
+													<a href="/eg/en/alexandria/all/any.for_sale/any-any.egp/any-any.m2">Alexandria Real Estate</a>											</h4>
+											<ul>
+													<li>
+													<a href="/eg/en/alexandria/smouha/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in Smouha</a>													</li>
+													<li>
+													<a href="/eg/en/alexandria/sidi-bishr/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in Sidi Bishr</a>													</li>
+													<li>
+													<a href="/eg/en/alexandria/miami/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in Miami</a>													</li>
+													<li>
+													<a href="/eg/en/alexandria/el-bitash/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in El Bitash</a>													</li>
+													<li>
+													<a href="/eg/en/alexandria/el-hanouvel/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in El Hanouvel</a>													</li>
+													<li>
+													<a href="/eg/en/alexandria/el-asafra/any.for_sale/any-any.egp/any-any.m2">Apartments for sale in El Asafra</a>													</li>
+											</ul>
+									</div>
+									<div class="grid_3">
+											<h4>
+													<a href="/">Egypt Real Estate</a>											</h4>
+											<ul>
+													<li>
+													<a href="/eg/en/north-coast/all/any.for_sale/any-any.egp/any-any.m2">North Coast Real Estate</a>													</li>
+													<li>
+													<a href="/eg/en/marsa-matruh/all/any.for_sale/any-any.egp/any-any.m2">Marsa Matruh Real Estate</a>													</li>
+													<li>
+													<a href="/eg/en/ain-elsokhna/all/any.for_sale/any-any.egp/any-any.m2">Ain ElSokhna Real Estate</a>													</li>
+													<li>
+													<a href="/eg/en/red-sea/all/any.for_sale/any-any.egp/any-any.m2">Red Sea / Hurghada Real Estate</a>													</li>
+													<li>
+													<a href="/eg/en/sharm-el-sheikh/all/any.for_sale/any-any.egp/any-any.m2">Sharm el Sheikh Real Estate</a>													</li>
+													<li>
+													<a href="/eg/en/ras-sidr/all/any.for_sale/any-any.egp/any-any.m2">Ras Sidr Real Estate</a>													</li>
+											</ul>
+									</div>
+							</div>
+					</div>
+
+					<div id="footer" style="">
+							<div class="container_12">
+									<div class="links">
+											<div class="grid_4">
+													<div class="right-section">
+															<h4>AqarMap</h4>
+															<ul>
+																	<!-- <li><a href="/eg/en/pages/about-us">About Us</a></li> -->
+																	<li><a href="/eg/en/pages/jobs">Jobs</a></li>
+																	<li><a href="/eg/en/pages/advertise">Advertise</a></li>
+																	<li><a href="/eg/en/pages/contact-us">Contact Us</a></li>
+																	<li>
+																		<a href="http://ksa.aqarmap.com/" title="Saudi Arabia" target="_blank">Aqarmap Saudi Arabia</a>
+																	</li>
+															</ul>
+
+															<h4>Links</h4>
+															<ul>
+																	<li><a href="http://index.aqarmap.com/" target="_blank">Aqarmap Real Estate Index</a></li>
+																	<li><a href="/eg/en/listings/latest">Latest Listings</a></li>
+																	<li><a href="/eg/en/pages/terms-and-privacy">Terms &amp; Privacy</a></li>
+															</ul>
 
 
-  <!--[if !IE]> Script below Copyright 1997-2004 Omniture, Inc. <![endif]-->
-  s.channel = unescape('trulia');
-  s.events = unescape('event5');
-  s.prop11 = unescape('');
-  s.prop12 = unescape('Adv%20Search%20Re-Fail');
-  s.pageName = unescape('A_Srch');
-  s.prop58 = unescape('A_Srch');
-  s.eVar58 = unescape('A_Srch');
-  s.eVar15 = unescape('312');
-  s.eVar19 = unescape('cbs000');
-  s.eVar6 = unescape('2014.45');
-  s.eVar18 = unescape('45eb60e007f6225b87fe48b79e725e76');
-  s.eVar5 = unescape('14110745eb60e007f6225b87fe48b79e725e76');
-  s.prop38 = unescape('A_Srch%7CUnregistered');
-  s.eVar25 = unescape('20141107');
-  s.eVar39 = unescape('NULL');
-  s.eVar40 = unescape('NULL');
-  s.eVar41 = unescape('NULL');
-  s_campaign = unescape('');
+													</div>
+											</div><!-- end .grid_4 -->
+											<div class="grid_8">
+													<div class="left-section">
+															<h4>Magazine</h4>
+															<ul>
+																	<li><a href="http://magazine.aqarmap.com/" target="_blank">Latest</a></li>
+																	<li><a href="http://magazine.aqarmap.com/?cat=1" target="_blank">Aqarmap News</a></li>
+																	<li><a href="http://magazine.aqarmap.com/?cat=4" target="_blank">Advice</a></li>
+																	<li><a href="http://magazine.aqarmap.com/?cat=3" target="_blank">Lessons</a></li>
+															</ul>
+													</div>
+											</div><!-- end .grid_8 -->
+									</div><!-- end .links -->
 
-if(typeof s !== "undefined" && typeof s === "object"){ 
-s.prop75="399:7827";
-s.eVar73=s.prop75;
-}
-
-s_campaign = typeof s_campaign === 'undefined' ? '' : s_campaign;
+									<div class="clear">&nbsp;</div>
 
-if (typeof s.doPlugins == 'function')
-{
-  s.doPlugins(s, s_campaign);
-}
+									<div class="grid_12">
+											<div class="copyright">
+													<p>All rights are reserved to AqarMap L.L.C. &copy; 2015</p>
+											</div><!-- end .copyright -->
+									</div><!-- end .grid_12 -->
 
-if (typeof s.t == 'function')
-{
-  var s_code = s.t();
-  if (s_code)
-  {
-    document.write(s_code);
-  }
-}
+									<div class="clear">&nbsp;</div>
+							</div><!-- end #footer .container_12 -->
+					</div><!-- end .footer -->
+						<div id="organicTracking" class="lightbox closable">
+			<p class="newsletter-subscribe">Would you like to subscribe to our property notifier service. You will get a weekly email that contains the latest properties. </p>
+			<br>
+			<div style="float:left;">
+			<form action="/eg/en/users_notifiers/add" id="UsersNotifierOrganicTracking" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+<select name="" ng-options="item.City as item.City.title for item in citiesList" ng-model="data.city" required="1" id="UsersNotifierCityGeonameId">
+</select><input type="hidden" name="data[UsersNotifier][city_geoname_id]" value="{{data.city.geoname_id}}" id="UsersNotifierCityGeonameId"/>
+<select name="" ng-model="data.neighborhood" ng-show="showNeighborhoods" ng-options="neighborhood as neighborhood.title for neighborhood in filteredNeighborhoodsList" id="UsersNotifierNgNeighborhoodId">
+</select><input type="hidden" name="data[UsersNotifier][neighborhood_id]" value="{{data.neighborhood.id}}" id="UsersNotifierNeighborhoodId"/>
+<select name="data[UsersNotifier][property_type]" id="UsersNotifierPropertyType">
+<option value="APARTMENT">Apartment</option>
+<option value="FURNISHED_APARTMENT">Furnished Apartment</option>
+<option value="CHALET">Chalet</option>
+<option value="BUILDING">Building</option>
+<option value="VILLA">Villas</option>
+<option value="LAND_OR_FARM">Land</option>
+<option value="SHOP_OR_SHOWROOM">Shop / Showroom</option>
+<option value="OFFICE_OR_COMPANY">Office / Company</option>
+<option value="LAND_OR_COMMERCIAL">Other Types</option>
+</select>
+<select name="data[UsersNotifier][property_category]" ng-model="data.property_category" id="UsersNotifierPropertyCategory">
+<option value="FOR_SALE">For Sale</option>
+<option value="FOR_RENT">For Rent</option>
+</select>
+<select name="data[UsersNotifier][ng_min_price]" ng-options="Price | number:0 for Price in getMinPriceList(data.max_price, data.currency, data.property_category )" ng-model="data.min_price" ng-required="true" id="UsersNotifierNgMinPrice">
+<option value="">(Min Price)</option>
+</select><input type="hidden" name="data[UsersNotifier][min_price]" value="{{data.min_price}}" id="UsersNotifierMinPrice"/>
+<select name="" ng-model="data.max_price" ng-options="Price | number:0 for Price in getMaxPriceList(data.min_price, data.currency, data.property_category )" ng-required="true" id="UsersNotifierNgMaxPrice">
+<option value="">(Max Price)</option>
+</select><input type="hidden" name="data[UsersNotifier][max_price]" value="{{data.max_price}}" id="UsersNotifierMaxPrice"/>
+<input name="data[UsersNotifier][email]" class="email required" placeholder="Type your email" required="1" type="email" id="UsersNotifierEmail"/><input type="hidden" name="data[UsersNotifier][currency]" ng-model="data.currency" ng-init="data.currency=&#039;EGP&#039;" id="UsersNotifierCurrency"/><input type="hidden" name="data[UsersNotifier][source]" value="notifier_form" id="UsersNotifierSource"/><input type="hidden" ng-model="data.currency" ng-init="data.currency='EGP'">
+<input type="hidden" name="data[UsersNotifier][campaign]" value="OrganicTracking" id="UsersNotifierCampaign"/><input type="hidden" name="data[UsersNotifier][after_submit]" id="UsersNotifierAfterSubmit"/>
+<input  class="button blue" type="submit" value="Send"/>
+</form>			</div>
+			<button type="submit" style="padding-left:5px;padding-right:5px;color:black;" onclick="javascript:$('#organicTracking').Lightbox('hide');setDontSendCookie();" class="buttons gray">don't send</button>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('#BuyerAlertOrganicTracking .email').hide();
+					$('#BuyerAlertNeighborhoodId , #BuyerAlertCityId , #BuyerAlertPropertyCategory , #BuyerAlertPropertyType').change(function(){
+						$('#BuyerAlertOrganicTracking .email').show();
+					});
+				});
+			</script>
+		</div>
 
+		
+		<style type="text/css">
+            #FeedbackForm input[type=text], #FeedbackForm textarea {
+                width:300px;
+            }
+            #FeedbackForm .input {
+                margin-bottom: 20px;
+                z-index: 100;
+            }
+            #FeedbackForm .input > label {
+                display:inline-block;
+                @display:inline;
+				zoom:1;
+                width:auto;
+                padding-bottom: 7px;
+            }
+        </style>
+        <form action="/eg/en/feedbacks/add" id="FeedbackForm" class="lightbox closable" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><div class="close x-close">X</div><h2><img src="http://cf.aqarmap.net/img/feedback-icon.jpg?1415088153" style="" alt="" />Problem</h2><div style="padding:20px;padding-top:10px;padding-bottom:0px;"><div class="input textarea required"><label for="FeedbackComment">Describe the problem that you are facing:</label><br/><textarea name="data[Feedback][comment]" tabindex="1" class="no-resize" cols="30" rows="6" id="FeedbackComment"></textarea></div><div class="input text required"><label for="FeedbackName">Name</label><br/><input name="data[Feedback][name]" tabindex="2" maxlength="255" type="text" id="FeedbackName"/></div><div class="input text required"><label for="FeedbackContact">Your Email</label><br/><input name="data[Feedback][contact]" tabindex="3" maxlength="255" type="text" id="FeedbackContact"/></div></div><div style="text-align:center;"><input name="data[Feedback][captcha]" autocomplete="off" maxlength="6" style="vertical-align:middle;width:50px;" type="text" id="FeedbackCaptcha"/> <img src="/captcha.php?name=feedback&amp;c=/1423776442" style="vertical-align:middle;padding-top:1px;" alt="" /><div style="font-size:10px;margin-top:5px;color:#999;">Please type the code as it is displayed in the image.</div></div><center style="padding:10px;"><button class="active button blue" type="submit">Send</button></center></form>		<script type="text/javascript">
+			(function($,len,createRange,duplicate){
+				$.fn.caret=function(options,opt2){
+						var start,end,t=this[0],browser=$.browser.msie;
+						if(typeof options==="object" && typeof options.start==="number" && typeof options.end==="number") {
+								start=options.start;
+								end=options.end;
+						} else if(typeof options==="number" && typeof opt2==="number"){
+								start=options;
+								end=opt2;
+						} else if(typeof options==="string"){
+								if((start=t.value.indexOf(options))>-1) end=start+options[len];
+								else start=null;
+						} else if(Object.prototype.toString.call(options)==="[object RegExp]"){
+								var re=options.exec(t.value);
+								if(re != null) {
+										start=re.index;
+										end=start+re[0][len];
+								}
+						}
+						if(typeof start!="undefined"){
+								if(browser){
+										var selRange = this[0].createTextRange();
+										selRange.collapse(true);
+										selRange.moveStart('character', start);
+										selRange.moveEnd('character', end-start);
+										selRange.select();
+								} else {
+										this[0].selectionStart=start;
+										this[0].selectionEnd=end;
+								}
+								this[0].focus();
+								return this
+						} else {
+								// Modification as suggested by Ð�Ð½Ð´Ñ€ÐµÐ¹ Ð®Ñ‚ÐºÐ¸Ð½
+				   if(browser){
+										var selection=document.selection;
+						if (this[0].tagName.toLowerCase() != "textarea") {
+							var val = this.val(),
+							range = selection[createRange]()[duplicate]();
+							range.moveEnd("character", val[len]);
+							var s = (range.text == "" ? val[len]:val.lastIndexOf(range.text));
+							range = selection[createRange]()[duplicate]();
+							range.moveStart("character", -val[len]);
+							var e = range.text[len];
+						} else {
+							var range = selection[createRange](),
+							stored_range = range[duplicate]();
+							stored_range.moveToElementText(this[0]);
+							stored_range.setEndPoint('EndToEnd', range);
+							var s = stored_range.text[len] - range.text[len],
+							e = s + range.text[len]
+						}
+								// End of Modification
+					} else {
+										var s=t.selectionStart,
+												e=t.selectionEnd;
+								}
+								var te=t.value.substring(s,e);
+								return {start:s,end:e,text:te,replace:function(st){
+										return t.value.substring(0,s)+st+t.value.substring(e,t.value[len])
+								}}
+						}
+				}
+			})(jQuery,"length","createRange","duplicate");
+			function input_keypress(e){
+				var newVal=$(this).val();
+				var oldVal=$(this).data('oldValue');
 
+				var max=parseInt($(this).attr('ml'));
 
+				if(oldVal != newVal){
+					if (e.keyCode==8 || e.keyCode==46){
 
-  var utag_data = {"page_type":null,"page_name":"A_Srch","campaign":"","site_section":"trulia","server_code":"312","session_id":"45eb60e007f6225b87fe48b79e725e76","cobrand_site":"cbs000","date_first_visit":"20141107","page_reg_status":"A_Srch|Unregistered","user_id":"14110745eb60e007f6225b87fe48b79e725e76","user_type":"NULL","user_sub_type":"NULL"};
+					}
+					else if(newVal.length>max){
+						var caret=$(this).caret();
+						caret.start=caret.end=caret.start-1;
+						$(this).val(oldVal);
+						$(this).caret(caret);
+						var $d=$(this).data('div');
+						if(!$d){
+							$d=$('<div class="rounded5" style="display:none;font-size:10px;position:absolute;background:#FCC;color:darkred;padding:3px;">' + ('Sorry, you have exceeded the field limit (maximum = :max chars)'.replace(':max',max)) + '</div>');
+							$d.insertBefore(this);
+							var left=$(this).position().left;
+							if(locale.language=='ar'){
+								left=$(this).position().left-350+$(this).outerWidth();
+							}
+							$d.show().css({width:350,left:left,top:$(this).position().top-$d.height()-5}).hide();
+							var self=this;
+							$d.fadeIn('fast').delay(3000).fadeOut('fast',function(){
+								$(this).remove();
+								$(self).data('div',false);
+							});
+							$(this).data('div',$d);
+						}
+					}
+				}
+			}
+		  $('[maxlength]').each(function(){
+			$(this).attr('ml',$(this).attr('maxlength'));
+			$(this).removeAttr('maxLength');
+			$(this).keypress(function(e){
+				$(this).data('oldValue',$(this).val());
+				var self=this;
+				setTimeout(function(){
+					input_keypress.call(self,e);
+				},1);
+			});
+		});
+		</script>
+		<a href="javascript:void(0)" id="Problem" style="position:fixed;bottom:0;right:0;padding:5px;padding-bottom:0px;padding-top:3;margin:10px;text-align: center;margin-right:50px" class="active rounded5">Problem <img src="http://cf.aqarmap.net/img/feedback-button-icon.png?1415088153" style="width: 20px;" alt="" /></a>
 
+	<script type="text/javascript">
+//<![CDATA[
+
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName('script')[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/7223.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	
+//]]>
 </script>
+		<!-- Google Code for Remarketing tag -->
+		<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1016775409;
+		var google_conversion_label = "2nbjCP_ppwQQ8YXr5AM";
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+		</script>
+		<noscript>
+		<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1016775409/?value=0&amp;label=2nbjCP_ppwQQ8YXr5AM&amp;guid=ON&amp;script=0"/>
+		</div>
+		</noscript>
+		<!-- End Google Code for Remarketing tag -->
 
-  
+		<!-- Google Code for Remarketing Tag (Backup) -->
+		<!--  Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup -->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		var google_conversion_id = 1035944510;
+		var google_custom_params = window.google_tag_params;
+		var google_remarketing_only = true;
+		/* ]]> */
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+		<noscript>
+			<div style="display:inline;">
+				<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1035944510/?value=0&amp;guid=ON&amp;script=0"/>
+			</div>
+		</noscript>
+		<!-- End Google Code for Remarketing tag (Backup) -->
 
-<script type="text/javascript" src="//tags.tiqcdn.com/utag/trulia/main/prod/utag.js" async></script>
 
-  
-<!-- // --><script language='javascript' type='text/javascript'>
-<!--
-	req_1_1415426557=new Image();
-req_1_1415426557.src='/__ssobj/ard.png?6079210772255642112_1-1-'+(10160*139313+6477)+'&n=1';
-//-->
-<!-- // --></script>
-</body>
+								<div id="switching_countries" class="lightbox closable">
+			<p>Please choose which country you would like to search.</p>
+			<p style="text-align: center;">
+				<a href="http://aqarmap.com/?switch_country=true" title="Egypt">
+					<img src="/img/egypt-flag.png?1415088153" alt="Egypt" />				</a>
+				<a href="http://ksa.aqarmap.com/?switch_country=true" title="Saudi Arabia">
+					<img src="/img/ksa-flag.png?1415088153" alt="Saudi Arabia" />				</a>
+			</p>
+		</div>
+	</body>
 </html>
-
-<!-- T:32ms H:312 S:89487 -->

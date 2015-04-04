@@ -19,7 +19,7 @@ def adapt_list(LIST):
 
 def convert_list(STRING):
     """字符串 -> 类 转换"""
-    return str(STRING).split("&")
+    return STRING.decode().split("&")
     
 def unit_test1():
     """测试adaptor和convertor在数据库中的行为
@@ -43,7 +43,7 @@ def adapt_set(SET):
 
 def convert_set(STRING):
     """字符串 -> 类 转换"""
-    return set(str(STRING).split('&'))
+    return set(STRING.decode().split('&'))
     
 def unit_test2():
     """测试adaptor和convertor在数据库中的行为
@@ -60,3 +60,4 @@ def unit_test2():
         print(row)
 
 # unit_test2()
+

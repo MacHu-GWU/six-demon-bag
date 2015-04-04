@@ -58,7 +58,7 @@ def example1():
 def example2():
     from matplotlib import dates
     from matplotlib.ticker import FormatStrFormatter
-    res = dates.date2num(datetime(2014,1,1,10,05,0))
+    res = dates.date2num(datetime(2014,1,1,10,5,0))
     x, y = [1, 2], [25, 33]
     
     f = plt.figure()
@@ -103,4 +103,19 @@ def example4():
 
     # plt.show()
 
-example4()
+# example4()
+
+def example5():
+
+    fig = plt.figure()
+    ax1 = fig.add_subplot(111)
+    x = [1,2,3]
+    y1 = [1,2,3]
+    y2 = [3,2,1]
+
+    line1, = ax1.plot(x, y1)
+    line2, = ax1.plot(x, y2)
+    ax1.legend([line1, line2], ["a", "b"])
+    plt.show()
+    
+example5()
