@@ -22,7 +22,7 @@ def rand_string1(length):
     '''
     test_chars = u"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     s = []
-    for i in xrange(length): # naive method
+    for i in range(length): # naive method
         s.append(random.choice(test_chars))
     return "".join(s)
 
@@ -37,12 +37,12 @@ def rand_string2(length):
 
 def performance_test():
     st = time.clock()
-    for i in xrange(50000):
+    for i in range(50000):
         text = rand_string1(32)
     print(time.clock() - st)
     
     st = time.clock()
-    for i in xrange(50000):
+    for i in range(50000):
         text = rand_string2(32)
     print(time.clock() - st)
         

@@ -24,7 +24,7 @@ def example1():
     for i in Upper("abcde"):
         print(i)
         
-example1()
+# example1()
 
 def example2():
     """neat py2 py3 compatible implementation"""
@@ -40,4 +40,15 @@ def example2():
     for i in Upper("abcde"):
         print(i)
     
-example2()
+# example2()
+
+def example3():
+    def generate():
+        for i in [1,2,3,4,5]:
+            yield i
+
+    g = generate()
+    print(next(g))
+
+
+example3()

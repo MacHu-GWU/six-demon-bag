@@ -33,7 +33,7 @@ def example1():
                                 columns = list("ABCDE")) ) # 增加新行，必须保证列定义相同
     print(df)
     
-# example1()
+example1()
 
 def example2():
     """从表中删除行，删除列

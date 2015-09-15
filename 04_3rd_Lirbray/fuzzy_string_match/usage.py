@@ -46,4 +46,4 @@ def select_best_match():
     print( process.extract("new york jets", choices, limit=2) )
     print( process.extractOne("cowboys", choices) )
     
-# select_best_match()
+select_best_match()

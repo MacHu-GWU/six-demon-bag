@@ -22,7 +22,7 @@ def example1():
     xp = [1,2,3] ## 对多个x值向量求多项式值
     print(p(xp) )
 
-example1()
+# example1()
 
 def example2():
     """ 2. 根据样本值拟合多项式系数 

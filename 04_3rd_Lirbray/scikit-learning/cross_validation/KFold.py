@@ -29,7 +29,7 @@ def example1():
         train, test = data[train_index], data[test_index]
         train_label, test_label = data_label[train_index], data_label[test_index]
         
-# example1()
+example1()
 
 def example2():
     """train_test_split单次划分训练集和测试集
